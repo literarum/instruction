@@ -26,7 +26,7 @@ $('input').on('keypress', function(e) {
 		let itemText = $(this).val();
 		let semicolon = ';';
 		$(this).val('');
-		$('ol').append('<li><span><img src="/img/trash.png"></span> ' + itemText + semicolon + '</li>');
+		$('ol').append('<li><span><img src="/instruction/img/trash.png"></span> ' + itemText + semicolon + '</li>');
 	}
 });
 
