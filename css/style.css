@@ -234,6 +234,7 @@ body {
 }
 
 .main_h1_1 {
+  background-color: rgba(0, 0, 0, .45);
   display: flex;
   align-items: center;
   align-content: center;
