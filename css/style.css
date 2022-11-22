@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 html * {
   font-family: "IBM Plex Sans", sans-serif;
 }
@@ -234,12 +234,19 @@ body {
 }
 
 .main_h1_1 {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  margin: 0 auto;
   text-align: center;
-  margin-left: 100px;
-  margin-right: 100px;
-  margin-top: 50px;
-  margin-bottom: -15px;
-  font-size: 20px;
+  font-size: 30px;
+  color: #fff;
+  font-family: 'Russo One', sans-serif;
+  text-shadow: 10px 10px 30px #2400ff, -10px -10px 30px #7e2bd9;
+  -webkit-text-stroke: 2px #fc78ff;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 5px;
 }
 
 .main_h1_2 {
