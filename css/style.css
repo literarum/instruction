@@ -111,7 +111,19 @@ body {
 
 @media (min-width: 300px) and (max-width: 9999px) {
   .nav__side {
-    margin-left: 2.3%;
+    margin-left: 3.6%;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 3000px) {
+  .nav__side {
+    margin-left: 3.6%;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 1500px) {
+  .nav__side {
+    margin-left: 2%;
   }
 }
 
