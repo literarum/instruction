@@ -60,6 +60,13 @@ body {
   transition: 1s;
 }
 
+#tooltip {
+	display: none;
+	position: absolute;
+	border: 1px solid #ccc;
+	padding: 5px;
+}
+
 .main_p {
   display: flex;
   justify-content: center;

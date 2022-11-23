@@ -34,6 +34,8 @@ $('h2').on('click', 'img', function() {
 	$('input').slideToggle();
 });
 
+//ниже код всплывающих подсказок
+
 $('document').ready(function() {
 	$('.hover').mousemove(function(e) {
 		let tooltip = $(this).attr('data-title');
@@ -51,6 +53,8 @@ $('document').ready(function() {
 		$('#tooltip').fadeOut(100);
 	});
 });
+
+//далее снова код по списку покупок
 
 $('document').ready(function(e) {
 	$('input').mouseenter(function() {
@@ -91,7 +95,4 @@ $('#span').on('click', function(e) {
 	$('li').fadeOut(function() {
 		$('li').remove();
 	});
-}); 
-
-
-
+});
