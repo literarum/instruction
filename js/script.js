@@ -1,7 +1,7 @@
 $('document').ready(function() {
 	$('.hover').mousemove(function(e) {
 		let tooltip = $(this).attr('data-title');
-		$('#tooltip').fadeIn(100).css({
+		$('#tooltip').fadeIn(150).css({
 			'left': e.clientX + -24,
 			'top': e.clientY + -290,
             'text-align': 'center',
@@ -16,6 +16,6 @@ $('document').ready(function() {
 		});
 		$('#tooltip').show().text(tooltip);
 	}).mouseout(function() {
-		$('#tooltip').fadeOut(100);
+		$('#tooltip').fadeOut(150);
 	});
 });
