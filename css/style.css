@@ -44,7 +44,7 @@ body {
   display: flex;
   list-style-type: none;
   gap: 60px;
-  font-size: 25px;
+  font-size: 1.6vw;
   transition: 1.2s;
   transition-timing-function: ease-out;
   max-width: 100%;
@@ -359,35 +359,16 @@ body {
   line-height: 1.7;
 }
 
-.tom1 {
+.tom__name {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  max-width: 80%;
+  margin: 0 auto;
   text-align: center;
-  margin: 40px;
-  margin-top: 60px;
-  font-size: 40px;
-}
-
-.tom2 {
-  text-align: center;
-  margin: 150px;
-  font-size: 40px;
-}
-
-.tom3 {
-  text-align: center;
-  margin: 150px;
-  font-size: 40px;
-}
-
-#tom4 {
-  text-align: center;
-  margin: 150px;
-  font-size: 40px;
-}
-
-#tom5 {
-  text-align: center;
-  margin: 150px;
-  font-size: 40px;
+  margin-top: 2%;
+  font-size: 3.5vw;
 }
 
 .faq_img {
@@ -412,6 +393,10 @@ body {
   padding: 5px;
   box-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
     inset 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.faq_all p, ol, ul, li {
+  font-size: 1.39vw;
 }
 
 .faq_all img {
@@ -868,23 +853,26 @@ body {
   margin-left: 14px;
   list-style-position: outside;
   line-height: 1.5;
-  font-size: 18px;
+  font-size: 1.39vw;
   list-style-type: square;
 }
 
 .list_1 {
   margin-left: 50px;
   margin-bottom: 30px;
+  font-size: 1.39vw;
 }
 
 .list_2 {
   margin-left: 50px;
   margin-bottom: 30px;
+  font-size: 1.39vw;
 }
 
 .p_to_list {
   font-size: 20px;
   margin-top: 30px;
+  font-size: 1.39vw;
 }
 
 .list_3 {
@@ -893,7 +881,7 @@ body {
   margin-left: 20px;
   margin-bottom: 30px;
   line-height: 1.5;
-  font-size: 18px;
+  font-size: 1.39vw;
 }
 
 .list_4 {
@@ -901,7 +889,7 @@ body {
   margin-left: 14px;
   list-style-position: outside;
   line-height: 1.5;
-  font-size: 18px;
+  font-size: 1.39vw;
   list-style-type: square;
 }
 
@@ -910,7 +898,7 @@ body {
   margin-left: 14px;
   list-style-position: outside;
   line-height: 1.5;
-  font-size: 18px;
+  font-size: 1.39vw;
   list-style-type: square;
 }
 
@@ -920,7 +908,7 @@ body {
   margin-left: 14px;
   list-style-position: outside;
   line-height: 1.5;
-  font-size: 18px;
+  font-size: 1.39vw;
   list-style-type: square;
 }
 
@@ -930,7 +918,7 @@ body {
   margin-left: 14px;
   list-style-position: outside;
   line-height: 1.5;
-  font-size: 18px;
+  font-size: 1.39vw;
   list-style-type: square;
 }
 
@@ -940,7 +928,7 @@ body {
   margin-left: 14px;
   list-style-position: outside;
   line-height: 1.5;
-  font-size: 18px;
+  font-size: 1.39vw;
   list-style-type: square;
 }
 
@@ -950,7 +938,7 @@ body {
   margin-left: 14px;
   list-style-position: outside;
   line-height: 1.5;
-  font-size: 18px;
+  font-size: 1.39vw;
   list-style-type: square;
 }
 
@@ -960,7 +948,7 @@ body {
   margin-left: 14px;
   list-style-position: outside;
   line-height: 1.5;
-  font-size: 18px;
+  font-size: 1.39vw;
   list-style-type: square;
 }
 
@@ -1040,7 +1028,7 @@ body {
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.5);
   padding: 10px 15px;
-  font-size: 20px;
+  font-size: 1.39vw;
   text-decoration: none;
   border-radius: 10px;
   border: none;
@@ -1053,7 +1041,7 @@ body {
 .span__download {
   display: flex;
   align-items: center;
-  font-size: 20px;
+  font-size: 1.39vw;
   margin-left: 4%;
 }
 
@@ -1507,7 +1495,7 @@ input[type="radio"]:checked + label:after {
 }
 
 #let {
-  font-size: 50px;
+  font-size: 5vw;
   text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
   letter-spacing: 3;
   border: solid;
@@ -1538,6 +1526,7 @@ input[type="radio"]:checked + label:after {
 
 .here {
   color: #fff;
+  font-size: 1.39vw;
 }
 
 #operators:hover {
@@ -1550,7 +1539,7 @@ input[type="radio"]:checked + label:after {
 }
 
 #p_operators {
-  font-size: 20px;
+  font-size: 1.39vw;
   max-width: 90%;
   margin: 0;
   line-height: 2;
@@ -1566,6 +1555,10 @@ input[type="radio"]:checked + label:after {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+#code_block p {
+  font-size: 1.39vw;
+}
+
 #code_block_HTML {
   border: solid 1.5px rgba(0, 0, 255, 0.5);
   border-radius: 5px;
@@ -1575,6 +1568,10 @@ input[type="radio"]:checked + label:after {
   background-color: rgba(0, 0, 255, 0.1);
 }
 
+.code_block_HTML p {
+  font-size: 1.39vw;
+}
+
 #code_block_js {
   border: solid 1.5px rgba(255, 0, 0, 0.5);
   border-radius: 5px;
@@ -1582,6 +1579,10 @@ input[type="radio"]:checked + label:after {
   padding: 40px;
   box-shadow: 0 0 5px rgba(255, 0, 0, 0.5), inset 0 0 10px rgba(255, 0, 0, 0.3);
   background-color: rgba(255, 0, 0, 0.1);
+}
+
+.code_block_js p {
+  font-size: 1.39vw;
 }
 
 #code_block_CSS {
@@ -1800,7 +1801,7 @@ input[type="radio"]:checked + label:after {
   line-height: 2;
   text-align: center;
   color: white;
-  font-size: 30px;
+  font-size: 3vw;
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 10px;
   box-shadow: 0 0px 10px rgba(255, 255, 255, 0.5),
@@ -1819,7 +1820,7 @@ input[type="radio"]:checked + label:after {
 }
 
 .final {
-  font-size: 20px;
+  font-size: 1.39vw;
   margin-bottom: 15px;
   line-height: 1.5;
 }
@@ -1841,7 +1842,7 @@ input[type="radio"]:checked + label:after {
   background-color: rgba(255, 255, 255, 0.5);
   padding: 10px 15px;
   color: #fff;
-  font-size: 20px;
+  font-size: 1.39vw;
   text-decoration: none;
   text-align: center;
   border-radius: 10px;
@@ -1989,16 +1990,4 @@ input[type="radio"]:checked + label:after {
   100% {
     transform: rotate(360deg);
   }
-}
-
-.footer {
-  max-width: 1100px;
-  margin: 0 auto;
-  margin-left: 15%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 20px 15px 104px 15px;
-  padding-bottom: 3%;
-  gap: 20%;
 }
