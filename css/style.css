@@ -49,6 +49,7 @@ body {
 }
 
 .header__link {
+  dispay: flex;
   color: #fff;
   text-decoration: none;
   transition: 1s;
@@ -72,6 +73,7 @@ body {
   justify-content: center;
   margin: 2% auto;
   margin-top: -2%;
+  text-align: center;
   font-size: 40px;
   color: rgba(255, 255, 255, 0.1);
   letter-spacing: 5px;
