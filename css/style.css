@@ -133,7 +133,7 @@ body {
 
 @media (min-width: 200px) and (max-width: 9999px) {
   .nav__side {
-    margin-left: 3.6%;
+    margin-left: 3.8%;
   }
   body p, #code_block p, #code_block_HTML p, #code_block_js p, #code_block_css p, div p, .faq_all p, ol, ul, li {
     font-size: 20px;
@@ -160,7 +160,7 @@ body {
 
 @media (min-width: 1600px) and (max-width: 3000px) {
   .nav__side {
-    margin-left: 3.6%;
+    margin-left: 3.8%;
   }
   body p, #code_block p, #code_block_HTML p, #code_block_js p, #code_block_css p, div p, .faq_all p, ol, ul, li {
     font-size: 22px;
