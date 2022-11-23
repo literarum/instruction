@@ -768,7 +768,7 @@
                 </div>
                 <h3 class = "pre_chap_6" id="ternary">Тернарный оператор</h3>
                 <p class="post_pre_chap_6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Тернарный оператор действует точно так же, как и оператор <strong>'if else'</strong>, но формат записи у него однострочный. То есть, мы можем записать оба условия и <strong>'if'</strong> и <strong>'else'</strong> в одной строке. Итак, вот как это работало с уже известными нам операторами <strong>'else if'</strong>. Давайте объявим две переменных: 
-                <div id="code_block">
+                <div id="code_block" class="break">
                    <p class="code">
                       let userName = "Jack";
                    </p>
@@ -1371,8 +1371,10 @@
                       names.push("Вячеслав");
                    </p>
                 </div>
+                <p class="post_pre_chap_6">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;После чего, с помощью такого метода записи, в массив (в конец) будет добавлен новый эелемент.<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Так же метот <strong>push</strong> может возвращать значения. Вообще, метот – это, своего рода, функция. И мы можем извлечь это значение. Это можно реализовать следующим образом:
+                </p>
                 <div id="code_block">
                    <p class="code">
                       let names = "Вася", "Саша", "Игорь", "Олег"];
@@ -1387,10 +1389,12 @@
                       console.log(x);
                    </p>
                 </div>
+                <p class="post_pre_chap_6">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;При этом <strong>console.log();'</strong> в виде переменной <strong>'x'</strong> будет выводить число, означающее длину массива.
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Противоположностью метода <strong>push</strong> является метод <strong>pop</strong>. Метод <strong>pop</strong> удаляет последний элемент в массиве. Он так же способен возвращать значения, но он возвращает не количество элементов, а значение того элемента, который он удалил, то есть последнего. Код для удаления из массива последнего элемента выглядит так: <strong>'names.pop();'</strong>.
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Следующая пара методов – <strong>shift</strong> и <strong>unshift</strong>. По той же самой логике, что и предыдущие два массива, они используются для работы с элементами в начале массива. Метод <strong>unshift</strong> добавляет элемент, метод <strong>shift</strong> удаляет. 
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Следующий метод – <strong>indexOF</strong>. Он нужен для определения индекса элемента массива. Записывается следующим образом: <strong>'names.indexOf("Игорь");'</strong>. Как можно заметить, в качестве параметра этот метод принимает в себя конкретный элемент массива, а после чего возвращает его индекс. Если мы укажем какой-то элемент, которого нет в массиве, то будет возвращено значение <strong>-1</strong>. То есть, если нужно определить, существует ли введенный элемент в массиве, то это можно легко сделать при помощи этого метода. Есть еще один момент. Если в массиве присутствует два одинаковых элемента, то дудет возвращено значение <strong>0</strong>. Мы можем использовать метод <strong>indexOf</strong>, к примеру, в следующий логике:
+                </p>
                 <div id="code_block">
                    <p class="code">
                       let toyota = ["Camry", 2018, "sedan", "black", true];
@@ -1426,7 +1430,9 @@
                    </p>
                    <p id="scobe">}</p>
                 </div>
+                <p class="post_pre_chap_6">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Далее мы можем обращаться к элементу объекта при помощи похожей записи, что мы рассматривали выше, только в этот раз используется не индекс, а название свойства обекта. На примере консоли: <strong>'console.log(carToyota["year"]);'</strong>. Но для обращения к свойству объекта не обязательно используется метод обращения, как к массиву – для этого есть специальная запись: <strong>'carToyota.year';</strong>. Это обращение к объекту по его ключу. То есть теперь нам не важно знать, на каком месте расположено то или иное свойство. Мы даже можем менять их местами – на результат это никак не повлияет. Есть небольшое отличие между двумя типами записей. В первом случае, когда элемент указывается в квадратных скобках, мы можем использовать переменную. Например, если мы создадим переменную с каким-либо свойством из массива, а затем обратимся к ней, то всё сработает корректно:
+                </p>
                 <div id="code_block">
                    <p class="code">
                       let x = "Camry";
@@ -1435,10 +1441,11 @@
                       console.log(carToyota[x]);
                    </p>
                 </div>
+                <p class="post_pre_chap_6">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Но если мы обратимся к <strong>'x'</strong> в формате записи <strong>'console.log(carToyota.x)'</strong>, то в результате мы получим значение <strong>'undefined'</strong>. В этом случае будет разыскиваться свойство с названием <strong>'x'</strong>, а не назначенная переменная.
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;В объектах точно так же можно менять одни свойства на другие. Например, цвет: <strong>'carToyota.color = "red";</strong>.
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Как и массив, объект точно так же можно вызвать. Например, в консоль: <strong>'console.log(carToyota);'</strong>.<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Для объектов так же существует не один способ их создания. В первом способе, который мы рассмотрели выше, мы сразу прописываем все поля. Но есть второй сопоб: 
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Для объектов так же существует не один способ их создания. В первом способе, который мы рассмотрели выше, мы сразу прописываем все поля. Но есть второй cпособ:</p>
                 <div id="code_block">
                    <p class="code">
                       let carMazda = {};
@@ -1493,8 +1500,10 @@
                    </p>
                    <p id="scobe">}</p>
                 </div>
+                <p class="post_pre_chap_6">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Но кроме того, и массивы и объекты могут хранить в себе другие массивы и/или объекты. Например, массив <strong>'numbers'</strong> (числа), может хранить в себе какие-то массивы с какими-то числами: <strong>'let numbers = [[1,2,3], [4,5,6], [7,8,9,10]];'</strong>. А далее, чтобы обратиться к этому массиву, к примеру, через консоль, нужно сначала указать индекс массива в массиве, а затем индекс самого элемента в выбранном массиве: <strong>'condole.log(numbers[1][2]);'</strong>.<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Обекты с массивами можно конфигурировать по-разному. К примеру, объекты могут содеражть в себе массивы. Вернемся к нашему примеру с <strong>'personIvan'</strong>:
+                </p>
                 <div id="code_block">
                    <p class="code">
                       let personIvan = {
@@ -1516,8 +1525,10 @@
                    </p>
                    <p id="scobe">}</p>
                 </div>
+                <p class="post_pre_chap_6">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;А чтобы обратиться к одному из элементов массива, нужно: <strong>'console.log(personIvan.pets[1]);'</strong>.<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Обекты могут хранить массивы, а массивы могут хранить объекты. К примеру, мы хотим сделать базу данных о продавцах автомобилей:
+                </p>
                 <div id="code_block">
                    <p class="code">
                       let sellers = [
@@ -1558,8 +1569,10 @@
                    <p class="sub_code">}</p>
                    <p id="scobe">]</p>
                 </div>
+                <p class="post_pre_chap_6">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;То есть, как можно заметить, у нас есть массив и внутри этого массива есть два объекта (можно создавать сколько угодно объектов). Как же нам обратиться к полям этих объектов? Есть два споосба. Мы можем обраться ко всему объекту, к примеру, в консоли: <strong>'console.log(sellers[1]);'</strong>. Или мы можем обратиться только к какой-то конкретной строке: <strong>'console.log(sellers[1].hasDiscount);'</strong>.
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;В реальной жизни мы можем создавать базы данных, а затем обращаться к конкретным элементам в них. Например, создать базу данных об автомобилях в автосалоне, а затем вывести только те автомобили, которые были проданы. Для этого, собственно, создадим базу данных. А затем создадим цикл, где будет высчитываться длина выводимой информации. Выглядеть это будет следуюющим образом:
+                </p>
                 <div id="code_block">
                    <p class="code">
                       let cars = [
@@ -1708,7 +1721,7 @@
                    <p class="sub_code">}</p>
                    <p id="scobe">}</p>
                    <p class="code">
-                      console.log(carSeller1.discountCalculation(2019));
+                      <span class="break">console.log(carSeller1.discountCalculation(2019));</span>
                    </p>
                 </div>
                 <h3 class = "pre_chap_6" id="this">'this' в методе объекта</h3>
@@ -1719,7 +1732,7 @@
                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Но мы можем пойти и еще дальше. Например, если выше описанный объект имеет свойство <strong>discount</strong>, в котором эта скидка указывается, например, по умолчанию скидка будет равна 0. А далее в коде мы можем объявить переменную <strong>'discount'</strong> и присвоить ей значение выше описанной функции с методом <strong>'this'</strong> и далее мы можем переменной <strong>'carSeller1.discount'</strong> присвоить значение переменной <strong>'discount'</strong>. То есть, мы присваиваем полю <strong>discount</strong> в объекте, значение, которое мы вычисляем с помощью выше описанной функции:
                 <div id="code_block">
                    <p class="code">
-                      let discount = carSeller1.discountCalculation();
+                      <span class="break">let discount = carSeller1.discountCalculation();</span>
                    </p>
                    <p class="code">
                       carSeller1.discount = discount;
@@ -1728,7 +1741,7 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Но можно записать еще короче и сделать так, чтобы код обращался к объекту (carSeller1), затем к его свойству (discount) и отождествлял его с объектом (carSeller1), затем функцией (discountCalculation();). А затем вывести в консоль весь объект. В этом случае, будет выведен весь объект, а в нём автоматически прописываться вычисленный функцией процент скидки, в зависимости от года регистрации на сайте:
                 <div id="code_block">
                    <p class="code">
-                      carSeller1.discount = carSeller1.discountCalculation();
+                      <span class="break">carSeller1.discount = carSeller1.discountCalculation();</span>
                    </p>
                 </div>
                 <p class="post_pre_chap_6">
@@ -1779,10 +1792,10 @@
                    <p class="sub_code">}</p>
                    <p id="scobe">}</p>
                    <p class="code">
-                      carSeller1.calculateDiscount();
+                      <span class="break">carSeller1.calculateDiscount();</span>
                    </p>
                    <p class="code">
-                      console.log(carSeller1);
+                      <span class="break">console.log(carSeller1);</span>
                    </p>
                 </div>
                 <h3 class = "pre_chap_6" id="dom">DOM</h3>
@@ -1802,9 +1815,9 @@
                 </ul>
                 <p class="post_pre_chap_6">
                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Начнем с первого селектора – <strong>'document.getElementById();'</strong>. С помощью этого селектора, к примеру, можно заполнить любой тег на странице, которых до этого был пустым, допустим, параграф, где написано - "Привет, Мир!". Поскольку, как можно заметить, если попытаться развернуть и перевести название селектора (это будет "Получить элемент по ID"), то этому параграфу нужно своевременно (до выполнения кода), присвоить ID, по которому этот код будет выполняться. Выглядеть код будет так:<br>
-                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>'document.getElementById("paragraph").innerHTML = "Привет, Мир!";'</strong>.<br><br><br><br>
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="break"><strong>'document.getElementById("paragraph").innerHTML = "Привет, Мир!";'</strong></span>.<br><br><br><br>
                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Следующий селектор <strong>'ducument.getElementByClassName();'</strong> – находит все элементы по имени указанного класса. То есть, мы можем присвоить HTML-элементам какие-то классы, а затем этот селектор способен возвращать их для дальнейшей с ними работы, например, изменения/добалвения контента. Проще говоря, этот селектор занимается примерно тем же, что и классы в HTML – собирает в себя другие элементы, объединяя в группу. Принцип его работы состоит только в том, чтобы собрать по HTML-коду все эелементы с прописанным (указанным) в селекторе классом, а затем возвратить (передать) эту информацию для дальнейшей работы кому-нибудь другому. Схема применения может выглядеть следующим образом:
-                <div id="code_block">
+                <div id="code_block" class="break">
                    <p class="code">
                       &lt;!DOCTYPE html&gt;
                    </p>
@@ -1873,7 +1886,7 @@
                    </div>
                 </div>
                 <p class="post_pre_chap_6">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Принцип работы этого кода довольно прост. В HTML мы создаем два параграфа заполненные текстом с классом <strong>'intro'</strong> и один пустой параграф с id <strong>'demo'</strong>. Далее мы объявляем переменную <strong>'x'</strong> и присваиваем ей значение в виде <strong>'document.getElementByClassName("intro");'</strong>, то есть переменная <strong>'x'</strong> теперь представляет тот контент, который входит в класс <strong>'intro'</strong>. Как и все прочие перечисления индексов элементов в JS, селекторы при работе с DOM не стали исключением и тоже отсчитываются от ноля. Далее мы вставляем в пустой параграф с id <strong>'demo'</strong> текст <strong>'Первый параграф (индекс 0) с классом="intro": '</strong> с помощью <strong>'document.getElementById("demo")'</strong> и приплюсовываем ко всему этому переменную <strong>'x[0]'</strong> с индексом 0, так как у нас два параграфа с классом <strong>'intro'</strong>, а исчисляются индексы, как говорилось выше, начиная от ноля, а затем вставляем всё это в тот же пустой параграф.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Принцип работы этого кода довольно прост. В HTML мы создаем два параграфа заполненные текстом с классом <strong>'intro'</strong> и один пустой параграф с id <strong>'demo'</strong>. Далее мы объявляем переменную <strong>'x'</strong> и присваиваем ей значение в виде <span class="break"><strong>'document.getElementByClassName("intro");'</strong></span>, то есть переменная <strong>'x'</strong> теперь представляет тот контент, который входит в класс <strong>'intro'</strong>. Как и все прочие перечисления индексов элементов в JS, селекторы при работе с DOM не стали исключением и тоже отсчитываются от ноля. Далее мы вставляем в пустой параграф с id <strong>'demo'</strong> текст <strong>'Первый параграф (индекс 0) с классом="intro": '</strong> с помощью <strong>'document.getElementById("demo")'</strong> и приплюсовываем ко всему этому переменную <strong>'x[0]'</strong> с индексом 0, так как у нас два параграфа с классом <strong>'intro'</strong>, а исчисляются индексы, как говорилось выше, начиная от ноля, а затем вставляем всё это в тот же пустой параграф.<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Выглядит запутано, но глядя на код выше и вчитываясь в это запутанную инструкцию (пусть даже придется прочесть не один раз), всё непременно будет ясно.<br><br><br><br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Следюущий селектор в нашем списке – это <strong>document.getElementByTagName();</strong>. Этот селектор по принципу своего действия очень похож на предыдущий, но с одним, как можно догадаться по названию, отличием: он находит в документе HTML-теги. Можно сказать, что у этого и предыдущего селектора буквально один и тот же принцип действия, только в этот раз мы бы подставляли не класс, а название тега: параграф, заголовок и/или другие.<br><br><br><br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Следующий селектор выбора элементов – <strong>'document.querySelector();'</strong>. Этот селектор работает уже <strong>не с HTML-тегами</strong>, а <strong>с селекторами CSS</strong>. Как говорилось выше, JS позволяет работать (манипулировать/взаимодействовать) не только с HTML, но и CSS. К примеру, если у нас есть заголовок в HTML с id 'header', то с помощью этого селектора мы можем обратиться к нему точно так же, как в CSS, то есть: <strong>'ducument.querySelector("#header");'</strong>. Это актуально и в случае обращения к классу. Важно отметить, что при выборе селектором <strong>'querySelector'</strong> класса будут выбираться не все элементы с соответсвующими классами, а только <strong>первое</strong> совпадение.<br>
@@ -1886,7 +1899,7 @@
                 <h3 class = "pre_chap_6" id="dom_changing_styles">DOM. Изменение стилей</h3>
                 <p class="post_pre_chap_6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                    Изменение стилей с помощью DOM и JS провернуть довольно просто. Допустим, в HTML документе у нас есть заголовок, у этого заголовка есть id="header". Чтобы изменить его стиль с помощью JS, код будет выглядеть следующим образом (для удобства запишем функцию с методом (селектором) как переменную):
-                <div id="code_block">
+                <div id="code_block" class="break">
                    <p class="code">
                       let h1 = document.getElementById("header");
                    </p>
@@ -1896,14 +1909,14 @@
                 </div>
                 <p class="post_pre_chap_6">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Этим кодом мы через JS обратились по id к заголовку и стилизовали его, сделав его цвет красным.<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Кроме того, исходя из концепции DOM, JS позволяет добавлять не сущестовавшие ранее классы. Для этого существует метод <strong>'.classList.add("навзание_нового_класса");'</strong>. У добавления/создания чего-либо, конечно, есть и обратное действие, для этого есть метод<span class="break"><strong>'.classList.remove("название_удаляемого_класса");'</strong></span>. 
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Кроме того, исходя из концепции DOM, JS позволяет добавлять не сущестовавшие ранее классы. Для этого существует метод <span class="break"><strong>'.classList.add("навзание_нового_класса");'</strong></span>. У добавления/создания чего-либо, конечно, есть и обратное действие, для этого есть метод<span class="break"><strong>'.classList.remove("название_удаляемого_класса");'</strong></span>. 
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Еще один метод, который часто используют для добавления/удаления классов – это <span class="break"><strong>'.classList.toggle("название_класса");'</strong></span>. Этот метод работает как некий переключатель – при первом срабатывании он "включает" новый класс, создавая его, при втором, соответственно, "выключает", удаляя.</p>
                 <div class="faq_all">
                    <div class="f_img_21">
                       <img class = "faq_img" src = "/instruction/img/faq.png">
                    </div>
                    <div class="p_faq21">
-                      <p class="faq_p">*для справки: разумеется, используя все перечисленные методы для добавления и/или удаления классов, нужно использовать селекторы обращения к элементам. То есть, используя один из представленных выше методов, полная конструкция будет выглядеть так: <strong>'document.getElementById("некий_id").classList.toggle("некий_класс");'</strong>.
+                      <p class="faq_p">*для справки: разумеется, используя все перечисленные методы для добавления и/или удаления классов, нужно использовать селекторы обращения к элементам. То есть, используя один из представленных выше методов, полная конструкция будет выглядеть так: <span class="break"><strong>'document.getElementById("некий_id").classList.toggle("некий_класс");'</strong></span>.
                       </p>
                    </div>
                 </div>
@@ -1921,7 +1934,7 @@
                 </div>
                 <p class="post_pre_chap_6">
                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>ПОДЦЕПИТЬ КОГДА-НИБУДЬ КАКУЮ-НИБУДЬ ГАЛЕРЕЮ ИЗОБРАЖЕНИЙ ДЛЯ КОТОВ!!!</strong> И теперь, с помощью JS, мы можем воздействовать на эти изображения. Для начала нам нужно с помощью одного из уже известных селекторов обратиться к этим изображениям:
-                <div id="code_block">
+                <div id="code_block" class="break">
                    <p class="code">
                       let cats = document.querySelector("#cats");
                    </p>
@@ -1934,7 +1947,7 @@
                 </div>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Как видно из кода, с помощью объявленной переменной <strong>'cats'</strong> и индекса (порядкового номера) "0" мы обращаемся к атрибуту <strong>'src'</strong> первого изображения и получаем его. Затем мы меняем значение этого атрибута с помощью метода <strong>'.setAttribute'</strong>, у которого используется не только значение <strong>'src'</strong>, но и то значение, которое требуется заменить. В данном случае, это путь к новому изображению – <strong>'img/cat2.jpeg'</strong>.<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Точно так же, мы можем менять и любой другой атрибут, к примеру атрибут ссылки – тега <strong>'a'</strong>:
-                <div id="code_block">
+                <div id="code_block" class="break">
                    <p class="code">
                       let link = document.querySelector("#link");
                    </p>
@@ -1949,7 +1962,7 @@
                 <p class="post_pre_chap_6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                    Что такое "events"? Events в переводе с англиского – события. То есть, мы можем изменять объекты DOM структуры с помощью JS по ккаким-то событиям. Схема орагнизации реакции на какие-либо события выглядит следующим образом. Для начала нам, конечно, нужно выбрать какой-то элемент, с которым мы и будем работать. Затем, нужно добавить так называемого  <strong>Event Listener</strong> – прослушивателя события. Он через точку записывается после обращения к элементу, а после него в круглых скобках и кавычках пишется, непосредственно событие. Самое распространенное, к примеру <strong>'click'</strong>. Вторым елементом указывается функция, в которой мы пишем код, который будет запускаться, когда будет кликнут выбранный нами элемент. Ну а дальше всё как обычно из принципа работы функции. К примеру, изменим цвет заголовка на красный. Рассмотрим это на практике. Допустим, у нас есть эелемент заголовка – <strong>h1</strong> с id "test". Код JS будет выглядеть следующим образом:
                 <div id="code_block">
-                   <p class="code">
+                   <p class="code" class="break">
                       let h1 = document.getElementById("test");
                    </p>
                    <p class="code">
@@ -1972,12 +1985,12 @@
                 <p class="post_pre_chap_6">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Для одного элемента мы можем устанавливать несколько <strong>Event Listener</strong>.<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Точно такой же функционал, как и со сменой цвета заголовка из примера выше, мы можем цеплять и, к примеру, к кнопкам. Для наглядности и простоты, кнопка тоже будет менять цвет. По нажатию она будет менять цвет фона всей страницы! А код будет выглядеть следующим образом (HTML-код мы поместим в синюю рамку, а JS-код в красную):</p>
-                <div id="code_block_HTML">
+                <div id="code_block_HTML" class="break">
                    <p class="code">
                       &lt;button id="button_test"&gt;Сменить цвет!&lt;/button&gt;
                    </p>
                 </div>
-                <div id="code_block_js">
+                <div id="code_block_js" class="break">
                    <p class="code">
                       let button = document.getElementById("button_test");
                    </p>
@@ -2031,7 +2044,7 @@
                       &lt;h3&gt;Время реакции &lt;span id="reactionTime"&gt;&lt;/span&gt;&lt;/h3&gt;
                    </p>
                 </div>
-                <div id="code_block_CSS">
+                <div id="code_block_CSS" class="break">
                    <p class="code">
                       #shape {
                    </p>
@@ -2052,7 +2065,7 @@
                    </p>
                    <p class="code">}</p>
                 </div>
-                <div id="code_block_js">
+                <div id="code_block_js" class="break">
                    <p class="code">
                       let startTime = new Date().getTime();
                    </p>
@@ -2201,7 +2214,7 @@
                       
                           let shape = document.getElementById("shape");
                           let top = Math.random() * 400;
-                          let left = Math.random() * 400;
+                          let left = Math.random() * 150;
                           let width = Math.random() * 200 + 50;
                           shape.style.top = top + "px";
                           shape.style.left = left + "px";
@@ -2409,7 +2422,7 @@
                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                    Базовые методы манипуляции классами в jQuery так же не отличаются от методов из ванильного JS и похожи названиями: <strong>'.addClass()'</strong>, <strong>'.removeClass()'</strong> и <strong>'.toggleClass()'</strong>. Как можно заметить, эти методы одинковы с методами JS после обращения к .classList. На примере того же списка, для автоматического добавления классов к его элементам с помощью jQuery можно использовать такой код:
                 <div id="code_block_js">
-                   <p class="code">
+                   <p class="code break">
                       $('li:lt(3)').addClass('Первые_три_элемента');
                    </p>
                 </div>
