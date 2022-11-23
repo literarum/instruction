@@ -968,6 +968,39 @@ body {
   margin: 0 auto;
 }
 
+.a__tag {
+  display: flex;
+  text-align: left;
+  align-items: left;
+  justify-content: left;
+  gap: 1%;
+  margin-bottom: 3%;
+}
+
+.a__tag__id {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px 15px;
+  font-size: 20px;
+  text-decoration: none;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.45),
+    inset 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.span__download {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  margin-left: 4%;
+}
+
 .table1 {
   border: 0px solid #fff;
   width: 500px;
