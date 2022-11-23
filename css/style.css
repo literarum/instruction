@@ -17,7 +17,7 @@ body {
 }
 
 .header {
-  max-width: 60%;
+  max-width: 70%;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -46,10 +46,19 @@ body {
   gap: 60px;
   font-size: 25px;
   transition: 1s;
+  max-width: 100%;
+  text-align: center;
+}
+
+.header__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
 }
 
 .header__link {
-  dispay: flex;
+  display: flex;
   color: #fff;
   text-decoration: none;
   transition: 1s;
@@ -118,34 +127,43 @@ body {
   margin: 20% auto;
 }
 
-@media (min-width: 300px) and (max-width: 9999px) {
+@media (min-width: 200px) and (max-width: 9999px) {
   .nav__side {
     margin-left: 3.6%;
   }
 }
 
-@media (min-width: 300px) and (max-width: 3000px) {
+@media (min-width: 200px) and (max-width: 3000px) {
   .nav__side {
     margin-left: 3.6%;
   }
 }
 
-@media (min-width: 300px) and (max-width: 1500px) {
+@media (min-width: 200px) and (max-width: 1500px) {
   .nav__side {
     margin-left: 2%;
   }
 }
 
-@media (min-width: 300px) and (max-width: 1350px) {
+@media (min-width: 200px) and (max-width: 1350px) {
   .nav__side {
     margin: 0 auto;
     margin-left: 0;
   }
 }
 
-@media (min-width: 300px) and (max-width: 1290px) {
+@media (min-width: 200px) and (max-width: 1290px) {
   .nav__side {
     display: none;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 500px) {
+  .nav__side {
+    display: none;
+  }
+  body {
+    font-size: 14px;
   }
 }
 
@@ -166,16 +184,25 @@ body {
 }
 
 #div_table_of_contents {
-  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 90%;
   margin-bottom: 15%;
   padding: 20px;
   line-height: 1.8;
-  font-size: 18px;
+  font-size: 1.4vw;
   border-radius: 20px;
   color: #fff;
 }
 
 #table_of_contents {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 90%;
   font-size: 40px;
   text-align: center;
   letter-spacing: 2px;
@@ -208,7 +235,7 @@ body {
   text-align: center;
   color: #fff;
   text-decoration: none;
-  font-size: 40px;
+  font-size: 3vw;
   letter-spacing: 2px;
   margin-top: 10px;
   margin: 0 auto;
@@ -229,7 +256,7 @@ body {
   text-align: center;
   color: #fff;
   text-decoration: none;
-  font-size: 40px;
+  font-size: 3vw;
   letter-spacing: 2px;
   margin-top: 10px;
   margin: 0 auto;
@@ -243,11 +270,11 @@ body {
 }
 
 #header_table {
-  font-size: 30px;
+  font-size: 1.5vw;
 }
 
 #table_up_down {
-  font-size: 22px;
+  font-size: 1.5vw;
 }
 
 #decor {
@@ -267,7 +294,7 @@ body {
   border-radius: 10px;
   text-align: center;
   text-transform: uppercase;
-  font-size: 40px;
+  font-size: 3vw;
   color: #fff;
   font-family: 'Russo One', sans-serif;
   text-shadow: 25px 25px 60px #0f00ff, -25px -25px 60px #0200ff;
@@ -277,6 +304,12 @@ body {
 }
 
 .main_h1_1 h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  max-width: 80%;
   margin-top: 2.5%;
 }
 
@@ -298,11 +331,14 @@ body {
 }
 
 .main_h1_2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  max-width: 80%;
+  margin: 0 auto;
   text-align: center;
-  margin-left: 100px;
-  margin-right: 100px;
-  margin-bottom: 40px;
-  font-size: 13px;
+  font-size: 1.25vw;
 }
 
 .p_top {
