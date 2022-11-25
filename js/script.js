@@ -2,8 +2,8 @@ $('document').ready(function() {
 	$('.hover').mousemove(function(e) {
 		let tooltip = $(this).attr('data-title');
 		$('#tooltip').fadeIn(150).css({
-			'left': e.clientX + -22,
-			'top': e.clientY + -290,
+			'left': e.clientX + -25,
+			'top': e.clientY + -280,
             'text-align': 'center',
 			'font-size': '20px',
 			'max-width': '150px',

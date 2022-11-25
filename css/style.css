@@ -1966,7 +1966,7 @@ input[type="radio"]:checked + label:after {
     margin-left: 3.8%;
   }
   body p, .here, #p_operators, #code_block p, #code_block_HTML p, #code_block_js p, #code_block_css p, div p, .faq_all p, ol, ul, li {
-    font-size: 22px;
+    font-size: 20px;
   }
   .pre_chap_6 {
     font-size: 42px;
@@ -2002,7 +2002,7 @@ input[type="radio"]:checked + label:after {
     margin-left: 2.3%;
   }
   body p, .here, #p_operators, #code_block p, #code_block_HTML p, #code_block_js p, #code_block_css p, div p, .faq_all p, ol, ul, li {
-    font-size: 20px;
+    font-size: 18px;
   }
   .pre_chap_6 {
     font-size: 40px;
@@ -2039,7 +2039,7 @@ input[type="radio"]:checked + label:after {
     margin-left: 0;
   }
   body p, .here, #p_operators, #code_block p, #code_block_HTML p, #code_block_js p, #code_block_css p, div p, .faq_all p, ol, ul, li {
-    font-size: 20px;
+    font-size: 18px;
   }
   .pre_chap_6 {
     font-size: 40px;
@@ -2084,7 +2084,7 @@ input[type="radio"]:checked + label:after {
     display: none;
   }
   body p, .here, #p_operators, #code_block p, #code_block_HTML p, #code_block_js p, #code_block_css p, div p, .faq_all p, ol, ul, li {
-    font-size: 17px;
+    font-size: 15px;
   }
   .pre_chap_6 {
     font-size: 37px;
@@ -2111,6 +2111,9 @@ input[type="radio"]:checked + label:after {
 
 @media (min-width: 500px) and (max-width: 700px) {
   .header__list {
+    background-color: rgba(0, 0, 0, .7);
+    padding: 15px 25px;
+    border-radius: 10px;
     position: fixed;
     display: flex;
   align-items: center;
@@ -2125,7 +2128,7 @@ input[type="radio"]:checked + label:after {
     display: none;
   }
   body p, .here, #p_operators, #code_block p, #code_block_HTML p, #code_block_js p, #code_block_css p, div p, ol, ul, li {
-    font-size: 15px;
+    font-size: 13px;
   }
   .pre_chap_6 {
     font-size: 35px;
@@ -2152,7 +2155,9 @@ input[type="radio"]:checked + label:after {
 
 @media (min-width: 200px) and (max-width: 500px) {
   .header__list {
-    background-color: black;
+    background-color: rgba(0, 0, 0, .7);
+    padding: 15px 25px;
+    border-radius: 10px;
     position: fixed;
     display: flex;
   align-items: center;
@@ -2167,7 +2172,7 @@ input[type="radio"]:checked + label:after {
     display: none;
   }
   body p, .here, #p_operators, #code_block p, #code_block_HTML p, #code_block_js p, #code_block_css p, div p, .faq_all p, ol, ul, li {
-    font-size: 12px;
+    font-size: 10px;
   }
   .pre_chap_6 {
     font-size: 32px;
@@ -2189,5 +2194,22 @@ input[type="radio"]:checked + label:after {
   }
   .faq_all p, .faq_all li {
     font-size: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .div_table_of_contents {
+    position: relative;
+    top:-10px;
+    background-color: transparent;
+  }
+  .div_table_of_contents ul {
+    max-height: 70px;
+    padding: 15px 0;
+    text-align: right;
+  }
+  .div_table_of_contents ul li {
+    display: inline-flex;
+    padding-left: 20px;
   }
 }
