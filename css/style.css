@@ -131,196 +131,6 @@ body {
   margin: 20% auto;
 }
 
-@media (min-width: 200px) and (max-width: 9999px) {
-  .nav__side {
-    margin-left: 3.8%;
-  }
-  body p, .here, #p_operators, #code_block p, #code_block_HTML p, #code_block_js p, #code_block_css p, div p, .faq_all p, ol, ul, li {
-    font-size: 20px;
-  }
-  .pre_chap_6, .main_h1_1 {
-    font-size: 40px;
-  }
-  .tom__name {
-    font-size: 55px;
-  }
-  .header__item {
-    font-size: 25px;
-  }
-  #div_table_of_contents {
-    font-size: 22px;
-  }
-  #table_of_contents_up_a, #table_of_contents_down_a {
-    font-size: 45px;
-  }
-  #header_table, #table_up_down {
-    font-size: 25px;
-  }
-}
-
-@media (min-width: 1600px) and (max-width: 3000px) {
-  .nav__side {
-    margin-left: 3.8%;
-  }
-  body p, .here, #p_operators, #code_block p, #code_block_HTML p, #code_block_js p, #code_block_css p, div p, .faq_all p, ol, ul, li {
-    font-size: 22px;
-  }
-  .pre_chap_6, .main_h1_1 {
-    font-size: 42px;
-  }
-  .tom__name {
-    font-size: 57px;
-  }
-  .header__item {
-    font-size: 27px;
-  }
-  #div_table_of_contents {
-    font-size: 25px;
-  }
-  #table_of_contents_up_a, #table_of_contents_down_a {
-    font-size: 47px;
-  }
-  #header_table, #table_up_down {
-    font-size: 27px;
-  }
-}
-
-@media (min-width: 1350px) and (max-width: 1500px) {
-  .nav__side {
-    margin-left: 2.3%;
-  }
-  body p, .here, #p_operators, #code_block p, #code_block_HTML p, #code_block_js p, #code_block_css p, div p, .faq_all p, ol, ul, li {
-    font-size: 20px;
-  }
-  .pre_chap_6, .main_h1_1 {
-    font-size: 40px;
-  }
-  .tom__name {
-    font-size: 55px;
-  }
-  .header__item {
-    font-size: 25px;
-  }
-  #div_table_of_contents {
-    font-size: 22px;
-  }
-  #table_of_contents_up_a, #table_of_contents_down_a {
-    font-size: 45px;
-  }
-  #header_table, #table_up_down {
-    font-size: 25px;
-  }
-}
-
-@media (min-width: 1290px) and (max-width: 1350px) {
-  .nav__side {
-    margin: 0 auto;
-    margin-left: 0;
-  }
-  body p, .here, #p_operators, #code_block p, #code_block_HTML p, #code_block_js p, #code_block_css p, div p, .faq_all p, ol, ul, li {
-    font-size: 20px;
-  }
-  .pre_chap_6, .main_h1_1 {
-    font-size: 40px;
-  }
-  .tom__name {
-    font-size: 55px;
-  }
-  .header__item {
-    font-size: 25px;
-  }
-  #div_table_of_contents {
-    font-size: 22px;
-  }
-  #table_of_contents_up_a, #table_of_contents_down_a {
-    font-size: 45px;
-  }
-  #header_table, #table_up_down {
-    font-size: 25px;
-  }
-}
-
-@media (min-width: 700px) and (max-width: 1290px) {
-  .nav__side {
-    display: none;
-  }
-  body p, .here, #p_operators, #code_block p, #code_block_HTML p, #code_block_js p, #code_block_css p, div p, .faq_all p, ol, ul, li {
-    font-size: 17px;
-  }
-  .pre_chap_6, .main_h1_1 {
-    font-size: 37px;
-  }
-  .tom__name {
-    font-size: 52px;
-  }
-  .header__item {
-    font-size: 22px;
-  }
-  #div_table_of_contents {
-    font-size: 19px;
-  }
-  #table_of_contents_up_a, #table_of_contents_down_a {
-    font-size: 42px;
-  }
-  #header_table, #table_up_down {
-    font-size: 22px;
-  }
-}
-
-@media (min-width: 500px) and (max-width: 700px) {
-  .nav__side {
-    display: none;
-  }
-  body p, .here, #p_operators, #code_block p, #code_block_HTML p, #code_block_js p, #code_block_css p, div p, .faq_all p, ol, ul, li {
-    font-size: 15px;
-  }
-  .pre_chap_6, .main_h1_1 {
-    font-size: 35px;
-  }
-  .tom__name {
-    font-size: 50px;
-  }
-  .header__item {
-    font-size: 20px;
-  }
-  #div_table_of_contents {
-    font-size: 17px;
-  }
-  #table_of_contents_up_a, #table_of_contents_down_a {
-    font-size: 40px;
-  }
-  #header_table, #table_up_down {
-    font-size: 20px;
-  }
-}
-
-@media (min-width: 200px) and (max-width: 500px) {
-  .nav__side {
-    display: none;
-  }
-  body p, .here, #p_operators, #code_block p, #code_block_HTML p, #code_block_js p, #code_block_css p, div p, .faq_all p, ol, ul, li {
-    font-size: 12px;
-  }
-  .pre_chap_6, .main_h1_1 {
-    font-size: 32px;
-  }
-  .tom__name {
-    font-size: 47px;
-  }
-  .header__item {
-    font-size: 17px;
-  }
-  #div_table_of_contents {
-    font-size: 14px;
-  }
-  #table_of_contents_up_a, #table_of_contents_down_a {
-    font-size: 37px;
-  }
-  #header_table, #table_up_down {
-    font-size: 17px;
-  }
-}
-
 .main_div {
   border-radius: 15px;
   padding: 15px;
@@ -442,6 +252,7 @@ body {
   padding-top: -5%;
   max-width: 80%;
   border-radius: 10px;
+  font-size: 2.7vw;
   text-align: center;
   text-transform: uppercase;
   color: #fff;
@@ -1565,9 +1376,13 @@ input[type="radio"]:checked + label:after {
 
 .select1 {
   grid-row: 1;
-  font-size: 1.3vw;
   z-index: 5;
   max-width: 90%;
+  margin-left: -10%;
+}
+
+.select1>p, .select2>p, .select3>p {
+  font-size: 1.3vw;
 }
 
 .select-wrapper-1 {
@@ -1576,8 +1391,8 @@ input[type="radio"]:checked + label:after {
 
 .select2 {
   grid-row: 3;
-  font-size: 1.3vw;
   max-width: 90%;
+  margin-left: -10%;
 }
 
 .select-wrapper-2 {
@@ -1586,8 +1401,8 @@ input[type="radio"]:checked + label:after {
 
 .select3 {
   grid-row: 5;
-  font-size: 1.3vw;
   max-width: 90%;
+  margin-left: -10%;
 }
 
 .select-wrapper-3 {
@@ -1771,6 +1586,13 @@ input[type="radio"]:checked + label:after {
   font-size: 20px;
 }
 
+.sub_sub_sub_sub_sub_sub_code {
+  margin-left: 30%;
+  margin-top: -1.2%;
+  letter-spacing: 0.5;
+  font-size: 20px;
+}
+
 #scobe {
   margin-top: 1.5%;
   margin-left: 5%;
@@ -1913,6 +1735,21 @@ input[type="radio"]:checked + label:after {
 
 .li__5 {
 	margin-left: 2.5%;
+}
+
+.nav__bar__img {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 800px;
+  max-width: 90%;
+}
+
+.nav__bar__img>img {
+  width: 800px;
+  overflow: hidden;
+  object-fit: cover;
 }
 
 .tobe {
@@ -2114,5 +1951,243 @@ input[type="radio"]:checked + label:after {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+
+@media (min-width: 1600px) and (max-width: 3000px) {
+  .header__list {
+    position: static;
+  }
+  .header__logo {
+    display: block;
+  }
+  .nav__side {
+    margin-left: 3.8%;
+  }
+  body p, .here, #p_operators, #code_block p, #code_block_HTML p, #code_block_js p, #code_block_css p, div p, .faq_all p, ol, ul, li {
+    font-size: 22px;
+  }
+  .pre_chap_6 {
+    font-size: 42px;
+  }
+  .tom__name {
+    font-size: 57px;
+  }
+  .header__item {
+    font-size: 27px;
+  }
+  #div_table_of_contents {
+    font-size: 25px;
+  }
+  #table_of_contents_up_a, #table_of_contents_down_a {
+    font-size: 47px;
+  }
+  #header_table, #table_up_down {
+    font-size: 27px;
+  }
+  .faq_all p, .faq_all li {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1350px) and (max-width: 1500px) {
+  .header__list {
+    position: static;
+  }
+  .header__logo {
+    display: block;
+  }
+  .nav__side {
+    margin-left: 2.3%;
+  }
+  body p, .here, #p_operators, #code_block p, #code_block_HTML p, #code_block_js p, #code_block_css p, div p, .faq_all p, ol, ul, li {
+    font-size: 20px;
+  }
+  .pre_chap_6 {
+    font-size: 40px;
+  }
+  .tom__name {
+    font-size: 55px;
+  }
+  .header__item {
+    font-size: 25px;
+  }
+  #div_table_of_contents {
+    font-size: 22px;
+  }
+  #table_of_contents_up_a, #table_of_contents_down_a {
+    font-size: 45px;
+  }
+  #header_table, #table_up_down {
+    font-size: 25px;
+  }
+  .faq_all p, .faq_all li {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1290px) and (max-width: 1350px) {
+  .header__list {
+    position: static;
+  }
+  .header__logo {
+    display: block;
+  }
+  .nav__side {
+    margin: 0 auto;
+    margin-left: 0;
+  }
+  body p, .here, #p_operators, #code_block p, #code_block_HTML p, #code_block_js p, #code_block_css p, div p, .faq_all p, ol, ul, li {
+    font-size: 20px;
+  }
+  .pre_chap_6 {
+    font-size: 40px;
+  }
+  .tom__name {
+    font-size: 55px;
+  }
+  .header__item {
+    font-size: 25px;
+  }
+  #div_table_of_contents {
+    font-size: 22px;
+  }
+  #table_of_contents_up_a, #table_of_contents_down_a {
+    font-size: 45px;
+  }
+  #header_table, #table_up_down {
+    font-size: 25px;
+  }
+  .faq_all p, .faq_all li {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1290px) {
+  .header__list {
+    background-color: rgba(0, 0, 0, .7);
+    padding: 15px 25px;
+    border-radius: 10px;
+    position: fixed;
+    display: flex;
+  align-items: left;
+  justify-content: left;
+  align-content: left;
+  margin: 0 auto;
+  max-width: 100%;
+  }
+  .header__logo {
+    display: none;
+  }
+  .nav__side {
+    display: none;
+  }
+  body p, .here, #p_operators, #code_block p, #code_block_HTML p, #code_block_js p, #code_block_css p, div p, .faq_all p, ol, ul, li {
+    font-size: 17px;
+  }
+  .pre_chap_6 {
+    font-size: 37px;
+  }
+  .tom__name {
+    font-size: 52px;
+  }
+  .header__item {
+    font-size: 22px;
+  }
+  #div_table_of_contents {
+    font-size: 19px;
+  }
+  #table_of_contents_up_a, #table_of_contents_down_a {
+    font-size: 42px;
+  }
+  #header_table, #table_up_down {
+    font-size: 22px;
+  }
+  .faq_all p, .faq_all li{
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 700px) {
+  .header__list {
+    position: fixed;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 90%;
+  }
+  .header__logo {
+    display: none;
+  }
+  .nav__side {
+    display: none;
+  }
+  body p, .here, #p_operators, #code_block p, #code_block_HTML p, #code_block_js p, #code_block_css p, div p, ol, ul, li {
+    font-size: 15px;
+  }
+  .pre_chap_6 {
+    font-size: 35px;
+  }
+  .tom__name {
+    font-size: 50px;
+  }
+  .header__item {
+    font-size: 20px;
+  }
+  #div_table_of_contents {
+    font-size: 17px;
+  }
+  #table_of_contents_up_a, #table_of_contents_down_a {
+    font-size: 40px;
+  }
+  #header_table, #table_up_down {
+    font-size: 20px;
+  }
+  .faq_all p, .faq_all li {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 500px) {
+  .header__list {
+    background-color: black;
+    position: fixed;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 90%;
+  }
+  .header__logo {
+    display: none;
+  }
+  .nav__side {
+    display: none;
+  }
+  body p, .here, #p_operators, #code_block p, #code_block_HTML p, #code_block_js p, #code_block_css p, div p, .faq_all p, ol, ul, li {
+    font-size: 12px;
+  }
+  .pre_chap_6 {
+    font-size: 32px;
+  }
+  .tom__name {
+    font-size: 47px;
+  }
+  .header__item {
+    font-size: 17px;
+  }
+  #div_table_of_contents {
+    font-size: 14px;
+  }
+  #table_of_contents_up_a, #table_of_contents_down_a {
+    font-size: 37px;
+  }
+  #header_table, #table_up_down {
+    font-size: 17px;
+  }
+  .faq_all p, .faq_all li {
+    font-size: 10px;
   }
 }
