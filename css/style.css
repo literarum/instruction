@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
 html * {
   font-family: "IBM Plex Sans", sans-serif;
 }
@@ -73,10 +73,10 @@ body {
 }
 
 #tooltip {
-	display: none;
-	position: absolute;
-	border: 1px solid #ccc;
-	padding: 5px;
+  display: none;
+  position: absolute;
+  border: 1px solid #ccc;
+  padding: 5px;
 }
 
 .main_p {
@@ -242,7 +242,7 @@ body {
 }
 
 .main_h1_1 {
-  background-color: rgba(0, 0, 0, .6);
+  background-color: rgba(0, 0, 0, 0.6);
   display: flex;
   align-items: center;
   align-content: center;
@@ -256,7 +256,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   color: #fff;
-  font-family: 'Russo One', sans-serif;
+  font-family: "Russo One", sans-serif;
   text-shadow: 25px 25px 60px #0f00ff, -25px -25px 60px #0200ff;
   -webkit-text-stroke: 2px #89efff;
   -webkit-text-fill-color: transparent;
@@ -287,7 +287,6 @@ body {
   text-transform: lowercase;
   margin: 0 auto;
   margin-bottom: 2.5%;
-  
 }
 
 .main_h1_2 {
@@ -560,12 +559,12 @@ body {
 }
 
 .f_img_24 {
-	margin-top: 30px;
-  }
-  
-  .p_faq24 {
-	margin-top: -60px;
-  }  
+  margin-top: 30px;
+}
+
+.p_faq24 {
+  margin-top: -60px;
+}
 
 .sub_f_img_10 {
   margin-top: 15px;
@@ -1371,7 +1370,6 @@ input[type="radio"]:checked + label:after {
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 3px;
   width: 20vw;
-
 }
 
 .select1 {
@@ -1381,7 +1379,9 @@ input[type="radio"]:checked + label:after {
   margin-left: -10%;
 }
 
-.select1>p, .select2>p, .select3>p {
+.select1 > p,
+.select2 > p,
+.select3 > p {
   font-size: 1.3vw;
 }
 
@@ -1470,7 +1470,7 @@ input[type="radio"]:checked + label:after {
 
 .operators__a {
   display: block;
-	margin-left: 1.5%;
+  margin-left: 1.5%;
   float: left;
 }
 
@@ -1613,8 +1613,6 @@ input[type="radio"]:checked + label:after {
   text-decoration: underline;
 }
 
-
-
 #div_cats {
   display: flex;
   justify-content: space-between;
@@ -1640,7 +1638,7 @@ input[type="radio"]:checked + label:after {
 }
 
 #events_h1 {
-	color: #fff;
+  color: #fff;
   text-align: center;
   font-size: 30px;
   padding: 30px;
@@ -1687,10 +1685,10 @@ input[type="radio"]:checked + label:after {
 }
 
 .sl_desc_span {
-	font-size: 35px;
-	text-align: center;
-	text-transform: uppercase;
-	text-decoration: underline;
+  font-size: 35px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: underline;
 }
 
 .bootstrap__div {
@@ -1718,23 +1716,23 @@ input[type="radio"]:checked + label:after {
 }
 
 .li__1 {
-	margin-left: 4.5%;
+  margin-left: 4.5%;
 }
 
 .li__2 {
-	margin-left: 1.35%;
+  margin-left: 1.35%;
 }
 
 .li__3 {
-	margin-left: 1.2%;
+  margin-left: 1.2%;
 }
 
 .li__4 {
-	margin-left: 3.1%;
+  margin-left: 3.1%;
 }
 
 .li__5 {
-	margin-left: 2.5%;
+  margin-left: 2.5%;
 }
 
 .nav__bar__img {
@@ -1746,7 +1744,7 @@ input[type="radio"]:checked + label:after {
   max-width: 90%;
 }
 
-.nav__bar__img>img {
+.nav__bar__img > img {
   width: 800px;
   overflow: hidden;
   object-fit: cover;
@@ -1954,7 +1952,6 @@ input[type="radio"]:checked + label:after {
   }
 }
 
-
 @media (min-width: 1500px) and (max-width: 3000px) {
   .header__list {
     position: static;
@@ -1965,7 +1962,18 @@ input[type="radio"]:checked + label:after {
   .nav__side {
     margin-left: 3.8%;
   }
-  body p, .here, #p_operators, #code_block p, #code_block_HTML p, #code_block_js p, #code_block_css p, div p, .faq_all p, ol, ul, li {
+  body p,
+  .here,
+  #p_operators,
+  #code_block p,
+  #code_block_HTML p,
+  #code_block_js p,
+  #code_block_css p,
+  div p,
+  .faq_all p,
+  ol,
+  ul,
+  li {
     font-size: 20px;
   }
   .pre_chap_6 {
@@ -1980,13 +1988,16 @@ input[type="radio"]:checked + label:after {
   #div_table_of_contents {
     font-size: 25px;
   }
-  #table_of_contents_up_a, #table_of_contents_down_a {
+  #table_of_contents_up_a,
+  #table_of_contents_down_a {
     font-size: 47px;
   }
-  #header_table, #table_up_down {
+  #header_table,
+  #table_up_down {
     font-size: 27px;
   }
-  .faq_all p, .faq_all li {
+  .faq_all p,
+  .faq_all li {
     font-size: 18px;
   }
 }
@@ -2001,7 +2012,18 @@ input[type="radio"]:checked + label:after {
   .nav__side {
     margin-left: 2.3%;
   }
-  body p, .here, #p_operators, #code_block p, #code_block_HTML p, #code_block_js p, #code_block_css p, div p, .faq_all p, ol, ul, li {
+  body p,
+  .here,
+  #p_operators,
+  #code_block p,
+  #code_block_HTML p,
+  #code_block_js p,
+  #code_block_css p,
+  div p,
+  .faq_all p,
+  ol,
+  ul,
+  li {
     font-size: 18px;
   }
   .pre_chap_6 {
@@ -2016,13 +2038,16 @@ input[type="radio"]:checked + label:after {
   #div_table_of_contents {
     font-size: 22px;
   }
-  #table_of_contents_up_a, #table_of_contents_down_a {
+  #table_of_contents_up_a,
+  #table_of_contents_down_a {
     font-size: 45px;
   }
-  #header_table, #table_up_down {
+  #header_table,
+  #table_up_down {
     font-size: 25px;
   }
-  .faq_all p, .faq_all li {
+  .faq_all p,
+  .faq_all li {
     font-size: 16px;
   }
 }
@@ -2038,7 +2063,18 @@ input[type="radio"]:checked + label:after {
     margin: 0 auto;
     margin-left: 0;
   }
-  body p, .here, #p_operators, #code_block p, #code_block_HTML p, #code_block_js p, #code_block_css p, div p, .faq_all p, ol, ul, li {
+  body p,
+  .here,
+  #p_operators,
+  #code_block p,
+  #code_block_HTML p,
+  #code_block_js p,
+  #code_block_css p,
+  div p,
+  .faq_all p,
+  ol,
+  ul,
+  li {
     font-size: 18px;
   }
   .pre_chap_6 {
@@ -2053,29 +2089,37 @@ input[type="radio"]:checked + label:after {
   #div_table_of_contents {
     font-size: 22px;
   }
-  #table_of_contents_up_a, #table_of_contents_down_a {
+  #table_of_contents_up_a,
+  #table_of_contents_down_a {
     font-size: 45px;
   }
-  #header_table, #table_up_down {
+  #header_table,
+  #table_up_down {
     font-size: 25px;
   }
-  .faq_all p, .faq_all li {
+  .faq_all p,
+  .faq_all li {
     font-size: 16px;
   }
 }
 
 @media (min-width: 700px) and (max-width: 1290px) {
   .header__list {
-    background-color: rgba(0, 0, 0, .7);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 15px 25px;
     border-radius: 10px;
     position: fixed;
     display: flex;
-  align-items: left;
-  justify-content: left;
-  align-content: left;
-  margin: 0 auto;
-  max-width: 100%;
+    align-items: left;
+    justify-content: left;
+    align-content: left;
+    margin: 0 auto;
+    max-width: 90%;
+    margin-left: -200px;
+    margin-top: 10px;
+  }
+  .main_p {
+    display: none;
   }
   .header__logo {
     display: none;
@@ -2083,7 +2127,18 @@ input[type="radio"]:checked + label:after {
   .nav__side {
     display: none;
   }
-  body p, .here, #p_operators, #code_block p, #code_block_HTML p, #code_block_js p, #code_block_css p, div p, .faq_all p, ol, ul, li {
+  body p,
+  .here,
+  #p_operators,
+  #code_block p,
+  #code_block_HTML p,
+  #code_block_js p,
+  #code_block_css p,
+  div p,
+  .faq_all p,
+  ol,
+  ul,
+  li {
     font-size: 15px;
   }
   .pre_chap_6 {
@@ -2098,28 +2153,37 @@ input[type="radio"]:checked + label:after {
   #div_table_of_contents {
     font-size: 19px;
   }
-  #table_of_contents_up_a, #table_of_contents_down_a {
+  #table_of_contents_up_a,
+  #table_of_contents_down_a {
     font-size: 42px;
   }
-  #header_table, #table_up_down {
+  #header_table,
+  #table_up_down {
     font-size: 22px;
   }
-  .faq_all p, .faq_all li{
+  .faq_all p,
+  .faq_all li {
     font-size: 15px;
   }
 }
 
 @media (min-width: 500px) and (max-width: 700px) {
   .header__list {
-    background-color: rgba(0, 0, 0, .7);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 15px 25px;
     border-radius: 10px;
     position: fixed;
     display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  max-width: 90%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: auto;
+    max-width: 90%;
+    font-size: 15px;
+    margin-left: -185px;
+  }
+  .main_p {
+    display: none;
   }
   .header__logo {
     display: none;
@@ -2127,7 +2191,17 @@ input[type="radio"]:checked + label:after {
   .nav__side {
     display: none;
   }
-  body p, .here, #p_operators, #code_block p, #code_block_HTML p, #code_block_js p, #code_block_css p, div p, ol, ul, li {
+  body p,
+  .here,
+  #p_operators,
+  #code_block p,
+  #code_block_HTML p,
+  #code_block_js p,
+  #code_block_css p,
+  div p,
+  ol,
+  ul,
+  li {
     font-size: 13px;
   }
   .pre_chap_6 {
@@ -2142,28 +2216,45 @@ input[type="radio"]:checked + label:after {
   #div_table_of_contents {
     font-size: 17px;
   }
-  #table_of_contents_up_a, #table_of_contents_down_a {
+  #table_of_contents_up_a,
+  #table_of_contents_down_a {
     font-size: 40px;
   }
-  #header_table, #table_up_down {
+  #header_table,
+  #table_up_down {
     font-size: 20px;
   }
-  .faq_all p, .faq_all li {
+  .faq_all p,
+  .faq_all li {
     font-size: 13px;
   }
 }
 
 @media (min-width: 200px) and (max-width: 500px) {
   .header__list {
-    background-color: rgba(0, 0, 0, .7);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 15px 25px;
     border-radius: 10px;
     position: fixed;
     display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  max-width: 90%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 60%;
+    margin-left: -138px;
+    text-align: center;
+    font-size: 14px;
+    gap: 10%;
+    padding-left: 50px;
+  }
+  .header__link {
+    width: 80px;
+  }
+  .header__item {
+    padding-left: 10px;
+  }
+  .main_p {
+    display: none;
   }
   .header__logo {
     display: none;
@@ -2171,7 +2262,18 @@ input[type="radio"]:checked + label:after {
   .nav__side {
     display: none;
   }
-  body p, .here, #p_operators, #code_block p, #code_block_HTML p, #code_block_js p, #code_block_css p, div p, .faq_all p, ol, ul, li {
+  body p,
+  .here,
+  #p_operators,
+  #code_block p,
+  #code_block_HTML p,
+  #code_block_js p,
+  #code_block_css p,
+  div p,
+  .faq_all p,
+  ol,
+  ul,
+  li {
     font-size: 10px;
   }
   .pre_chap_6 {
@@ -2186,30 +2288,16 @@ input[type="radio"]:checked + label:after {
   #div_table_of_contents {
     font-size: 14px;
   }
-  #table_of_contents_up_a, #table_of_contents_down_a {
+  #table_of_contents_up_a,
+  #table_of_contents_down_a {
     font-size: 37px;
   }
-  #header_table, #table_up_down {
+  #header_table,
+  #table_up_down {
     font-size: 17px;
   }
-  .faq_all p, .faq_all li {
+  .faq_all p,
+  .faq_all li {
     font-size: 10px;
-  }
-}
-
-@media (min-width: 768px) {
-  .div_table_of_contents {
-    position: relative;
-    top:-10px;
-    background-color: transparent;
-  }
-  .div_table_of_contents ul {
-    max-height: 70px;
-    padding: 15px 0;
-    text-align: right;
-  }
-  .div_table_of_contents ul li {
-    display: inline-flex;
-    padding-left: 20px;
   }
 }
