@@ -1748,6 +1748,7 @@ input[type="radio"]:checked + label:after {
   width: 800px;
   overflow: hidden;
   object-fit: cover;
+  border-radius: 10px;
 }
 
 .tobe {
