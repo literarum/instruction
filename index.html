@@ -10,13 +10,13 @@
     <link rel="stylesheet" href="../css/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="../css/introduction.css">
     <link rel="stylesheet" type="text/css" href="/instruction/css/introduction.css">
-    <script src="/js/jquery.min.js"></script>
-    <script src="/instruction/js/jquery.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/instruction/js/jquery.min.js"></script>
     <script type="text/javascript">
         $(function(){
             $('a[href^="#"]').click(function(){
@@ -32,7 +32,7 @@
     <div id="top"></div>
     <header class="header">
             <ul class="header__list">
-                <li class="header__item"><a href="#" class="header__link">Раздел</a></li>
+                <li class="header__item"><a href="/instruction/index.html" class="header__link">Главная</a></li>
                 <li class="header__item"><a href="#" class="header__link">Раздел</a></li>
                 <li class="header__item"><a href="#" class="header__link">Раздел</a></li>
                 <li class="header__item">
@@ -49,14 +49,13 @@
                     </div>
                 </div></li>
             </ul>
+            <div class="up__down">
+                <a class="hover" data-title="Переместиться в самый верх страницы" href="#top">Up</a>
+                <a class="hover" data-title="Переместиться в самый низ страницы" href="#bottom">Down</a>
+                <div id="tooltip"></div>
+            </div>
         <p class="slogan">Make Web-Sites not War</p>
     </header>
-
-    <div class="nav__side">
-        <div id="tooltip"></div>
-        <div class="nav__up"><a class="hover" data-title="Переместиться в самый верх страницы" href="#top">Up</a></div>
-        <div class="nav__down"><a class="hover" data-title="Переместиться в самый низ страницы" href="#bottom">Down</a></div>
-    </div>
 
     <div class="container">
 
@@ -143,5 +142,6 @@
 
 
     <script src="/js/script.js"></script>
+    <script src="/instruction/js/script.js"></script>
 </body>
 </html>

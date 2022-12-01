@@ -162,36 +162,25 @@ body {
   margin-right: 3%;
 }
 
-.nav__side {
-  display: grid;
-  position: fixed;
-  top: 40%;
-  margin-left: 2.8%;
+.up__down {
+  margin-left: 22%;
+  width: 200px;
 }
 
-.nav__side a {
+.up__down a {
   color: white;
-  font-size: 30px;
+  font-size: 23px;
   text-decoration: none;
   margin: 0 auto;
   transition: .5s;
   transition-timing-function: ease-out;
+  margin-right: 10%;
 }
 
-.nav__side a:hover {
-  text-shadow: 0px 0px 2px #fff, 0 0 .5em #fff, 0 0 0.2em #fff;
+.up__down a:hover {
+  text-shadow: 0 0 5px rgba(255, 255, 255, 1);
   transition: .5s;
-}
-
-.nav__up {
-  padding: 3%;
-  margin: 20%;
-  margin-left: 25%;
-}
-
-.nav__down {
-  padding: 3%;
-  margin: 20% auto;
+  transition-timing-function: ease-out;
 }
 
 #tooltip {
@@ -227,7 +216,7 @@ body {
   padding: 2%;
   padding-top: -5%;
   max-width: 80%;
-  border-radius: 10px;
+  border-radius: 5px;
   font-size: 2.7vw;
   text-align: center;
   text-transform: uppercase;
@@ -382,7 +371,7 @@ body {
   padding: 1em;
 }
 
-.faq__first img {
+.faq__any img {
   width: 3em;
   object-fit: cover;
 }
@@ -409,6 +398,66 @@ body {
   width: 10px;
   height: 10px;
   margin-right: 8px;
+}
+
+.table__box {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.table {
+  margin-top: 2%;
+  border: 0px solid #fff;
+  width: 500px;
+  height: 100px;
+  text-align: center;
+  font-size: 25px;
+  border-collapse: collapse;
+  border-width: 3px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.45),
+    inset 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+th,
+td {
+  border: 1px solid #fff;
+  padding: 15px;
+}
+
+.link {
+  display: flex;
+  justify-content: left;
+  gap: 1%;
+}
+
+.link__id {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px 15px;
+  font-size: 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.45),
+    inset 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.span__download {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  margin-left: 4%;
+}
+
+.faq__flex {
+  margin-top: 3%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3%;
 }
 
 
