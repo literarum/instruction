@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/instruction/img/ico.png" type="image/png">
+    <link rel="shortcut icon" href="/img/ico.png" type="image/png">
+    <link rel="stylesheet" href="/instruction/css/normalize.min.css">
+    <link rel="stylesheet" href="../css/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/introduction.css">
+    <link rel="stylesheet" type="text/css" href="/instruction/css/introduction.css">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/instruction/js/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('a[href^="#"]').click(function(){
+         		var target = $(this).attr('href');
+         	    $('html, body').animate({scrollTop: $(target).offset().top}, 500);//800 - длительность скроллинга в мс
+         		return false;
+            });
+        });
+    </script>
+    <title>HTML5</title>
+</head>
+
+<body>
+
+    <div class="nav__side">
+        <div id="tooltip"></div>
+        <div class="nav__up"><a class="hover" data-title="Переместиться в самый верх страницы" href="#top">Up</a></div>
+        <div class="nav__down"><a class="hover" data-title="Переместиться в самый низ страницы" href="#bottom">Down</a></div>
+    </div>
+
+    <header class="header">
+        <ul class="header__list">
+            <li class="header__item"><a href="#" class="header__link">Раздел</a></li>
+            <li class="header__item"><a href="#" class="header__link">Раздел</a></li>
+            <li class="header__item"><a href="#" class="header__link">Раздел</a></li>
+            <li class="header__item">
+                <div class="dropdown">
+                <button class="dropbtn">Разделы</button>
+                <div class="dropdown-content">
+                    <a href="/instruction/index.html5.html'">HTML5</a>
+                    <a href="#">CSS</a>
+                    <button class="dropbtn dropbtn__jQuery">JavaScript</button>
+                    <div class="dropdown__jQuery__div">
+                        <a class="jquery__a" href="#">jQuery</a>
+                    </div>
+                    <a href="#">Bootstrap</a>
+                </div>
+            </div></li>
+        </ul>
+    <p class="slogan">Make Web-Sites not War</p>
+</header>
+
+    <div class="container">
+        <h1 class="tom__name">Tom I. HTML5</h1>
+        <h1 class="main__head">Общие положения</h1>
+        <p class="main__par">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HTML5 зиждется на нескольких базовых тегах, которые формируют основную разметку и, применив которые, их вам может быть уже достаточно для разметки вашей первой, простой, но информативной web-страницы.<br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Итак, проблема: у вас есть текст, который вам необходимо разместить на вашем сайте. Как её решить? Для этого в HTML существует тег параграфов текста – тег <strong>&lt;p&gt;</strong>, который используется как контейнер для работы с текстом. А еще, это еще один зеркальный тег.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Быть может, я сейчас слегка перегну палку и говорить об этом еще рано, но я всё-таки напишу про это именно здесь. Когда вырастете – поймете и вам это пригодится, придете сюда, в начало, читать об этом. Итак, помните, как я говорил выше, что в HTML у тегов могут быть атрибуты? Вот и тег &lt;p&gt; исключением не является. У него есть атрибут <strong>'contenteditable'</strong> со значением после знака '=' <strong>'true'</strong>. Этот атрибут позволит вам превратить обычный параграф текста в редактируемый, это нужно для того, чтобы пользователь мог с ним взаимодействовать. С этой информацией, введенной пользователем, в дальнейшем можно взаимодействовать с помощью JavaScript. Но он так же может использоваться и с заголовками, и с тегами ненумерованных/нумерованных списков, однако о списках позже. В любом случае, поздравляю, вы разместили у себя на странице свой первый параграф текста.<br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Разместив на у себя на странице параграфы с текстом, нам может понадобиться разместить и заголовки к ним. Разумеется, в HTML это тоже предусмотрено – для этого есть теги с <strong>&lt;h1&gt; до &lt;h6&gt;</strong> – различные по значению для браузера, а так же, как я сказал, по размеру по умолчанию (от самого большого до самого малого). Эти теги тоже зеркальны.<br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;У тегов параграфов и заголовков есть еще один полезный под(суб)тег. Это тег <strong>&lt;span&gt;</strong>. Зачастую он применяется для дополнительной, внутристрочной стилизации текста, к примеру, для создания буквиц. Проще говоря, если вам будет нужно сделать так, чтобы ваш параграф текста выглядел одним образом, а одно лишь слово внутри этого параграфа было по стилю другим, то здесь вам и пригодится тег <strong>&lt;span&gt;</strong>. Записывается, кстати, просто, например, в параграфе: <span class="break"><strong>&lt;p&gt;&lt;span&gt;Какой-то&lt;/span&gt; текст&lt;/p&gt;</strong>.</span> И далее, помимо того, что находится в параграфе, вы можете заниматься отдельной стилизацией именно того, что заключено между тегами <strong>span</strong>.<br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ещё одним из базовых тегов является <strong>не зеркальный</strong> тег <strong>&lt;img&gt;</strong> – image (от англ. изображение), он используется для добавления изображения на веб-страницу и у него есть два важных атрибута. Первый атрибут – это <strong>alt</strong>. Он позволяет отображать на странице содержимое добавленного изображения, если то, по тем или иным причинам, не будет загружено вместе с остальным контентом. Это так же необходимо и для пользователей с ограниченными возможностями – слабовидящих или незрячих людей. Их специальные программы – скринридеры – позволяют воспроизводить прочитанным вслух текстом содержимое фотографии. Поэтому то, что вы напишете в атрибуте <strong>'alt'</strong>, будет всерьез помогать людям с ограниченными возможностями воспринимать информацию с вашей веб-страницы. Второй атрибут – <strong>'src="  "'</strong>, в значении которого указывается путь к изображению. Поскольку мы работаем из репозитория, то все изображения для вашего веб-сайта рекомендуется размещать внутри него в папке с названием, к примеру, <strong>img</strong> или <strong>images</strong>. Исходя из того, что наш файл index.html у нас тоже создан и находится внутри репозитория, то путь к картинке прописать несложно. Репозиторий с нашим веб-сайтом назовём "test_site", представим, что скачали картинку со смешным котом и назвали её cat. При прописывании пути обязательно указывать расширение изображения (png, jpg, svg и так далее), и выглядеть это будет так:
+        </p>
+        <div class="code__block__any code__block__syntax">
+            <p class="code">
+               ***
+            </p>
+            <p class="code code__any">
+               &lt;body&gt;
+            </p>
+            <p class="sub__code code__any">
+               <span class="break">&lt;img src="test_site/img/cat.png" alt="Крутой и мягкий кот, который спит в очень смешной позе"&gt;</span>
+            </p>
+            <p class="code code__any">&lt;/body&gt;</p>
+            <p class="code code__any">
+               ***
+            </p>
+          </div>
+          <p class="main__par">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Вот и всё! Теперь вы можете создавать простейшие веб-сайты, где есть заголовки, тексты и даже картинки. Ну а с тем, что чуть посложнее, мы разберемся далее.
+          </p>
+          <h1 class="main__head">Списки и инструменты форматирования документа</h1>
+          <p class="main__par">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Как известно, списки бывают двух видов: нумерованные (упорядоченные) и не нумерованные (неупорядоченные). Основа у них проста и состоит из двух зеркальных тегов: тег <strong>&lt;ul&gt;</strong> для ненумерованного списка и <strong>&lt;ol&gt;</strong> для нумерованного. Для лучшего понимания и чтобы не путать их между собой, я рекомендую запомнить названия этих тегов с точки зрения слов, откуда они произошли. Первый вид списка – ненумерованный (<strong>&lt;ul&gt;</strong>) расшифровывается как "unordered list" (от англ. unordered list – не упорядоченный список). Второй вид списка – нумерованный (<strong>&lt;ol&gt;</strong>) расшифровывается как "ordered list" (от англ. ordered list – упорядоченный список). Как можно догадаться, название этих тегов – это есть первые буквы названий видов списков – <strong>ul</strong> и <strong>ol</strong>. Но эти теги еще не сами списки, а только их основа, как некий контейнер.<br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Любой список, нумерованный или ненумерованный, состоит из элементов. За это отвечает соответствующий тег – <strong>&lt;lu&gt;</strong>. Этот тег не стал исключением и у него тоже есть расшифровка – это "list item" (от англ. list item – элемент списка). Структура создания списков в таком случае получается простой (одинаково работает для обоих видов списка, только меняйте теги):
+          </p>
+          <div class="code__block__any code__block__syntax">
+            <p class="code code__any">
+               ***
+            </p>
+            <p class="code code__any">
+               &lt;body&gt;
+            </p>
+            <p class="sub__code code__any">
+               &lt;ul&gt;
+            </p>
+            <p class="sub__sub__code code__any">
+               &lt;li&gt;Первый пункт списка&lt;/li&gt;
+            </p>
+            <p class="sub__sub__code code__any">
+               &lt;li&gt;Второй пункт списка&lt;/li&gt;
+            </p>
+            <p class="sub__sub__code code__any">
+               &lt;li&gt;Третий пункт списка&lt;/li&gt;
+            </p>
+            <p class="sub__code code__any">
+               &lt;/ul&gt;
+            </p>
+            <p class="code code__any">&lt;/body&gt;</p>
+            <p class="code code__any">
+               ***
+            </p>
+         </div>
+         <div class="faq__any faq__first">
+                <!-- <img class = "faq__img" src = "/instruction/img/faq.png"> -->
+                <img class = "faq__img" src = "/img/faq.png">
+                <p class="faq__p">*для справки: и нумерованные и не нумерованные списки можно формировать каскадно, вкладывая один в другой. <br>Для этого, уже по известной схеме, формируется список, а затем, как один из его пунктов после тега &lt;li&gt;, прописывается новый подсписок тегами &lt;ol&gt; или &lt;ul&gt;. Вот, например:</p>
+                <ul class="list__faq">
+                    Список 1:
+                    <li>Пункт 1;</li>
+                    <li>Пункт 2;</li>
+                    <li>Пункт 3;</li>
+                    <ol>
+                    Еще один список, но каскадно, где родительным элементом нового списка является пункт №3 не нумерованного списка:
+                    <li>Пункт 1;</li>
+                    <li>Пункт 2;</li>
+                    <li>Пункт 3;</li>
+                    </ol>
+                </ul>
+         </div>
+         <p class="main__par">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ну а теперь элементы форматирования текста:
+        </p>
+        <ul class="list">
+            <li>&nbsp;Элемент <strong>'strong'</strong> (замена не рекомендованному тегу 'b' – "bold") – <strong>выделяет текст жирным</strong>, отмечая его важность для браузера;</li>
+            <li>&nbsp;Элемент <strong>'em'</strong> (замена не рекомендованному тегу 'i' – "italic") – <em>форматирует текст курсивом</em>, так же отмечая его важность для браузера;</li>
+            <li>&nbsp;Элемент <strong>'ins'</strong> – "inserted" – отвечает за создание <ins>подчеркнутого текста</ins>;</li>
+            <li>&nbsp;Элемент <strong>'sup'</strong> – "supertext" – отвечает за создание <sup>надстрочного текста</sup>, к примеру, для написания степеней умножения (&nbsp;2<sup>3</sup>&nbsp;) и прочих символов верхнего индекса;</li>
+            <li>&nbsp;Элемент <strong>'sub'</strong> – "subscript" – отвечает за создание <sub>подстрочного текста</sub> и прочих символов нижнего индекса;</li>
+            <li>&nbsp;Элемент <strong>'del'</strong> – "deleted" – отвечает за создание <del>зачеркнутого текста</del>;</li>
+        </ul>
+        <h1 class="main__head">Таблицы</h1>
+        <p class="main__par">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Для рисования таблиц в HTML так же существует определенный набор тегов, которые подобно тегам списка структурируются каскадно.<br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Для начала перечислим эти элементы в порядке убывания важности:
+        </p>
+
+
+
+
+
+
+
+
+    </div>
+    
+    <script src="/js/script.js"></script>
+</body>
+</html>
