@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/instruction/img/ico.png" type="image/png">
+    <link rel="shortcut icon" href="/img/ico.png" type="image/png">
+    <link rel="stylesheet" href="/instruction/css/normalize.min.css">
+    <link rel="stylesheet" href="../css/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/introduction.css">
+    <link rel="stylesheet" type="text/css" href="/instruction/css/introduction.css">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/instruction/js/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('a[href^="#"]').click(function(){
+         		var target = $(this).attr('href');
+         	    $('html, body').animate({scrollTop: $(target).offset().top}, 500);//800 - длительность скроллинга в мс
+         		return false;
+            });
+        });
+    </script>
+    <title>CSS</title>
+</head>
+
+<body>
+    <div id="top"></div>
+    <header class="header">
+        <ul class="header__list">
+            <li class="header__item"><a href="/instruction/index.html" class="header__link">Главная</a></li>
+            <li class="header__item"><a href="#" class="header__link">Раздел</a></li>
+            <li class="header__item"><a href="#" class="header__link">Раздел</a></li>
+            <li class="header__item">
+                <div class="dropdown">
+                <button class="dropbtn">Разделы</button>
+                <div class="dropdown-content">
+                    <a href="/instruction/index.html5.html'">HTML5</a>
+                    <a href="/instruction/index.css.html">CSS</a>
+                    <button class="dropbtn dropbtn__jQuery">JavaScript</button>
+                    <div class="dropdown__jQuery__div">
+                        <a class="jquery__a" href="#">jQuery</a>
+                    </div>
+                    <a href="#">Bootstrap</a>
+                </div>
+            </div></li>
+        </ul>
+        <div class="up__down">
+            <a class="hover" data-title="Переместиться в самый верх страницы" href="#top">Up</a>
+            <a class="hover" data-title="Переместиться в самый низ страницы" href="#bottom">Down</a>
+            <div id="tooltip"></div>
+        </div>
+    <p class="slogan">Make Web-Sites not War</p>
+</header>
+
+    <div class="container">
+        <h1 class="tom__name">Том II. CSS</h1>
+        <h1 class="main__head">Общие положения</h1>
+        <p class="main__par">
+            <span class="tab">CSS</span>, как HTML – это аббревиатура и расшифровывается эта аббревиатура как <strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets (от англ. Каскадные Таблицы Стилей).<br><br>
+            <span class="tab">Итак</span>, если говоря об HTML мы уже знаем, что это HyperText Markup Language (от англ. Язык Гипертекстовой Разметки), который, как мы знаем, занимается тем, <strong>ЧТО</strong> находится у вас на странице (создает каркас или скелет), то CSS занимается тем, <strong>КАК</strong> выглядит это ваше <strong>ЧТО</strong>, размещенное на странице. Проще говоря, CSS занимается стилизацией или оформлением контента, который вы разместили на странице с помощью HTML.<br><br>
+            <span class="tab">Самое</span> главное в CSS, то, что вам следует сразу строго <strong>запомнить</strong> – это формула <strong>СЕЛЕКТОР &gt; СВОЙСТВО &gt; ЗНАЧЕНИЕ</strong>! Синтаксис таков: вводится селектор, затем открываются фигурные скобки, где внутри указывается CSS свойство, после которого ставится двоеточие и указывается значение. Пойдем по порядку, сейчас объясню.<br><br>
+            <span class="tab">Помните</span>, когда мы разговаривали об HTML, я говорил что самое главное там – это теги? Они занимаются определением типа контента, который находится на странице. Так вот в случае с CSS, грубо говоря, примерное та же схема. Здесь тоже есть главный "определитель" (как тег в HTML) – это и есть селектор. Существует <strong>три</strong> базовых (основных) вида селекторов и <strong>два</strong> сторонних.
+            <p class="main__par"><span class="tab">Так</span> сказать "классические" или базовые селекторы это:</p>
+            <ul class="list">
+                <li><strong>Селектор по типу элемента</strong>, где этот самый "тип" и есть выбираемый HTML элемент. То есть, если вы хотите работать с одним или многими заголовками из HTML, то в CSS вы просто выбираете тип этого заголовка, к примеру, <strong>h1</strong>, как селектор.</li>
+                <li><strong>Селектор по классу</strong>. Вот тут уже интереснее. Помните, на странице об HTML я рассказывал про то, что у тегов могут быть различные атрибуты? Так вот <strong>class</strong> – это примерно то же самое. То есть, вы создаете HTML-элемент, к примеру &lt;h1&gt;, и задаете ему как атрибут слово <strong>class</strong>. У атрибутов, как вы помните, есть значения, но в данном случае, значение атрибута <strong>class</strong> вы можете придумывать сами. Выглядеть это может так: <strong>&lt;h1 class="head"&gt;Какой-то заголовок!&lt;/h1&gt;</strong>. Возвращаясь к CSS, вы просто берете это придуманное вами значение атрибута <strong>class</strong> и переносите его как селектор. <strong>ВАЖНО!</strong> При указании в CSS селектора по классу перед названием класса<strong style="margin: 1%; text-decoration: underline;">ВСЕГДА ставится точка</strong>!</li>
+                <li><strong>Селектор по ID</strong>. Любой ID (Identificator от англ. идентификатор), как мы знаем из обычной жизни, используется как некая уникальная характеристика ("ярлык"). Мир веб-разработки тоже не стал исключением и здесь ID тоже используется как уникальный идентификатор для элемента. Поскольку он уникален, то, соответственно, если вы придумали некий ID, то, в отличие от классов, вы можете использовать его только <strong>один</strong> раз только для <strong>одного</strong> HTML-элемента.</li>
+            </ul>
+            <p class="main__par"><span class="tab">Теперь</span> перечислим продвинутые селекторы:</p>
+            <ul class="list">
+                <li><strong>Псевдоклассы</strong> – это, грубо говоря, </li>
+            </ul>
+            
+
+            
+            
+           <!-- ст. У CSS есть возможность установки единиц измерения набором способов: с помощью абсолютной величины – в пикселях, с помощью процентов и с помощью единиц <strong>'em'</strong>. Размер одной единицы <strong>'em'</strong>, вероятно, должен быть равен 16px. Смысл использования единиц <strong>'em'</strong> в установлении размеров шрифта состоит в том, что такой способ работает относительно всего текста. То есть, если мы увеличиваем размер всего блока текста, то внутренние элементы, к которым применен <strong>'em'</strong> будет увеличен относительно него. У способа <strong>'em'</strong> есть разновидность – это <strong>'rem'</strong>, то есть root – единица измерения отсчитываемая от самого основного элемента – например, <strong>'body'</strong>. Еще одним довольно полезным вариантом регулировки размеров текста является единица <strong>'vw'</strong> – view board width (от англ. ширина окна просмотра) – позволяет вариативно менять размер текста, к которому применена данная величина, но в зависимости от размеров окна. Этот способ удобен для адаптивности к различным размерам экранов. -->
+        </p>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <div id="bottom"></div>
+
+
+
+    <script src="/js/script.js"></script>
+    <script src="/instruction/js/script.js"></script>
+</body>
+</html>
