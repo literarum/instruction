@@ -48,7 +48,7 @@
     <header class="header">
         <label for="nav-toggle" class="nav-toggle" onclick></label>
         <ul class="header__list">
-            <li class="header__item"><a href="/instruction/index.html" class="header__link">Главная</a></li>
+            <li class="header__item"><a class="hover" data-title="Перейти во введение" href="/instruction/index.html" class="header__link">Главная</a></li>
             <li class="header__item"><a href="#" class="header__link">Раздел</a></li>
             <li class="header__item"><a href="#" class="header__link">Раздел</a></li>
             <li class="header__item">
@@ -66,11 +66,14 @@
             </div></li>
         </ul>
         <div class="up__down">
-            <a class="hover" data-title="Переместиться в самый верх страницы" href="#top">Up</a>
-            <a class="hover" data-title="Переместиться в самый низ страницы" href="#bottom">Down</a>
+            <a class="hover" data-title="Переместиться в самый верх страницы" href="#top">Наверх</a>
+            <a class="hover" data-title="Переместиться в самый низ страницы" href="#bottom">Вниз</a>
             <div id="tooltip"></div>
         </div>
     <p class="slogan">Make Web-Sites not War</p>
+    <div class="logo">
+        <img src="/instruction/img/logo.png">
+    </div>
 </header>
 
     <div class="container">
@@ -89,7 +92,15 @@
             </ul>
             <p class="main__par"><span class="tab">Теперь</span> перечислим продвинутые селекторы:</p>
             <ul class="list">
-                <li><strong>Псевдоклассы</strong> – это, грубо говоря, </li>
+                <li><strong>Псевдоклассы</strong> – это, грубо говоря, те же самые классы, действующие в той же последовательности селекторов, но вот только отвечают они за элементы, которые не размещены в дереве элементов. То есть, как бы, косвенно на что-то ссылающиеся. "Что-то" – это какое-то свойство <strong>уже</strong> существующее в дереве элементов объекта, но не прописанное напрямую. Это хорошо можно понять на примере псевдоклассов <strong>:active</strong>, <strong>:visited</strong> или <strong>:hover</strong>. Первый, к примеру, может делать ссылку той веб страницы, где вы сейчас находитесь, выделенной по различным параметрам, говоря вам, что "Вы здесь!". Второй может делать ваши ссылки, на которые вы уже нажимали, другого цвета. Третий же, как можно догадаться по его названию, отвечает за какие-то действия, происходящие при наведении мыши на объект. Синтаксически псевдоклассы оформляются как: <strong>селектор:псевдокласс</strong>, то есть, через двоеточие.<br> Псевдоклассов бывает множество, подробнее обо всех вы можете прочесть на сайте <button class="button" onclick="window.location.href='https://www.w3schools.com/css/css_pseudo_classes.asp">W3Schools</button>
+                <div class="faq__any faq__flex">
+                    <img src="/instruction/img/faq.png">
+                    <p><span class="tab">Не</span> знаете английский, чтобы читать статьи на W3Schools – используйте встроенный в браузер переводчик. Но вам должно быть стыдно!</p>
+                </div>
+                </li>
+                <li>А вот псевдоэлементы совсем не стоит путать с псевдоклассами, как бы вам не хотелось... Проще всего понять концепцию псевдоэлементов можно по аналогии с чем-то виртуальным. Впрочем, да, они именно этим и занимаются: создают виртуальный элемент. Чаще всего в роли псевдоэлементов используют <strong>::before</strong> и <strong>::after</strong>. С помощью первого можно, к примеру, создать объект, находящийся <strong>ДО</strong> основного объекта, к которому этот виртуальный псевдоэлемент применен. Ну а с помощью второго, по аналогии, <strong>ПОСЛЕ</strong>. Синтаксически, как можно заметить, псевдоэлементы оформляются как <strong>селектор::псевдоэлемент</strong>, то есть, через два двоеточия. У этой функции довольно обширная область применения и псевдоэлементов тоже существует большое множество,<br>
+                Подробнее о псевдоэлементах можно прочесть <button class="button" onclick="window.location.href='https://www.w3schools.com/css/css_pseudo_elements.asp'">здесь</button>, на сайте W3Schools.
+                </li>
             </ul>
             
 

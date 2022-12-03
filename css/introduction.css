@@ -15,7 +15,7 @@ body {
   font-family: "IBM Plex Sans", sans-serif;
   background: linear-gradient(
     90deg,
-    rgba(59, 9, 121, 1) -15%,
+    rgba(59, 9, 121, 1) -40%,
     rgba(147, 0, 255, 1) 48%,
     rgba(207, 0, 255, 0.5) 100%
   );
@@ -58,6 +58,14 @@ body {
 .header__link {
   transition: .5s;
   transition-timing-function: ease-out;
+}
+
+.header__link:active {
+  background-color: red;
+}
+
+.header__link:focus {
+  background-color: red;
 }
 
 .header a {
@@ -142,8 +150,8 @@ body {
 .dropbtn__jQuery:hover,
 .dropdown__jQuery__div:hover,
 .dropbtn:hover {
-  color: rgb(255, 255, 255);
-  text-shadow: 0 0 5px rgba(255, 255, 255, 1);
+  color: rgba(0, 0, 0, .8);
+  text-shadow: 0 0 10px #fff, 1px 1px 2px #fff;
   transition: .5s;
   transition-timing-function: ease-out;
 }
@@ -172,15 +180,36 @@ body {
   flex-grow: 1;
 }
 
+.logo {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  justify-self: center;
+  align-self: center;
+}
+
+.logo img {
+  width: 30px;
+}
+
 .up__down {
   display: flex;
   justify-content: center;
-  flex-grow: 1;
+  flex-grow: 2;
   gap: 10%;
 }
 
+.up__down::before,
+.up__down::after {
+  content: '';
+  height: 40px;
+  width: 1px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 2px rgb(76, 76, 76);
+}
+
 .up__down a {
-  color: white;
+  padding: .4rem .8rem;
   font-size: 23px;
   text-decoration: none;
   transition: .5s;
@@ -188,7 +217,8 @@ body {
 }
 
 .up__down a:hover {
-  text-shadow: 0 0 5px rgba(255, 255, 255, 1);
+  color: rgba(0, 0, 0, .8);
+  text-shadow: 0 0 10px #fff, 1px 1px 2px #fff;
   transition: .5s;
   transition-timing-function: ease-out;
 }
@@ -471,8 +501,11 @@ body {
 
 .nav > ul > li > a:hover,
 .nav > ul > li > a:focus {
-  color: white;
+  font-weight: 300;
   padding-left: 15px;
+  text-shadow: 0 0 10px #fff, 1px 1px 2px #fff;
+  color: rgba(0, 0, 0, .8);
+  transition: .5s;
 }
 
 /**
@@ -1243,9 +1276,14 @@ input[type="radio"]:checked + label:after {
 
 
 
+@media screen and (max-width: 1310px) {
+  .up__down::before,
+  .up__down::after {
+    display: none;
+  }
+}
 
-
-@media screen and (max-width: 1060px) {
+@media screen and (max-width: 1115px) {
   header {
     display: flex;
     flex-wrap: nowrap;
@@ -1259,14 +1297,17 @@ input[type="radio"]:checked + label:after {
   header .header__list {
     display: none;
   }
-  .logo {
-    font-size: 1.8rem;
-    margin: 10px 0 0 10px;
-  }
+
   .toggle__menu {
     display: flex;
   }
   #tooltip {
     opacity: 0;
+  }
+}
+
+@media screen and (max-width: 605px) {
+  header .slogan {
+    display: none;
   }
 }
