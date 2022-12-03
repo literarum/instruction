@@ -30,32 +30,47 @@
 </head>
 <body>
     <div id="top"></div>
+    <input type="checkbox" id="nav-toggle" hidden>
+    <nav class="nav">
+        <ul>
+            <li><a href="/instruction/index.html">Главная</a>
+            <li><a href="/instruction/index.html5.html'">HTML5</a>
+            <li><a href="/instruction/index.css.html">CSS</a>
+            <li><a href="#4">Четыре</a>
+            <li><a href="#5">Пять</a>
+            <li><a href="#6">Шесть</a>
+            <li><a href="#7">Семь</a> 
+        </ul>
+    </nav>
+    <div class="mask-content"></div>
+    <div id="top"></div>
     <header class="header">
-            <ul class="header__list">
-                <li class="header__item"><a href="/instruction/index.html" class="header__link">Главная</a></li>
-                <li class="header__item"><a href="#" class="header__link">Раздел</a></li>
-                <li class="header__item"><a href="#" class="header__link">Раздел</a></li>
-                <li class="header__item">
-                    <div class="dropdown">
-                    <button class="dropbtn">Разделы</button>
-                    <div class="dropdown-content">
-                        <a href="/instruction/index.html5.html'">HTML5</a>
-                        <a href="#">CSS</a>
-                        <button class="dropbtn dropbtn__jQuery">JavaScript</button>
-                        <div class="dropdown__jQuery__div">
-                            <a class="jquery__a" href="#">jQuery</a>
-                        </div>
-                        <a href="#">Bootstrap</a>
+        <label for="nav-toggle" class="nav-toggle" onclick></label>
+        <ul class="header__list">
+            <li class="header__item"><a href="/instruction/index.html" class="header__link">Главная</a></li>
+            <li class="header__item"><a href="#" class="header__link">Раздел</a></li>
+            <li class="header__item"><a href="#" class="header__link">Раздел</a></li>
+            <li class="header__item">
+                <div class="dropdown">
+                <button class="dropbtn">Разделы</button>
+                <div class="dropdown-content">
+                    <a href="/instruction/index.html5.html'">HTML5</a>
+                    <a href="/instruction/index.css.html">CSS</a>
+                    <button class="dropbtn dropbtn__jQuery">JavaScript</button>
+                    <div class="dropdown__jQuery__div">
+                        <a class="jquery__a" href="#">jQuery</a>
                     </div>
-                </div></li>
-            </ul>
-            <div class="up__down">
-                <a class="hover" data-title="Переместиться в самый верх страницы" href="#top">Up</a>
-                <a class="hover" data-title="Переместиться в самый низ страницы" href="#bottom">Down</a>
-                <div id="tooltip"></div>
-            </div>
-        <p class="slogan">Make Web-Sites not War</p>
-    </header>
+                    <a href="#">Bootstrap</a>
+                </div>
+            </div></li>
+        </ul>
+        <div class="up__down">
+            <a class="hover" data-title="Переместиться в самый верх страницы" href="#top">Up</a>
+            <a class="hover" data-title="Переместиться в самый низ страницы" href="#bottom">Down</a>
+            <div id="tooltip"></div>
+        </div>
+    <p class="slogan">Make Web-Sites not War</p>
+</header>
 
     <div class="container">
 
