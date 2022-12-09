@@ -60,14 +60,6 @@ body {
   transition-timing-function: ease-out;
 }
 
-.header__link:active {
-  background-color: red;
-}
-
-.header__link:focus {
-  background-color: red;
-}
-
 .header a {
   text-decoration: none;
   color: rgb(255, 255, 255);
@@ -155,7 +147,7 @@ body {
 /* Меняет цвет ссылок в выпадающем списке при наведении */
 .dropdown-content a:hover,
 .dropdown-content-links a:hover,
-.header__link:hover,
+.header__item a:hover,
 .dropbtn__jQuery:hover,
 .dropdown__jQuery__div:hover,
 .dropbtn:hover,
@@ -195,6 +187,7 @@ body {
 }
 
 .logo {
+  opacity: .5;
   display: flex;
   flex-grow: 1;
   justify-content: center;
@@ -259,7 +252,7 @@ body {
  */
  
  .nav {
-  /*  ширна произвольная, не стесняйтесь экспериментировать */
+  /*  ширина произвольная, не стесняйтесь экспериментировать */
   width: 320px;
   min-width: 320px;
   /* фиксируем и выставляем высоту панели на максимум */
@@ -359,48 +352,6 @@ body {
   -webkit-box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
   overflow-y: auto;
 }
-
-/* 
-* смещение контента страницы
-* на размер ширины панели,
-* фишка необязательная, на любителя
-*/
-
-[id='nav-toggle']:checked ~ main > article {
-  -webkit-transform: translateX(320px);
-  -moz-transform: translateX(320px);
-  transform: translateX(320px);
-}
-
-/*
-* изменение символа переключателя,
-* привычный крестик (MULTIPLICATION X), 
-* вы можете испльзовать любой другой значок
-*/
-
-[id='nav-toggle']:checked ~ .nav > .nav-toggle:after {
-  content: '\2715';
-}
-
-/**
-* профиксим баг в Android <= 4.1.2
-* см: http://timpietrusky.com/advanced-checkbox-hack
-*/
-
-body {
-  -webkit-animation: bugfix infinite 1s;
-}
-
-@-webkit-keyframes bugfix {
-  to {
-    padding: 0;
-  }
-}
-
-/**
-* позаботьтимся о средних и маленьких экранах
-* мобильных устройств
-*/
 
 @media screen and (min-width: 320px) {
   html,
@@ -692,7 +643,6 @@ body {
   -webkit-text-fill-color: #fff;
   color: #fff;
   display: flex;
-  align-items: top;
   justify-content: center;
   align-content: center;
   text-align: center;
@@ -1379,10 +1329,18 @@ input[type="checkbox"]:not(:checked) + label:before {
   #tooltip {
     opacity: 0;
   }
+  
+  .tom__name {
+    font-size: 4rem;
+  }
 }
 
 @media screen and (max-width: 605px) {
   header .slogan {
     display: none;
+  }
+
+  .tom__name {
+    font-size: 3rem;
   }
 }
