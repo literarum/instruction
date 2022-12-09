@@ -24,7 +24,6 @@ $('document').ready(function() {
 		if($(window).scrollTop() > 100) {
 			$(".header").addClass("active", 1000);
 		} else {
-			//remove the background property so it comes transparent again (defined in your css)
 		   $(".header").removeClass("active", 1000);
 		}
 	});
