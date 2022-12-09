@@ -33,13 +33,13 @@
     <input type="checkbox" id="nav-toggle" hidden>
     <nav class="nav">
         <ul>
-            <li><a target="_blank" href="/instruction/index.html">Главная</a></li>
-            <li><a target="_blank" href="/instruction/index.html5.html">HTML5</a></li>
-            <li><a target="_blank" href="/instruction/index.css.html">CSS</a></li>
+            <li><a href="/instruction/index.html">Главная</a></li>
+            <li><a href="/instruction/index.html5.html">HTML5</a></li>
+            <li><a href="/instruction/index.css.html">CSS</a></li>
             <li style="margin-left: 1rem; font-size: 24px; color:rgba(0, 0, 0, .8)">Полезные ссылки</li>
-            <li><a target="_blank" href="https://www.w3schools.com/">W3Schools</a></li>
-            <li><a target="_blank" href="https://developer.mozilla.org/ru/">MDN</a></li>
-            <li><a target="_blank" href="https://html5book.ru/">HTML5Book</a></li>
+            <li><a href="https://www.w3schools.com/">W3Schools</a></li>
+            <li><a href="https://developer.mozilla.org/ru/">MDN</a></li>
+            <li><a href="https://html5book.ru/">HTML5Book</a></li>
             <li><a href="#7">Семь</a></li>
         </ul>
     </nav>
@@ -97,7 +97,8 @@
             </ul>
         </div>
         <h1 class="tom__name">Том I. HTML5</h1>
-        <h1 class="main__head" id="general">Общие положения</h1>
+        <div id="general">&nbsp;</div>
+        <h1 class="main__head">Общие положения</h1>
         <p class="main__par">
             <span class="tab">HTML5</span> зиждется на нескольких базовых тегах, которые формируют основную разметку и, применив которые, их вам может быть уже достаточно для разметки вашей первой, простой, но информативной web-страницы.<br><br>
             <span class="tab">Итак</span>, проблема: у вас есть текст, который вам необходимо разместить на вашем сайте. Как её решить? Для этого в HTML существует тег параграфов текста – тег <strong>&lt;p&gt;</strong>, который используется как контейнер для работы с текстом. А еще, это еще один зеркальный тег.<br>
@@ -124,7 +125,8 @@
           <p class="main__par">
             <span class="tab">Вот</span> и всё! Теперь вы можете создавать простейшие веб-сайты, где есть заголовки, тексты и даже картинки. Ну а с тем, что чуть посложнее, мы разберемся далее.
           </p>
-          <h1 class="main__head" id="lists">Списки и инструменты форматирования документа</h1>
+          <div id="lists">&nbsp;</div>
+          <h1 class="main__head">Списки и инструменты форматирования документа</h1>
           <p class="main__par">
             <span class="tab">Как</span> известно, списки бывают двух видов: нумерованные (упорядоченные) и не нумерованные (неупорядоченные). Основа у них проста и состоит из двух зеркальных тегов: тег <strong>&lt;ul&gt;</strong> для ненумерованного списка и <strong>&lt;ol&gt;</strong> для нумерованного. Для лучшего понимания и чтобы не путать их между собой, я рекомендую запомнить названия этих тегов с точки зрения слов, откуда они произошли. Первый вид списка – ненумерованный (<strong>&lt;ul&gt;</strong>) расшифровывается как "unordered list" (от англ. unordered list – не упорядоченный список). Второй вид списка – нумерованный (<strong>&lt;ol&gt;</strong>) расшифровывается как "ordered list" (от англ. ordered list – упорядоченный список). Как можно догадаться, название этих тегов – это есть первые буквы названий видов списков – <strong>ul</strong> и <strong>ol</strong>. Но эти теги еще не сами списки, а только их основа, как некий контейнер.<br><br>
             <span class="tab">Любой</span> список, нумерованный или ненумерованный, состоит из элементов. За это отвечает соответствующий тег – <strong>&lt;lu&gt;</strong>. Этот тег не стал исключением и у него тоже есть расшифровка – это "list item" (от англ. list item – элемент списка). Структура создания списков в таком случае получается простой (одинаково работает для обоих видов списка, только меняйте теги):
@@ -157,7 +159,6 @@
             </p>
          </div>
          <div class="faq__any faq__first">
-                <!-- <img class = "faq__img" src = "/instruction/img/faq.png"> -->
                 <img class = "faq__img" src = "/instruction/img/faq.png">
                 <p class="faq__p">*для справки: и нумерованные и не нумерованные списки можно формировать каскадно, вкладывая один в другой. <br>Для этого, уже по известной схеме, формируется список, а затем, как один из его пунктов после тега &lt;li&gt;, прописывается новый подсписок тегами &lt;ol&gt; или &lt;ul&gt;. Вот, например:</p>
                 <ul class="list__faq">
@@ -184,7 +185,8 @@
             <li>Элемент <strong>'sub'</strong> – "subscript" – отвечает за создание <sub>подстрочного текста</sub> и прочих символов нижнего индекса;</li>
             <li>Элемент <strong>'del'</strong> – "deleted" – отвечает за создание <del>зачеркнутого текста</del>;</li>
         </ul>
-        <h1 class="main__head" id="tables">Таблицы</h1>
+        <div id="tables">&nbsp;</div>
+        <h1 class="main__head">Таблицы</h1>
         <p class="main__par">
             <span class="tab">Для</span> рисования таблиц в HTML так же существует определенный набор тегов, которые подобно тегам списка структурируются каскадно.<br><br>
             <span class="tab">Для</span> начала перечислим эти элементы в порядке убывания важности:
@@ -230,7 +232,8 @@
                 </tbody>
              </table>
         </div>
-        <h1 class="main__head" id="links">Ссылки</h1>
+        <div id="links">&nbsp;</div>
+        <h1 class="main__head">Ссылки</h1>
         <p class="main__par">
             <span class="tab">За</span> создание ссылок внутри вашей веб-страницы отвечает зеркальный тег &lt;a&gt; – он является одним из важнейших элементов HTML и предназначен для создания ссылок. У тега &lt;a&gt; есть два предназначения: первое непосредственно относится к созданию ссылки, чтобы перевести вас ну другую веб-страницу, второе же устанавливает якорь. Якорем называется закладка внутри страницы, которую можно указать в качестве цели ссылки. При использовании ссылки, которая указывает на якорь, происходит переход к закладке внутри веб-страницы. К примеру, так устроено оглавление в на странице, которую вы сейчас читаете.<br>
             <span class="tab">Простейшим</span> способом создать ссылку якорного типа было бы задать <strong>id</strong> в теге той части страницы, куда необходимо переместиться, а в теге ссылки – прописать <strong>href="#указанный_id"</strong>.<br><br>
@@ -246,7 +249,8 @@
                 <img class = "faq_img" src = "/instruction/img/faq.png">
                 <p>*для справки: в HTML так же существует специальный тег <strong>'button'</strong>, который создает на странице кнопку. К этой кнопке затем можно привязать самые различные действия посредствам языка JavaScript, но в том числе и закреплять к ней ссылки.</p>
         </div>
-        <h1 class="main__head" id="forms">Формы</h1>
+        <div id="forms">&nbsp;</div>
+        <h1 class="main__head">Формы</h1>
         <p class="main__par">
             <span class="tab">Элемент</span> <strong>'form'</strong> (от англ. форма) – это тег создания блока форм, то есть полей ввода на web-странице. Использует в себе следующие теги:
         </p>
@@ -425,7 +429,8 @@
                 </select>
             </div>
         </div>
-        <h1 class="main__head" id="semantic">Видео, аудио и семантические элементы</h1>
+        <div id="semantic">&nbsp;</div>
+        <h1 class="main__head">Видео, аудио и семантические элементы</h1>
         <p class="main__par">
             <span class="tab">Разумеется</span>, на web-страницу нужно размещать не только текстовую информацию, но еще и мультимедийную. Для этого в HTML существуют специальные теги <strong>'audio'</strong> и <strong>'video'</strong>. И <strong>'audio'</strong> и <strong>'video'</strong> теги представляют из себя некий контейнер, внутри которого, посредствам тега <strong>'source'</strong>, где прописывается имя/путь к файлу и атрибута <strong>'type'</strong> (= "video/'формат'"" или = "audio/'формат'"), к ним прикрепляется соответствующий аудио/видео файл.
         </p>
@@ -456,7 +461,7 @@
                 </p>
         </div>
         <p class="main__par"><span class="tab">На</span> этом наше краткое путешествие по огромному миру языка HTML5 подошло к концу. Если вы хотите подробнее рассмотреть язык, вы можете воспользоваться сайтами <button class="button" onclick="window.open('https://www.w3schools.com/');">W3Schools</button> (очень рекомендую), <button class="button" onclick="window.open('https://developer.mozilla.org/ru/');">MDN</button> или <button class="button" onclick="window.open('https://html5book.ru/');">HTML5Book</button>. При этом вы не обязаны читать подробности конкретно на каждом из выбранных сайтов. Гораздо более простой и эффективный вариант – воспользоваться Гуглом, спросив у него интересующую вас тему.<br><br>
-        <span class="tab">Ну</span> а теперь мы можем перейти ко второму, не менее интересному и объемному языку стилей – CSS. Для перехода на страницу посвященную CSS, вы можете воспользоваться <button class="button" onclick="window.open('/index.css.html');">этой</button> кнопкой или меню навигации в верхней части страницы.</p>
+        <span class="tab">Ну</span> а теперь мы можем перейти ко второму, не менее интересному и объемному языку стилей – CSS. Для перехода на страницу посвященную CSS, вы можете воспользоваться <button class="button" onclick="window.location.href = '/index.css.html';">этой</button> кнопкой или меню навигации в верхней части страницы.</p>
 
 
 
