@@ -40,9 +40,15 @@ body {
   max-width: 100%;
   width: 100%;
   height: 50px;
-  background-color: #d1c3fc;
+  background-color: #d1c3fca5;
   z-index: 10000;
   border-bottom: .5px solid black;
+  transition: all .7s;
+}
+
+.active {
+  background-color: #d1c3fc;
+  transition: all .7s;
 }
 
 .header__list {
