@@ -791,7 +791,7 @@ body {
   margin-block: 3%;
   display: grid;
   grid-template-columns: 3rem 1fr;
-  grid-template-rows: 8rem 3rem 1fr;
+  grid-template-rows: 10rem 3rem 1fr;
   justify-content: space-between;
   align-items: center;
 }
