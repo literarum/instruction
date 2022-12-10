@@ -20,11 +20,15 @@ $('document').ready(function() {
 		$('#tooltip').fadeOut(150);
 	});
 
-	$(window).on("scroll", function() {
+	$(window).on('scroll', function() {
 		if($(window).scrollTop() > 100) {
-			$(".header").addClass("active", 1000);
+			$('.header, .nav-toggle').addClass('active', 1000);
 		} else {
-		   $(".header").removeClass("active", 1000);
+		   $('.header').removeClass('active', 1000);
 		}
 	});
+
+	$('#input__button').on('click', function() {
+		$('#toggle__input').slideToggle(1000);
+	})
 });

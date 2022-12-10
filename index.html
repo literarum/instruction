@@ -26,6 +26,12 @@
             });
         });
     </script>
+    <style>
+        .header__list li:nth-child(1) a {
+            color: rgba(0, 0, 0, 1) !important;
+            text-shadow: 0 0 10px #fff, 1px 1px 1px #fff;
+        }
+    </style>
     <title>Главная || Введение</title>
 </head>
 <body>
@@ -46,7 +52,7 @@
     <header class="header">
         <label for="nav-toggle" class="nav-toggle" onclick></label>
         <ul class="header__list">
-            <li class="header__item"><a class="hover" data-title="Перейти во введение" href="/instruction/index.html" class="header__link">Главная</a></li>
+            <li class="header__item"><a class="hover" data-title="Перейти во введение" href="/instruction/index.html" tabindex="1" class="header__link">Главная</a></li>
             <li class="header__item"><a href="#" class="header__link">Раздел</a></li>
             <div class="dropdown-links">
                 <button class="dropbtn-links">Cсылки</button>
@@ -159,7 +165,7 @@
         </p>
         <hr style="margin: 3% 0; height: 3px; border: none; border-radius: 10px; background-color: rgba(255, 255, 255, .6); filter: drop-shadow(0 0 5px rgba(255, 255, 255, 1));">
         <p class="main__par">
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Далее вас ждет увлекательное путешествие в мир HTML5. Для перехода на страницу, посвященную этому языку, вы можете нажать на <button class="button" onclick="window.location.href = 'index.html5.html';">эту</button> кнопку, либо через меню в верхней панели навигации в графе "Разделы".
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Далее вас ждет увлекательное путешествие в мир HTML5. Для перехода на страницу, посвященную этому языку, вы можете нажать на <button class="button" onclick="window.location.href = '/instruction/index.html5.html';">эту</button> кнопку, либо через меню в верхней панели навигации в графе "Разделы".
         </p>
         <div id="bottom"></div>
     </div>

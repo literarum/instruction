@@ -264,7 +264,7 @@ body {
   /* фиксируем и выставляем высоту панели на максимум */
   height: 100%;
   position: fixed;
-  top: 5%;
+  top: 7%;
   bottom: 0;
   margin: 0;
   /* сдвигаем (прячем) панель относительно левого края страницы */
@@ -292,7 +292,7 @@ body {
   /* определяем цвет фона переключателя
    * чаще всего в соответствии с цветом фона панели
   */
-  background: inherit;
+  background-color: transparent;
   /* цвет текста */
   color: #fff;
   /* вид курсора */
@@ -1245,6 +1245,11 @@ input[type="checkbox"]:not(:checked) + label:before {
   margin: 3% auto;
 }
 
+select option {
+  color: #000;
+  background-color: #fff;
+}
+
 .select-wrapper select {
   padding: 0 20px 0 7px;
   background: transparent;
@@ -1314,6 +1319,12 @@ input[type="checkbox"]:not(:checked) + label:before {
   }
 }
 
+@media screen and (max-width: 1000px) {
+  .container {
+    margin-top: 8%;
+  }
+}
+
 @media screen and (max-width: 1115px) {
   header {
     display: flex;
@@ -1332,6 +1343,7 @@ input[type="checkbox"]:not(:checked) + label:before {
   .toggle__menu {
     display: flex;
   }
+
   #tooltip {
     opacity: 0;
   }
@@ -1345,8 +1357,26 @@ input[type="checkbox"]:not(:checked) + label:before {
   header .slogan {
     display: none;
   }
+  
+  .contents__header {
+    font-size: 2rem;
+  }
+
+  .list__tableOf a,
+  .list__tableOf li {
+    font-size: .8rem;
+    margin-bottom: 1%;
+  }
+
+  .container {
+    margin-top: 15%;
+  }
 
   .tom__name {
-    font-size: 3rem;
+    font-size: 2.5rem;
+  }
+
+  .main__head {
+    font-size: 1.8rem;
   }
 }
