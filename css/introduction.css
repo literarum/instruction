@@ -549,7 +549,7 @@ body {
   padding-top: -5%;
   max-width: 80%;
   border-radius: 5px;
-  font-size: 4rem;
+  font-size: 3rem;
   text-align: center;
   text-transform: uppercase;
   color: #fff;
@@ -567,7 +567,7 @@ body {
   align-content: center;
   flex-direction: column;
   max-width: 80%;
-  margin-top: .4rem;
+  margin-top: 1.2rem;
   text-align: center;
 }
 
