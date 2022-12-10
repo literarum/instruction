@@ -286,12 +286,6 @@ body {
   text-decoration: none;
 }
 
-/* цвет текста при наведении */
-
-.nav-toggle:hover {
-  color: #f4f4f4;
-}
-
 /**
 * Скрытый чекбокс (флажок)
 * невидим и недоступен :)
@@ -436,19 +430,6 @@ body {
 }
 
 /**
-* состояние ссылок меню при наведении
-*/
-
-.nav > ul > li > a:hover,
-.nav > ul > li > a:focus {
-  font-weight: 300;
-  padding-left: 15px;
-  text-shadow: 0 0 10px #fff, 1px 1px 2px #fff;
-  color: rgba(0, 0, 0, .8);
-  transition: .5s;
-}
-
-/**
 * линия подчеркивания ссылок меню
 */
 
@@ -475,26 +456,6 @@ body {
   background: #fff;
   -webkit-transition: width .5s ease;
   transition: width .5s ease;
-}
-
-/**
-* анимируем линию подчеркивания 
-* ссылок при наведении
-*/
-
-.nav > ul > li > a:hover:before {
-  height: .1px;
-  width: 0%;
-  background: #fff;
-  -webkit-transition: width .5s ease;
-  transition: width .5s ease;
-}
-
-.nav > ul > li > a:hover:after {
-  width: 0%;
-  background: transparent;
-  -webkit-transition: width 0s ease;
-  transition: width 0s ease;
 }
 
 /* фон затемнения на основной контент 
@@ -543,13 +504,6 @@ body {
   list-style-type: none;
   line-height: 1.5;
   font-size: 1.5rem;
-  transition: .5s;
-}
-
-.table__of__contents a:hover {
-  margin-left: 1em;
-  color: rgba(0, 0, 0, .8);
-  text-shadow: 0 0 10px #fff, 1px 1px 2px #fff;
   transition: .5s;
 }
 
@@ -729,11 +683,6 @@ body {
   cursor: pointer;
   margin: .2rem;
   transition: .5s ease-out;
-}
-
-.button:hover {
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, .4), -2px -2px 8px rgba(0, 0, 0, .4);
-  transition: .2s ease-out;
 }
 
 .tom__name {
@@ -1389,4 +1338,53 @@ select option {
   transition: .5s;
   transition-timing-function: ease-out;
 }
+
+/* цвет текста при наведении */
+.nav-toggle:hover {
+  color: #f4f4f4;
+}
+
+/**
+* состояние ссылок меню при наведении
+*/
+.nav > ul > li > a:hover,
+.nav > ul > li > a:focus {
+  font-weight: 300;
+  padding-left: 15px;
+  text-shadow: 0 0 10px #fff, 1px 1px 2px #fff;
+  color: rgba(0, 0, 0, .8);
+  transition: .5s;
+}
+
+/**
+* анимируем линию подчеркивания 
+* ссылок при наведении
+*/
+.nav > ul > li > a:hover:before {
+  height: .1px;
+  width: 0%;
+  background: #fff;
+  -webkit-transition: width .5s ease;
+  transition: width .5s ease;
+}
+
+.nav > ul > li > a:hover:after {
+  width: 0%;
+  background: transparent;
+  -webkit-transition: width 0s ease;
+  transition: width 0s ease;
+}
+
+.table__of__contents a:hover {
+  margin-left: 1em;
+  color: rgba(0, 0, 0, .8);
+  text-shadow: 0 0 10px #fff, 1px 1px 2px #fff;
+  transition: .5s;
+}
+
+.button:hover {
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, .4), -2px -2px 8px rgba(0, 0, 0, .4);
+  transition: .2s ease-out;
+}
+
 }
