@@ -11,6 +11,16 @@ html * {
   font-family: "IBM Plex Sans", sans-serif;
 }
 
+.progress-bar {
+  position: fixed;
+  left: 0;
+  top: 50px;
+  height: 4px;
+  width: 0%;
+  background: rgba(255, 255, 255, .7);
+  box-shadow: 0 0 3px rgba(255, 255, 255, .8);
+}
+
 body {
   font-family: "IBM Plex Sans", sans-serif;
   background: linear-gradient(
