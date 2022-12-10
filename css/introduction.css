@@ -1316,6 +1316,7 @@ select option {
   .up__down::before,
   .up__down::after {
     display: none;
+    pointer-events: none;
   }
 }
 
@@ -1338,6 +1339,7 @@ select option {
 
   header .header__list {
     display: none;
+    pointer-events: none;
   }
 
   .toggle__menu {
