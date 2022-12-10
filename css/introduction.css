@@ -150,30 +150,6 @@ body {
   transition-timing-function: ease-out;
 }
 
-/* Меняет цвет ссылок в выпадающем списке при наведении */
-.dropdown-content a:hover,
-.dropdown-content-links a:hover,
-.header__item a:hover,
-.dropbtn__jQuery:hover,
-.dropdown__jQuery__div:hover,
-.dropbtn:hover,
-.dropbtn-links:hover
- {
-  color: rgba(0, 0, 0, .8);
-  text-shadow: 0 0 10px #fff, 1px 1px 2px #fff;
-  transition: .2s;
-  transition-timing-function: ease-out;
-}
-
-.dropdown__jQuery__div:hover::before {
-  background-color: #fff;
-  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 1));
-  transition: .5s;
-  transition-timing-function: ease-out;
-  box-shadow: 0 0 3px rgba(255, 255, 255, 1);
-  background-color: rgba(0, 0, 0, 1);
-}
-
 /* Показывает выпадающий список при наведении */
 .dropdown:hover .dropdown-content,
 .dropdown-links:hover .dropdown-content-links {
@@ -225,13 +201,6 @@ body {
   padding: .4rem .8rem;
   font-size: 23px;
   text-decoration: none;
-  transition: .5s;
-  transition-timing-function: ease-out;
-}
-
-.up__down a:hover {
-  color: rgba(0, 0, 0, .8);
-  text-shadow: 0 0 10px #fff, 1px 1px 2px #fff;
   transition: .5s;
   transition-timing-function: ease-out;
 }
@@ -1237,7 +1206,7 @@ input[type="checkbox"]:not(:checked) + label:before {
   align-items: center;
   height: 420px;
   width: 600px;
-  max-width: 32%;
+  max-width: 40%;
   padding: 35px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.45), inset 0 0 20px rgba(0, 0, 0, 0.1);
   background-color: rgba(255, 255, 255, 0.1);
@@ -1316,7 +1285,6 @@ select option {
   .up__down::before,
   .up__down::after {
     display: none;
-    pointer-events: none;
   }
 }
 
@@ -1339,7 +1307,6 @@ select option {
 
   header .header__list {
     display: none;
-    pointer-events: none;
   }
 
   .toggle__menu {
@@ -1389,4 +1356,37 @@ select option {
   .attention h1 {
     font-size: 3em;
   }
+}
+
+@media (hover: hover) {
+  /* Меняет цвет ссылок в выпадающем списке при наведении */
+.dropdown-content a:hover,
+.dropdown-content-links a:hover,
+.header__item a:hover,
+.dropbtn__jQuery:hover,
+.dropdown__jQuery__div:hover,
+.dropbtn:hover,
+.dropbtn-links:hover
+ {
+  color: rgba(0, 0, 0, 1);
+  text-shadow: 0 0 10px #fff, 1px 1px 2px #fff;
+  transition: .2s;
+  transition-timing-function: ease-out;
+}
+
+.dropdown__jQuery__div:hover::before {
+  background-color: #fff;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 1));
+  transition: .5s;
+  transition-timing-function: ease-out;
+  box-shadow: 0 0 3px rgba(255, 255, 255, 1);
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.up__down a:hover {
+  color: rgba(0, 0, 0, .8);
+  text-shadow: 0 0 10px #fff, 1px 1px 2px #fff;
+  transition: .5s;
+  transition-timing-function: ease-out;
+}
 }

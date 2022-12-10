@@ -27,9 +27,9 @@
         });
     </script>
     <style>
-        .dropbtn,
-        .dropdown-content a:nth-child(1) {
-            color: rgba(0, 0, 0, 1) !important;
+        .clicked,
+        .dropdown-content a:nth-child(1):not(.jquery__a) {
+            color: rgba(0, 0, 0, 1);
             text-shadow: 0 0 10px #fff, 1px 1px 1px #fff;
         }
     </style>
@@ -66,7 +66,7 @@
             </div>
             <li class="header__item">
                 <div class="dropdown">
-                <button class="dropbtn">Разделы</button>
+                <button class="dropbtn clicked">Разделы</button>
                 <div class="dropdown-content">
                     <a href="/instruction/index.html5.html">HTML5</a>
                     <a href="/instruction/index.css.html">CSS</a>
@@ -433,9 +433,9 @@
                 <div class="select-arrow-3"></div>
                 <div class="select-arrow-3"></div>
                 <select>
-                    <option>Русский</option>
-                    <option>Американец</option>
-                    <option>Мексиканец</option>
+                    <option>Российское</option>
+                    <option>Американское</option>
+                    <option>Мексиканское</option>
                 </select>
             </div>
         </div>
