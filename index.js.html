@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/instruction/img/ico.png" type="image/png">
+    <link rel="shortcut icon" href="/img/ico.png" type="image/png">
+    <link rel="stylesheet" href="/instruction/css/normalize.min.css">
+    <link rel="stylesheet" href="../css/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/introduction.css">
+    <link rel="stylesheet" type="text/css" href="/instruction/css/introduction.css">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/instruction/js/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script>
+        $(function(){
+            $('a[href^="#"]').click(function(){
+         		var target = $(this).attr('href');
+         	    $('html, body').animate({scrollTop: $(target).offset().top}, 500);
+         		return false;
+            });
+        });
+    </script>
+    <style>
+        .clicked {
+            color: rgba(0, 0, 0, 1);
+            text-shadow: 0 0 10px #fff, 1px 1px 1px #fff;
+        }
+    </style>
+    <title>JavaScript</title>
+</head>
+
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+    <input type="checkbox" id="nav-toggle" hidden>
+    <nav class="nav">
+        <ul>
+            <li style="margin-left: 1rem; font-size: 24px; color:rgba(0, 0, 0, .8)">Навигация по сайту</li>
+            <li><a href="/instruction/index.html">Главная</a></li>
+            <li><a href="/instruction/index.html5.html">HTML5</a></li>
+            <li><a href="/instruction/index.css.html">CSS</a></li>
+            <li style="margin-left: 1rem; font-size: 24px; color:rgba(0, 0, 0, .8)">Полезные ссылки</li>
+            <li><a href="https://www.w3schools.com/">W3Schools</a></li>
+            <li><a href="https://developer.mozilla.org/ru/">MDN</a></li>
+            <li><a href="https://html5book.ru/">HTML5Book</a></li>
+            <li><a href="#7">Семь</a></li>
+        </ul>
+    </nav>
+    <div class="mask-content"></div>
+    <header class="header">
+        <label for="nav-toggle" class="nav-toggle" onclick></label>
+        <ul class="header__list">
+            <li class="header__item"><a class="hover" data-title="Перейти во введение" href="/instruction/index.html" class="header__link">Главная</a></li>
+            <li class="header__item"><a href="#" class="header__link">Раздел</a></li>
+            <div class="dropdown-links">
+                <button class="dropbtn-links">Cсылки</button>
+                <div class="dropdown-content-links">
+                    <a href="https://www.w3schools.com/" target="_blank">W3Schools</a>
+                    <a href="https://developer.mozilla.org/ru/" target="_blank">MDN</a>
+                    <a href="https://html5book.ru/" target="_blank">HTML5Book</a>
+                </div>
+            </div>
+            <li class="header__item">
+                <div class="dropdown">
+                <button class="dropbtn clicked">Разделы</button>
+                <div class="dropdown-content">
+                    <a href="/instruction/index.html5.html">HTML5</a>
+                    <a href="/instruction/index.css.html">CSS</a>
+                    <button onclick="window.location.href='/instruction/index.js.html'" class="dropbtn dropbtn__jQuery clicked">JavaScript</button>
+                    <div class="dropdown__jQuery__div">
+                        <a class="jquery__a" href="#">jQuery</a>
+                    </div>
+                    <a href="#">Bootstrap</a>
+                </div>
+            </div></li>
+        </ul>
+        <div class="up__down">
+            <a class="hover" data-title="Переместиться в самый верх страницы" href="#top">Наверх</a>
+            <a class="hover" data-title="Переместиться в самый низ страницы" href="#bottom">Вниз</a>
+            <div id="tooltip"></div>
+        </div>
+    <p class="slogan">Make Web-Sites not War</p>
+    <div class="logo">
+        <img src="/instruction/img/logo.png">
+    </div>
+</header>
+    <div id="top">&nbsp;</div>
+    <div class="container">
+        <div class="table__of__contents">
+            <h1 class="contents__header">Оглавление</h1>
+            <ul class="list__tableOf">
+                <li><a href="#general">Общие положения</a></li>
+                <li><a href="#variables">Переменные в JavaScript</a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </div>
+        <h1 class="tom__name">Том III. JavaScript</h1>
+        <div id="general">&nbsp;</div>
+        <h1 class="main__head">Общие положения</h1>
+        <p class="main__par">
+            <span class="tab">Если</span> вы помните, в HTML документе мы можем создавать кнопки. Делается это с помощью зеркального тега <strong>&lt;button&gt;</strong>. Этот тег сам по себе является простым шаблоном и не обладает никакой функциональностью без нужной настройки. Соответственно, чтобы при нажатии добавленной нами кнопки выполнялся какой-то код, тегу <strong>&lt;button&gt;</strong>, к примеру, можно присвоить атрибут <strong>'onclick'</strong>. Внутри этого атрибута можно указать код JavaScript inline-способом, то есть, без создания дополнительного документа с кодом. Самое элементарное, что мы сейчас можем сделать, просто для понимания – это по нажатию кнопки вывести какое-то сообщение. Выглядеть это будет следующим образом: <strong>&lt;button onclick="alert('Hello world!')"&gt;Поприветствуй мир!&lt;/button&gt;</strong>. Еще один абстрактный пример: точно таким же inline-способом (и всеми остальными, разумеется, тоже), с помощью JavaScript можно отправлять, к примеру, и сообщения в консоль браузера. Делается это с помощью кода <strong class="break">&lt;button onclick="console.log('Hello Console!')"&gt;Поприветствуй консоль!&lt;button&gt;</strong>. По нажатию на <button class="button" id="button" onclick="alert('Не тыкай!'), console.log('Hello Console!')">эту</button> кнопку вы получите alert-сообщение в окне браузера и вывод сообщения в консоль.
+        </p>
+        <div class="faq__any faq__flex">
+            <img src="/instruction/img/faq.png">
+            <p>*для справки: способы помещения кода JavaScript и взаимодействия его со страницей ничем не отличается от способов работы c CSS. У него точно так же есть способы <strong>inline</strong> – внутристрочный, <strong>internal</strong> – внутри HTML кода (документа), но отдельным блоком кода и <strong>external</strong> – создавая отдельный документ под JavaScript с расширением <strong>'js'</strong>.<br>
+            <span class="tab">Одним</span> из способов активировать код при загрузке страницы – это поместить его в HTML методом <strong>internal</strong>, код по умолчанию будет выполняться при загрузке страницы. К примеру, той же командой <strong>'alert'</strong> из JavaScript можно уведомить пользователя о сборе файлов Cookies при входе на страницу.
+        </div>
+        <div id="variables">&nbsp;</div>
+        <h1 class="main__par">Переменные в JavaScript</h1>
+        <p class="main__par">
+            <span class="tab">Как</span> и в любом другом языке программирования в языке JavaScript есть переменные и типы данных.<br><br>
+            <span class="tab"><strong>Переменные</strong></span> являются неким логическим контейнером для хранения в них неких данных, к которым в дальнейшем можно обращаться. Переменные в языке JavaScript декларируются значением <strong>'let'</strong> (от англ. пусть). К слову, есть и устаревшее значение var – variable (от англ. переменная), которое сейчас не используется. Далее переменной присваивается значение (имя). Выглядит это так: <strong>'var firstName = "Vasya"'</strong>. То есть, грубо говоря, мы объявляем: пусть значение <strong>'firstName'</strong> (то есть, в данном случае, имя человека) будет равняться (приравниваться) к значению <strong>'Vasya'</strong>, то есть, теперь мы ввели переменную <strong>'firstName'</strong>, которая равна <strong>'Vasya'</strong>. Далее, после объявления переменной, мы можем на эту переменную сослаться, просто записывая в коде <strong>'firstName'</strong>. Например, как и раньше, вывести в консоль. Выглядеть это будет следующим образом: <strong>'console.log(firstName)'</strong>, после чего мы получим выведенное в консоль ранее установленное значение переменной – <strong>'Vasya'</strong>. Концепция переменных очень важна и позволяет значительно сократить код. Представьте себе самое длинное математическое выражение, с которым в дальнейшем коде вам нужно работать. Представьте, что оно еще и не одно. Так вот идея в том, вто вы можете поместить каждое из этих выражений в переменные и затем использовать их в виде одного короткого слова.<br><br>
+            <span class="tab">Значения</span> переменных после присваивания им одних значений могут быть переписаны на другие значения. Для этого уже не нужно заново создавать "коробку" с переменной, а достаточно просто написать её ранее объявленное название и через знак приравнивания прописать ее новое значение, например: <strong>'firstName = Petya;'</strong>. После объявления необходимых переменных их можно использовать в каких-то выражениях. Для этого объявим еще одну переменную – <strong>'var lastName = "Ivanov";'</strong>. Теперь, после того, как у нас есть некоторый набор переменных, их можно, к примеру, сложить. Для этого объявим еще одну переменную – <strong>'var fullName = firstName + lastName;'</strong>. Переменные в этом случае уже пишуться <strong>без кавычек</strong>! Как видно из кода, взаимодействие этих переменных осуществялется через операцию сложения. То есть, таким образом, мы получаем сумму двух переменных, в данном случае переменной <strong>'firstName'</strong> и <strong>'lastName'</strong>, то есть имя и фамилию вместе, что в сумме представляет собой ранее объявленную переменную <strong>'fullName'</strong>.
+        </p>
+
+
+
+    </div>
+
+
+
+    <div id="bottom"></div>
+
+
+
+    <script src="/js/script.js"></script>
+    <script src="/instruction/js/script.js"></script>
+</body>
+</html>
