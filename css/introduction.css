@@ -1236,6 +1236,10 @@ select option {
   .faq__first {
     padding-top: 10%;
   }
+
+  .instruction h1 {
+    font-size: 3.7rem;
+  }
 }
 
 @media screen and (max-width: 1115px) {
@@ -1319,9 +1323,23 @@ select option {
   .faq__first {
     padding-top: 15%;
   }
+
+  .instruction h1 {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .instruction h1 {
+    font-size: 2.65rem;
+  }
 }
 
 @media screen and (max-width: 445px) {
+.instruction h1 {
+  font-size: 2rem;
+}
+
   .faq__first {
     padding: 30% 2% 30% 2%;
     row-gap: 5%;
@@ -1334,8 +1352,12 @@ select option {
     row-gap: 5%;
   }
   
-  .instruction {
-    font-size: 1rem;
+  .instruction h1 {
+    font-size: 1.4rem;
+  }
+
+  .main__par {
+    font-size: 17px;
   }
 }
 
