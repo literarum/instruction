@@ -1333,6 +1333,10 @@ select option {
     padding: 45% 2% 45% 2%;
     row-gap: 5%;
   }
+  
+  .instruction {
+    font-size: 1rem;
+  }
 }
 
 @media (hover: hover) {
