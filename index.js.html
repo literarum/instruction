@@ -44,6 +44,7 @@
             <li><a href="/instruction/index.html">Главная</a></li>
             <li><a href="/instruction/index.html5.html">HTML5</a></li>
             <li><a href="/instruction/index.css.html">CSS</a></li>
+            <li><a href="/instruction/index.js.html">JavaScript</a></li>
             <li style="margin-left: 1rem; font-size: 24px; color:rgba(0, 0, 0, .8)">Полезные ссылки</li>
             <li><a href="https://www.w3schools.com/">W3Schools</a></li>
             <li><a href="https://developer.mozilla.org/ru/">MDN</a></li>
@@ -101,6 +102,11 @@
                 <li><a href="#if__else">Условные операторы. If/Else</a></li>
                 <li><a href="#ternary">Тернарный оператор</a></li>
                 <li><a href="#switch">Оператор Switch</a></li>
+                <li><a href="#while">Цикл While</a></li>
+                <li><a href="#for">Цикл for</a></li>
+                <li><a href="#functions">Функции</a></li>
+                <li><a href="#function_param">Параметры (аргументы) функции</a></li>
+                <li><a href="#function__returns">Возвращаемые значения функций</a></li>
             </ul>
         </div>
         <h1 class="tom__name">Том III. JavaScript</h1>
@@ -272,6 +278,355 @@
          <p class="main__par">
             <span class="tab">Теперь</span> провернем всё то же самое, только уже с числами. Для примера обратимся к части уже ранее пройденного калькулятора лишнего веса. Снова объявим две переменные <strong>'age'</strong> и <strong>'groupNumber'</strong>. Но если мы в <strong>'switch'</strong> поставим переменную <strong>'age'</strong>, то в <strong>'case'</strong> мы будем проверять равенство какому-то числу, а не сравнивать число с интервалом чисел. Чтобы сделать это с оператором <strong>'switch'</strong>, нужно провернуть небольшой трюк. Для этого в качестве переменной (в скобках после оператора <strong>'switch'</strong>) напишем <strong>'true'</strong>. После чего пишем <strong>'case'</strong>, а в <strong>'case'</strong> уже прописываем условия. В этом случае будет сравниваться значение <strong>'true'</strong> (истина) с приведенным внутри <strong>'case'</strong> выражением. То есть, если <strong>'age >= 18 && age <=25'</strong> – это <strong>'true'</strong>, то в этом случае по значение переменной <strong>'switch(true)'</strong>, то <strong>'true'</strong> = <strong>'true'</strong> и переменной <strong>'groupNumber'</strong> присваивается значение <strong>'1'</strong>. Вот так будет выглядеть этот код:
          </p>
+         <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                let age = 20;
+            </p>
+            <p class="code__any code">
+                let groupNumber;
+            </p>
+            <p class="code__any code">
+                switch(true) {
+            </p>
+            <p class="code__any sub__code">
+                case age >= 18 && age <=25 :
+            </p>
+            <p class="code__any sub__sub__code">
+                groupNumber = 1;
+            </p>
+            <p class="code__any sub__sub__code">
+                break;
+            </p>
+            <p class="code__any sub__code">
+                case age >= 25 && age <=46 :
+            </p>
+            <p class="code__any sub__sub__code">
+                groupNumber = 2;
+            </p>
+            <p class="code__any sub__sub__code">
+                break;
+            </p>
+            <p class="code__any sub__code">
+                default :
+            </p>
+            <p class="code__any sub__sub__code">
+                groupNumber = 3;
+            </p>
+            <p class="code__any code">
+                }
+            </p>
+        </div>
+        <div id="while">&nbsp;</div>
+        <h1 class="main__head">Цикл While</h1>
+        <p class="main__par">
+            <span class="tab">Циклы</span> в языках программирования нужны для многократного повторения одного и того же действия. Для начала мы посмотрим на цикл <strong>'while'</strong> (от англ. пока, до тех пор).<br><br>
+            <span class="tab">Цикл</span> <strong>'while'</strong> чем-то похож на оператор <strong>'if'</strong>, в котором так же в скобках указывается условие: <strong>'while(условие)'</strong>. После чего открываются фигурные скобки и туда вписывается код, который должен выполнится несколько раз. Этот код будет выполняться до тех пор, пока условие прописанное в скобках истинно. Оператор <strong>'while'</strong> работает таким образом: сначала проверяется на истинность условие, прописанное в скобках после оператора. Затем, если условие не верно, выполняется тело цикла, прописанное между фигурными скобками. Далее, после выполнения кода в теле цикла, оператор снова проверяет истинность условия в круглых скобках после себя и так до тех пор, пока условие не будет ложным. То есть, условия выхода из цикла – это выражение в круглых скобках равняется <strong>'false'</strong>. К примеру, можно указать вывод изначальной переменной <strong>'x = 1'</strong> в консоль. Однако если сделать это без прочих условий, то код впадет в бесконечный цикл, что может привести к зависанию браузера и/или компьютера. Поэтому мы можем инкриминировать нашу переменную, прописав к ней <strong>'x++'</strong>. Код выглядит так (для начала объявим переменную):
+        </p>
+        <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                let x = 1;
+            </p>
+            <p class="code__any code">
+                while(x < 100) {
+            </p>
+            <p class="code__any sub__code">
+                console.log(x);
+            </p>
+            <p class="code__any sub__code">
+                x++
+            </p>
+            <p class="code__any code">
+                }
+            </p>
+        </div>
+        <p class="main__par">
+            <span class="tab">Есть</span> и другой способ применения цикла. Например, мы можем вывести в консоль какое-то текстовое сообщение по символам. Давайте добавим еще две переменных:
+        </p>
+        <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                let helloString = "Привет, Аня!"
+            </p>
+            <p class="code__any code">
+                let count = 0;
+            </p>
+            <p class="code__any code">
+                while(count < helloString.length) {
+            </p>
+            <p class="code__any sub__code">
+                console.log(helloString[count]);
+            </p>
+            <p class="code__any sub__code">
+                count++;
+            </p>
+            <p class="code__any code">
+                }
+            </p>
+        </div>
+        <div class="faq__any faq__flex">
+               <img src="/instruction/img/faq.png">
+               <p>*для справки: внутри цикла <strong>'while'</strong> можно размещать оператор <strong>'if'</strong>, который так же как и обычно будет проверять некие условия и выполнять какие-то действия. Здесь представлено выведение в консоль всех чисел, кратных пяти.
+                <div class="code__block__any code__block__syntax" style="flex-basis: 140%;">
+                    <p class="code__any code">
+                        let count = 1;
+                     </p>
+                     <p class="code__any code">
+                        while(count <= 30) {
+                     </p>
+                     <p class="code__any sub__code">
+                        if(count % 5 === 0) {
+                     </p>
+                     <p class="code__any sub__sub__code">
+                        console.log(сount);
+                     </p>
+                     <p class="code__any sub__code">
+                        }
+                    </p>
+                     <p class="code__any sub__code">
+                        count++
+                     </p>
+                     <p id="code__any code">
+                        }
+                    </p>
+                </div>
+         </div>
+         <div id="for">&nbsp;</div>
+         <h1 class="main__head">Цикл for</h1>
+         <p class="main__par">
+            <span class="tab">Цикл</span> <strong>'for'</strong> являет собой более удобный в записи и восприятии вариант цикла <strong>'while'</strong>. Всё дело в том, что все данные для цикла (в том числе даже объявление переменной) записываются прямо в строке самого цикла <strong>'for'</strong>, в круглых скобках. На примере предыдущей операции рассмотрим принцип его работы:
+         </p>
+         <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                for(count = 1; count &lt;= 10; count++) {
+            </p>
+            <p class="code__any sub__code">
+                console.log(count);
+            <p class="code__any code">
+                }
+            </p>
+        </div>
+        <p class="main__par">
+            <span class="tab">Для</span> лучшего понимания, давайте и здесь, с помощью цикла <strong>'for'</strong> устроим перебор символа строки. Теперь используем не <strong>'count'</strong> переменную, а переменную <strong>'i'</strong>. Переменная <strong>'i'</strong> в реальной жизни в циклах <strong>'for'</strong> используется практически постоянно. То есть, в цикле <strong>'for'</strong> указывается одна буква для счетчика, так как эта переменная больше нигде не используется, ей не нужно присваивать имя, которое будет что-то описывать. Рассмотрим код:
+        </p>
+        <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                let helloString = "Привет, Аня!"
+            </p>
+            <p class="code__any code">
+                for(i = 0; i < helloString.length; i++) {
+            </p>
+            <p class="code__any sub__code">
+                console.log(helloString[i]);
+            </p>
+            <p class="code__any code">
+                }
+            </p>
+        </div>
+        <div class="faq__any faq__flex">
+               <img src="/instruction/img/faq.png">
+               <p>*для справки: внутри цикла <strong>'for'</strong> можно размещать оператор <strong>'if'</strong>, который так же как и обычно будет проверять некие условия и выполнять какие-то действия. Здесь представлено выведение в консоль всех чисел, кратных семи в диапазоне до 30.
+                <div class="code__block__any code__block__syntax" style="flex-basis: 140%;">
+                    <p class="code__any code">
+                        for(i = 1; i <= 30; i++) {
+                    </p>
+                    <p class="code__any sub__code">
+                        if(i % 7 === 0) {
+                    </p>
+                    <p class="code__any sub__sub__code">
+                        console.log(i);
+                    </p>
+                    <p class="code__any sub__code">
+                        }
+                    </p>
+                    <p class="code__any code">
+                        }
+                    </p>
+                </div>
+         </div>
+         <div id="functions">&nbsp;</div>
+         <h1 class="main__head">Функции</h1>
+         <p class="main__par">
+            <span class="tab">Функции</span> </strong> чем-то схожи с переменными. То есть, как говорилось выше, в переменную можно поместить какое-либо значение, а затем, в последующих сценариях работы программы, при запросе этой переменной, мы можем получить это значение. В <strong>функциях</strong>можно хранить не значение, а целый код. То есть, функция – это как бы переменная (контейнер) для кода. Потом, соответственно, обратившись к функции программы по имени, в любом месте кода программы, мы можем запустить этот кусок кода.<br><br>
+            <span class="tab">Код</span> организовывается следующим образом. Сначала пишется слово <strong>'function'</strong>, после которого всегда ставятся круглые скобки (в них могут помещаться аргументы функции). Затем, как и в предыдущих примерах, открываются фигурные скобки, в которых записывается само тело функции. То есть тот код, который будет выполняться, когда мы будем обращаться к этой функции в другом месте программы по её имени. Если записать функцию подобно циклам или операторам, то код работать не будет (функция – название функции – круглые скобки – фигурные скобки – тело функции (к примеру, вывод чего-либо в консоль)). Потому что в таком случае мы не обращаемся к функции, а просто определяем её. То есть мы создали функцию, прописали её внутренний код (тело), который эта функция должна выполнять, но мы не обращаемся к этой функции, чтобы она начала свою работу.<br><br>
+            <span class="tab">Чтобы</span> запустить функцию (обратиться к ней), нужно просто прописать её имя, а сразу после обязательно поставить круглые скобки с точкой с запятой в конце.<br><br>
+            <span class="tab">Вот</span> так может выглядеть ваш код:
+         </p>
+         <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                function hello() {
+            </p>
+            <p class="code__any sub__code">
+                console.log("Hello World!");
+            </p>
+            <p class="code__any code">
+                }
+            </p>
+            <p class="code__any code">
+                function();
+            </p>
+        </div>
+        <p class="main__par">
+            <span class="tab">Теперь</span> функция полностью готова. Далее в коде, мы можем несколько раз обращаться к этой функции и код будет выполняться ровно столько раз, сколько мы к ней обратимся.<br><br>
+            <span class="tab">Вы</span> можете подумать, зачем же всё так усложнять? Можно же просто несколько раз прописать <strong>'console.log()'</strong> с нужными нам данными и тогда всё будет работать точно так же. Но не всё так просто. К примеру, если мы пропишем другую функцию:
+        </p>
+        <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                function complexHello() {
+            </p>
+            <p class="code__any sub__code">
+                console.log("Привет, меня зовут Глеб. Мне 24 года. Я из Ульяновска.");
+            </p>
+            <p class="code__any sub__code">
+                console.log("До свидания!");
+            </p>
+            <p class="code__any code">
+                }
+            </p>
+            <p class="code__any code">
+                complexHello();
+            </p>
+        </div>
+        <p class="main__par">
+            <span class="tab">То</span> есть, надеюсь, становится понятно, что чем длиннее и сложнее код, тем проще поместить его в некий "контейнер", в данном случае, в виде функции и выполнять его автоматизированно.<br><br>
+            <span class="tab">Функция</span> может содержать множество строк самого различного кода. То есть, принцип чем-то похож на контейнер <strong>'div'</strong> из <strong>HTML</strong>, который мы наполняем каким-то содержимым, с которым в последствии можно работать, обратившись к нему, например, из <strong>CSS</strong>.
+        </p>
+        <div id="function_param">&nbsp;</div>
+        <h1 class="main__head">Параметры (аргументы) функции</h1>
+        <p class="main__par">
+            <span class="tab">В</span> предыдущей главе мы выводили через функцию в консоль некий текст приветствия. Вызывая эту функцию, мы будем выводить в консоль один и тот же текст. Но мы можем модифицировать эту функцию так, чтобы мы могли передавать текст приветствия в качестве параметра функции и в консоль уже выводился бы тот текст, который мы туда (в консоль) передадим. Для этого мы передадим функцию <strong>параметра</strong> или <strong>аргумента</strong>. Вернемся к нашему примера с функцией <strong>'complexHello'</strong> и в данном случае, в качестве параметра подходит <strong>'text'</strong>. Соответственно, далее в <strong>'console.log()'</strong> мы указываем не какую-то определенную строку текста, а, соответственно, этот параметр – <strong>'text'</strong>. И теперь, вместо этого параметра, мы можем передавать функции <strong>'console.log'</strong> любой текст. Код будет выглядеть следующим образом:
+        </p>
+        <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                function complexHello() {
+            </p>
+            <p class="code__any sub__code">
+                console.log(text);
+            </p>
+            <p class="code__any code">
+                }
+            </p>
+            <p class="code__any code">
+                complexHello("Привет, меня зовут Глеб. Мне 24 года. Я из Ульяновска.");
+            </p>
+        </div>
+        <p class="main__par">
+            <span class="tab">В</span> качестве параметра функции мы можем передавать не только текст. Например, мы можем создать функцию, вычисляющую квадрат какого-то числа. Для этого, как обычно, создадим функцию и присвоим ей параметр <strong>'number'</strong>. После чего, поместим в тело этой функции <strong>'console.log(number);'</strong>, которая будет выводить в качестве результата эту функцию. А затем, мы можем эту функцию вызвать и передавать ей значение цифры, квадрат которой требуется получить. Код будет выглядеть следующим образом:
+        </p>
+        <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                function square(number) {
+            </p>
+            <p class="code__any sub__code">
+                console.log(number * number);
+            </p>
+            <p class="code__any code">
+                }
+            </p>
+            <p class="code__any code">
+                square(2);
+            </p>
+        </div>
+        <p class="main__par">
+            <span class="tab">Параметр</span>, передаваемый в функцию, может быть не один. Например, давайте создадим другую функцию, вычисляющую площадь прямоугольника. Площадь прямоугольника равна ширине умноженной на высоту. Поэтому, параметры функции мы так и назовем: <strong>'width'</strong> и (через запятую) <strong>'height'</strong>. После чего, в теле функции, прописываем <strong>'console.log(width * height)';</strong>. И далее мы можем вызывать эту функцию с различными параметрами сторон этого треугольника, например 2 и 3. Код будет выглядеть следующим образом: 
+        </p>
+        <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                function area(width, height) {
+            </p>
+            <p class="code__any sub__code">
+                console.log("Площадь прямоугольника =" + width * height + " сантиметров квадратных");
+            </p>
+            <p class="code__any code">
+                }
+            </p>
+            <p class="code__any code">
+                area(2, 3);
+            </p>
+        </div>
+        <p class="main__par">
+            <span class="tab">Как</span> можно заметить, полезность функции заключается не только в том, что мы сокращаем общее количество строк кода, но и в том, что мы можем передавать ей разные параметры в зависимости от которых код будет выполняться с разным результатом. Это очень важное свойство функций, которое можно и нужно использовать в своих программах.<br><br>
+            <span class="tab">Параметров</span> у функции может быть любое количество, но в обычной жизни их как правило не бывает больше трех-четырех. На примере текста приветствия это снова можно представить таким образом:
+        </p>
+        <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                function complexHello(helloText, name, age) {
+            </p>
+            <p class="code__any sub__code">
+                console.log(helloText + " Меня зовут " + name + ". Мне " + age + " лет.");
+            </p>
+            <p class="code__any code">
+                }
+            </p>
+            <p class="code__any code">
+                complexHello("Здравствуйте!", "Иван", 46);
+            </p>
+        </div>
+        <p class="main__par">
+            <span class="tab">Этот</span> код позволяет подставлять в функцию различные параметры в реальном времени. То есть, мы можем несколько раз обращаться к функции, меня её параметры и выводить, к примеру, различные приветствия.<br><br>
+            <span class="tab">В</span> итоге думаю становится понятно, что аргументы функции – это всё те же, хоть и локальные, но концептуально переменные. Исходя из этого, параметры функции можно называть как угодно.
+        </p>
+        <div id="function__returns">&nbsp;</div>
+        h§<div class="main__head">Возвращаемые значения функций</div>
+        <p class="main__par">
+            <span class="tab">В</span> качестве примера давайте рассмотрим уже изученную выше функцию по расчету площади прямоугольника. Эта функция, в качестве входного параметра, получает <strong>'number'</strong>, а затем умножает этот <strong>'number'</strong> на себя же и выводит в консоль. То есть, функцию можно рассмотреть как некий черный ящик: мы передаем что-то в этот ящик, а затем функция внутри себя как-то эту переданную информацию обрабатывает. Но что если мы хотим использовать далее в программе результат того, что выполнила функция? В рассматриваемом примере – это квадрат значения <strong>'number'</strong> – то есть, вычисление площади прямоугольника. Если мы пойдем по известному нам пути, попытаемся объявить переменную <strong>'let x = square(2)'</strong> (square() от ранее рассмотренной функции – квадрат числа), и пропишем отображение в консоли. В этом случае, первая строка с переменной работать будет, то есть, будет вычисляться квадрат от числа 2, так как работает функция. Но вот <strong>'console.log(x)'</strong> будет выводить значение <strong>'undefined'</strong>. То есть, мы присвоили значение переменной <strong>'x'</strong>, но эта функция в данном случае не возвращает никакого значения – она просто проделывает какую-то работу. Но можно сделать и так, чтобы данные после работы функции выдавались как выходные. Делается это очень просто:
+        </p>
+        <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                function square(number) {
+            </p>
+            <p class="code__any sub__code">
+                return number * number;
+            </p>
+            <p class="code__any code">
+                }
+            </p>
+        </div>
+        <p class="main__par">
+            <span class="tab">После</span> прописывания <strong>'return'</strong> нам становится доступно присвоение результата работы функции какой-то другой переменной.<br><br>
+            <span class="tab">Есть</span> еще один сценарий использования функции внутри другой функции. В данном случае функции <strong>'square'</strong>. Создадим новую функцию, которая посредствам вычислений будет сообщать нам, большой ли квадрат. В качестве параметра бы будем использовать сторону квадрата <strong>'side'</strong>. Внутри функции объявим переменную <strong>'squareArea'</strong>, которая посредствам функции будет заниматься вычислением площади квадрата – возведением стороны квадрата в квадрат. Поэтому эту переменную мы можем приравнять к уже объявленной функции, которая этим занимается – <strong>'square'</strong> со значением <strong>'side'</strong>. Ниже мы можем использовать оператор <strong>'if'</strong>, который будет выяснять: если площадь квадрата больше установленного нами значения, то квадрат большой. И если да, то эта функция будет возвращать <strong>'true'</strong>. А в другом случае, соответственно, <strong>'false'</strong>. А после выведем в консоль функцию, с параметром, к примеру "2": <strong>'console.log(isSquareBig(2))';</strong> Код будет выглядеть следующим образом:
+        </p>
+        <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                function square(number) {
+            </p>
+            <p class="code__any sub__code">
+                return number * number;
+            </p>
+            <p class="code__any code">
+                }
+            </p>
+            <p class="code__any code">
+                function isSquareBig(side) {
+            </p>
+            <p class="code__any sub__code">
+                let squareArea = square(side);
+            </p>
+            <p class="code__any sub__code">
+                if(squareArea > 100) {
+            </p>
+            <p class="code__any sub__sub__code">
+                return true;
+            </p>
+            <p class="code__any sub__code">
+                } else {
+            </p>
+            <p class="code__any sub__sub__code">
+                return false;
+            </p>
+            <p class="code__any sub__code">
+                }
+            </p>
+            <p class="code__any code">
+                }
+            </p>
+            <p class="code__any code">
+                console.log(isSquareBig(2));
+            </p>
+        </div>
+        
+
+
+
+
 
 
 
