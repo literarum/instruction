@@ -42,6 +42,7 @@
         <ul>
             <li style="margin-left: 1rem; font-size: 24px; color:rgba(0, 0, 0, .8)">Навигация по сайту</li>
             <li><a href="/instruction/index.html">Главная</a></li>
+            <li><a href="/instruction/old.ondex.html">Оригинал</a></li>
             <li><a href="/instruction/index.html5.html">HTML5</a></li>
             <li><a href="/instruction/index.css.html">CSS</a></li>
             <li><a href="/instruction/index.js.html">JavaScript</a></li>
@@ -57,7 +58,7 @@
         <label for="nav-toggle" class="nav-toggle" onclick></label>
         <ul class="header__list">
             <li class="header__item"><a class="hover" data-title="Перейти во введение" href="/instruction/index.html" class="header__link">Главная</a></li>
-            <li class="header__item"><a href="#" class="header__link">Раздел</a></li>
+            <li class="header__item"><a href="/instruction/old.ondex.html" class="header__link">Оригинал</a></li>
             <div class="dropdown-links">
                 <button class="dropbtn-links">Cсылки</button>
                 <div class="dropdown-content-links">
@@ -107,6 +108,12 @@
                 <li><a href="#functions">Функции</a></li>
                 <li><a href="#function_param">Параметры (аргументы) функции</a></li>
                 <li><a href="#function__returns">Возвращаемые значения функций</a></li>
+                <li><a href="#statements">Statements vs. Expressions</a></li>
+                <li><a href="#func_ex">Различные примеры реализации функций и рефакторинг</a></li>
+                <li><a href="#area__of__vis">Область видимости переменных</a></li>
+                <li><a href="#massives">Массивы</a></li>
+                <li><a href="#massive__methods">Методы массивов</a></li>
+                <li><a href="#objects">Объекты</a></li>
             </ul>
         </div>
         <h1 class="tom__name">Том III. JavaScript</h1>
@@ -145,7 +152,7 @@
                <p>*для справки: так же еще одно немаловажное замечание по поводу имен переменных состоит в том, что имя любой объявленной переменной в JavaScript необходимо начинать с любой маленькой буквы латинского алфавита, символа нижнего подчеркивания или символа доллара. Другие символы запрещены и будут рождать ошибку при исполнении кода.</p>
         </div>
         <div id="built__methods">&nbsp;</div>
-        <h1 class="main__head">Встроенные методы в JavaScript</h1>
+        <h1 class="main__head">Встроенные методы</h1>
         <p class="main__par">
             <span class="tab">Что</span> такое метод в языке программирования? Метод – это некий объем кода, состоящий из одной, нескольких или многих строк, помеченный каким-то именем, который в последствии можно вызывать (обращаться к нему). Это практически то же самое, что и переменная. Так же у метода существует такое понятие как "параметры". Параметр метода – это то значение, которое мы передаем внутрь метода для того, чтобы код в последствии мог к нему обращаться. Параметр метода пишется в круглых скобках.<br><br>
             <span class="tab">Далее</span> мы рассмотрим некоторые абстрактные методы в JavaScript для лучшего понимания.
@@ -155,12 +162,12 @@
             <li>Еще один метод – <strong>'prompt("")'</strong> (от англ. – подсказка). Таким образом, к примеру, при загрузке веб-страницы можно вывести сообщение с полем ввода, с вопросом "Как Вас зовут?" – <strong>'prompt("Как Вас зовут?");'</strong>. Точно так же, как и другие переменные в JavaScript, переменную <strong>'prompt'</strong> можно перезаписать, присвоив ей другое значение. К примеру, это может выглядеть так: <strong>'let firstName = "Vasya"; firstName = prompt("Как Вас зовут"); console.log(firstName);'</strong>. В этом случае мы обхявили переменную <strong>'firstName'</strong>, присвоили ей значение <strong>'Vasya'</strong>, а затем, когда в браузере появится окно с полем ввода и мы введем туда другое значение (своё имя, при условии, что нас зовут не Вася), переменная перепишется на новое значение, о чем будет выведено сообщение в консоль.</li>
          </ul>
          <div id="order__operators">&nbsp;</div>
-         <h1 class="main__head">Порядок операторов в JavaScript</h1>
+         <h1 class="main__head">Порядок операторов</h1>
          <p class="main__par">
-            <span class="tab"><button onclick="window.open.href='https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table'" class="button">Здесь</button></span>, чтобы не создавать в этой инструкции гигантскую таблицу, вы можете ознакомиться с распределением приоритетов различных операторов в языке JavaScript на сайте MDN.
+            <span class="tab"><button onclick="window.open('https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table')" class="button">Здесь</button></span>, чтобы не создавать в этой инструкции гигантскую таблицу, вы можете ознакомиться с распределением приоритетов различных операторов в языке JavaScript на сайте MDN.
          </p>
          <div id="if__else">&nbsp;</div>
-         <h1 class="main__head">Условные операторы в JavaScript. If/Else</h1>
+         <h1 class="main__head">Условные операторы. If/Else</h1>
          <p class="main__par">
             <span class="tab">Важнейшая</span> концепция <strong>любого</strong> языка программирования – это условия. При помощи условий в языках программирования принимаются решения. Условный оператор записывается при помощи двух слов: <strong>'if'</strong> (от англ. если) и <strong>'else'</strong> (от англ. еще, иначе, в ином случае). Рассмотрим наглядно.<br><br>
             <span class="tab">К</span> примеру, объявим две переменные: <strong>let userName = "Ivan";</strong> и <strong>'let userAge = 15;'</strong>. Код дальнейшего условия записывается таким образом: <strong>'if(userAge >= 18) { console.log(userName + " is adult."); }'</strong>. Если после этого начать выполнять код и открыть консоль, то мы не получим никакого результата. Не получим мы его потому что в этом случае утверждение ложно, так как Ивану меньше 18ти лет. Код выполняться не будет. Этот код можно продолжить (ранее объявленные переменные прописывать не будем): <strong>let userName = "Ivan";</strong> и <strong>'let userAge = 15;'</strong>. <strong>'if(userAge >= 18) { console.log(userName + " is adult.";) }'</strong>.<br><br>
@@ -565,7 +572,7 @@
             <span class="tab">В</span> итоге думаю становится понятно, что аргументы функции – это всё те же, хоть и локальные, но концептуально переменные. Исходя из этого, параметры функции можно называть как угодно.
         </p>
         <div id="function__returns">&nbsp;</div>
-        h§<div class="main__head">Возвращаемые значения функций</div>
+        <h1 class="main__head">Возвращаемые значения функций</h1>
         <p class="main__par">
             <span class="tab">В</span> качестве примера давайте рассмотрим уже изученную выше функцию по расчету площади прямоугольника. Эта функция, в качестве входного параметра, получает <strong>'number'</strong>, а затем умножает этот <strong>'number'</strong> на себя же и выводит в консоль. То есть, функцию можно рассмотреть как некий черный ящик: мы передаем что-то в этот ящик, а затем функция внутри себя как-то эту переданную информацию обрабатывает. Но что если мы хотим использовать далее в программе результат того, что выполнила функция? В рассматриваемом примере – это квадрат значения <strong>'number'</strong> – то есть, вычисление площади прямоугольника. Если мы пойдем по известному нам пути, попытаемся объявить переменную <strong>'let x = square(2)'</strong> (square() от ранее рассмотренной функции – квадрат числа), и пропишем отображение в консоли. В этом случае, первая строка с переменной работать будет, то есть, будет вычисляться квадрат от числа 2, так как работает функция. Но вот <strong>'console.log(x)'</strong> будет выводить значение <strong>'undefined'</strong>. То есть, мы присвоили значение переменной <strong>'x'</strong>, но эта функция в данном случае не возвращает никакого значения – она просто проделывает какую-то работу. Но можно сделать и так, чтобы данные после работы функции выдавались как выходные. Делается это очень просто:
         </p>
@@ -622,7 +629,328 @@
                 console.log(isSquareBig(2));
             </p>
         </div>
-        
+        <div id="statements">&nbsp;</div>
+        <h1 class="main__head">Statements vs. Expressions</h1>
+        <p class="main__par">
+            <span class="tab">Есть</span> два способа создания функции. Первый способ мы уже рассмотрели, он называется <strong>Statement</strong> или <strong>объявление функции</strong>. То есть, запись в форме <strong>'function название_функции() {}'</strong>. Но есть второй способ – способ создания функции в выражении – <strong>Expression</strong>. Для наглядности давайте создадим реальную функцию и посмотрим, как её можно реализовать двумя способами. В функции мы будем передавать два параметра: название и вид животного и в зависимости от того, какое это животное, мы будем выводить в консоль имя этого животного и звук, который оно издает. То есть, если мы введем параметры "Имя 'Ричард'" и "Вид 'собака'", то в консоль должно выводиться "Ричард гавкает". Код в первом случае будет выглядеть следующим образом:
+        </p>
+        <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                function animalVoice(animal, animalName) {
+            </p>
+            <p class="code__any sub__code">
+                if(animal === "dog") {
+            </p>
+            <p class="code__any sub__sub__code">
+                return animalName + " гавкает.";
+            </p>
+            <p class="code__any sub__code">
+                } else if(animal === "cat") {
+            </p>
+            <p class="code__any sub__sub__code">
+                return animalName + " мяукает.";
+            </p>
+            <p class="code__any sub__code">
+                } else if(animal === "pig") {
+            </p>
+            <p class="code__any sub__sub__code">
+                return animalName + " хрюкает.";
+            </p>
+            <p class="code__any sub__code">
+                } else {
+            </p>
+            <p class="code__any sub__sub__code">
+                return animalName + " издает какие-то звуки.";
+            </p>
+            <p class="code__any sub__code">
+                }
+            </p>
+            <p class="code__any code">
+                }
+            </p>
+            <p class="code__any code">
+                console.log(animalVoice("dog", "Ричард"));
+            </p>
+        </div>
+        <p class="main__par">
+            <span class="tab">А</span> вот второй способ – <strong>Expression</strong>:
+        </p>
+        <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                let animalVoice = function(animal, animalName) {
+            </p>
+            <p class="code__any sub__code">
+                if(animal === "dog") {
+            </p>
+            <p class="code__any sub__sub__code">
+                return animalName + " гавкает.";
+            </p>
+            <p class="code__any sub__code">
+                } else if(animal === "cat") {
+            </p>
+            <p class="code__any sub__sub__code">
+                return animalName + " мяукает.";
+            </p>
+            <p class="code__any sub__code">
+                } else if(animal === "pig") {
+            </p>
+            <p class="code__any sub__sub__code">
+                return animalName + " хрюкает.";
+            </p>
+            <p class="code__any sub__code">
+                } else {
+            </p>
+            <p class="code__any sub__sub__code">
+                return animalName + " издает какие-то звуки.";
+            </p>
+            <p class="code__any sub__code">
+                }
+            </p>
+            <p class="code__any code">
+                }
+            </p>
+            <p class="code__any code">
+                console.log(animalVoice("dog", "Ричард"));
+            </p>
+        </div>
+        <p class="main__par">
+            <span class="tab">Как</span> видно из кода – работа функций в обоих способах абсолютно идентична. Единственное отличие, как вы могли заметить по первой строке, состоит в том, что при объявлении функции как переменной, эту функцию можно обнулить, если присвоить этой переменной другое значение. Это в дальнейшем функционально может пригодиться в программе. 
+        </p>
+        <div id="func_ex">&nbsp;</div>
+        <h1 class="main__head">Различные примеры реализации функций и рефакторинг</h1>
+        <p class="main__par">
+            <span class="tab">В</span> первом примере мы рассмотрим, как создать функцию, вычисляющую, является ли число нечетным или нет. Если число нечетное, то в консоль выводится <strong>'true'</strong>, а если четное, то <strong>'false'</strong>. Код будет выглядеть следующим образом:
+        </p>
+        <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                function isNumberOdd(number) {
+            </p>
+            <p class="code__any sub__code">
+                if(number % 2 === 0) {
+            </p>
+            <p class="code__any sub__sub__code">
+                return false;
+            </p>
+            <p class="code__any sub__code">
+                } else {
+            </p>
+            <p class="code__any sub__sub__code">
+                return true;
+            </p>
+            <p class="code__any sub__code">
+                }
+            </p>
+            <p class="code__any code">
+                }
+            </p>
+        </div>
+        <div class="faq__any faq__flex">
+            <img src="/instruction/img/faq.png">
+            <p>*для справки: для лучшего понимания оператора <strong>'%'</strong>, строка <strong>'if(number % 2 === 0)'</strong> буквально означает, что "если, при делении на "2" переменной <strong>'number'</strong> остаток равен "0", то...</p>
+        </div>
+         <div class="faq__any faq__flex">
+            <img src="/instruction/img/faq.png">
+            <p class="faq_p">*для справки: кроме того, у обращения к функциям есть два варианта. На примере консоли первый вариант будет выглядеть так: <strong>'let x = isNumberOdd(11)';</strong>, а затем вывести в консоль, соответственно <strong>'console.log(x);'</strong>. И второй вариант: <strong>'console.log(isNumberOdd(11));'</strong>.</p>
+         </div>
+         <p class="main__par">
+            <span class="tab">Еще</span> бонусом можно было бы отметить, что в программировании существует такое понятие как <strong>'рефакторинг'</strong>. Сразу написать идеальный код бывает довольно сложно, особенно если код сам по себе тоже сложен, поэтому написанный код часто можно многократно улучшить, оптимизировав его. Это, разумеется, будет давать прирост в скорости его работы, но так же и положительно сказываться на его читаемости. На примере ранее описанной функции <strong>'isNumberOdd'</strong>, можно показать, насколько сильно можно укоротить код:
+         </p>
+         <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                function isNumberOdd(number) {
+            </p>
+            <p class="code__any sub__code">
+                return % 2 !== 0;
+            </p>
+            <p class="code__any code">
+                }
+            </p>
+        </div>
+        <p class="main__par">
+            <span class="tab">То</span> есть, сначала будет вычисляться значение логического выражения после <strong>'return'</strong> и если остаток от деления <strong>% 2</strong> <strong>НЕ</strong> равен нулю (неравенство обозначается оператором <strong>'!=='</strong>), то будет возвращаться <strong>'true'</strong> и на этом работа функции завершается. Быстро и элегантно.
+        </p>
+        <p class="main__par">
+            <span class="tab">Во</span> втором примере мы посмотрим на функцию, вычисляющую факториал числа:
+        </p>
+        <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                function factorial(naturalNumber) {
+            </p>
+            <p class="code__any sub__code">
+                if(naturalNumber < 0) {
+            </p>
+            <p class="code__any sub__sub__code">
+                return 0;
+            </p>
+            <p class="code__any sub__code">
+                }
+            </p>
+            <p class="code__any sub__code">
+                let result = 1;
+            </p>
+            <p class="code__any sub__code">
+                for(i = 1; i <= naturalNumber; i++) {
+            </p>
+            <p class="code__any sub__sub__code">
+                result = result * i;
+            </p>
+            <p class="code__any sub__code">
+                }
+            </p>
+            <p class="code__any sub__code">
+                return result;
+            </p>
+            <p class="code__any code">
+                }
+            </p>
+        </div>
+        <p class="main__par">
+            <span class="tab">А</span> теперь, смотря на код выше, давайте разберемся, как работает эта функция.<br><br>
+            <span class="tab">В</span> начале проверяется, ввел ли пользователь корректное значение. То есть, ввел ли пользователь натуральное число, чтобы факториал сработал. Например, мы можем договориться, что если пользователь ввел отрицательное значение, то мы возвращаем из функции значение <strong>0</strong>. Так как сам факториал не может возвращать <strong>0</strong>, следовательно, возвращенный <strong>0</strong> будет сигнализировать о том, что пользователь ввел некорректное значение.<br><br>
+            <span class="tab">Далее</span> к самому факториалу. Сначала <strong>'i = 1'</strong>, точно так же, как и объявленная переменная <strong>'result = 1'</strong>. То есть, исходя из логики работы цикла, переменной <strong>'result'</strong> будет присвоено значение <strong>1 * 1</strong>, что будет равняться <strong>единице</strong>.<br><br>
+            <span class="tab">Если</span> передать в параметр функции значение, к примеру, <strong>3</strong>, то <strong>'i < 3'</strong>, следовательно, запускается цикл. Так как из-за <strong>'i++'</strong> цикл продолжается, следовательно, <strong>i = 2</strong>. В <strong>'result'</strong> находится <strong>1</strong>, <strong>1 * 2 = 2</strong>, после чего <strong>'result'</strong> присваивается <strong>2</strong>. Далее снова идет проверка в цикле. <strong>i</strong> всё еще меньше заданного значения функции <strong>3</strong>, поэтому снова срабатывает <strong>'i++'</strong> и теперь <strong>i = 3</strong>. В <strong>'result'</strong> всё еще находится <strong>2</strong> – <strong>2 * 3 = 6</strong>. Число <strong>6</strong> присваивается <strong>'result'</strong>, после чего снова срабатывает <strong>i++</strong> и <strong>i</strong> теперь равна <strong>4</strong> и в этом случае мы выходим из цикла, так как <strong>4 > 3</strong>, где <strong>3</strong> – установленное значение функции. И в самом конце мы возвращаем <strong>'result'</strong>.
+        </p>
+        <p class="main__par">
+            <span class="tab">И</span> в последнем, третьем примере мы рассмотрим, как с помощью функции JavaScript можно автоматически менять текстовые символы. Для примера возьмем функцию, которая будет заменять все пробелы на символы нижнего подчеркивания – <strong>_</strong>.
+        </p>
+        <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                function changeSpaceToUnderscore(text) {
+            </p>
+            <p class="code__any sub__code">
+                let resultText = text.replace(/ /g, "_");
+            </p>
+            <p class="code__any sub__code">
+                return resultText;
+            </p>
+            <p class="code__any code">
+                }
+            </p>
+        </div>
+        <p class="main__par">
+            <span class="tab">Здесь</span> всё довольно просто. Мы создаем функцию с параметром <strong>'text'</strong>. Затем, внутри этой функции, мы объявляем переменную <strong>'resultText'</strong>, которая равна параметру объявленной функции <strong>'text'</strong>, но с методом <strong>'replace()'</strong>, который в JavaScript и занимается заменой символов. После метода <strong>'replace'</strong> в скобках между двумя слешами указывается то, что мы хотим заменить, после чего обязательно ставится символ <strong>'g'</strong> и после запятой в кавычках указывается то, <strong>НА ЧТО</strong> мы хотим заменить.
+        </p>
+        <div id="area__of__vis">&nbsp;</div>
+        <h1 class="main__head">Область видимости переменных</h1>
+        <p class="main__par">
+            <span class="tab">В</span> JavaScript есть два типа областей видимости переменных:
+        </p>
+        <ul class="list">
+            <li>Local Scope</li>
+            <li>Global Scope</li>
+        </ul>
+        <p class="main__par">
+            <span class="tab">Каждая</span> функция создает новую область видимости. Понятие <strong>области видимости</strong> включает в себя некую <strong>доступность</strong> или <strong>видимость</strong> переменных. Эта область видимости определяет доступность переменных вне других конструкций программы.<br><br>
+            <span class="tab">К</span> примеру, переменные определённые <strong>внутри</strong> некой функции не будут доступны <strong>за</strong> её пределами. Но это не работает для переменных, определенных снаружи относительно тела функции. В этом случае мы не только можем обращаться к внешним переменным, но и менять их значения. Такие переменные, декларированные за пределами каких-либо структур, называются <strong>глобальными</strong>. Внутри же функции предпочтение <strong>всегда</strong> отдается локальным одноименным переменным.
+        </p>
+        <div class="faq__any faq__flex">
+            <img src="/instruction/img/faq.png">
+            <p>*для справки: именно из-за понятия области видимости для циклов <strong>'for'</strong> и подобных структур, условия рекомендовано прописывать в формате переменной, как, например, <strong>'for(let i = 1; i < 10; i++) {}'</strong>. Всё потому что в случае, если объявить в цикле <strong>'i'</strong> без ключевого слова <strong>'let'</strong>, то в коде будет создаваться переменная глобального типа. Это, как можно понять, может серьезно повлиять на ход выполнения программы, если этой переменной случайно присвоится какое-то иное значение.</p>
+        </div>
+        <div id="massives">&nbsp;</div>
+        <h1 class="main__head">Массивы</h1>
+        <p class="main__par">
+            <span class="tab">Массивы</span> – это одна из структур данных, которые существуют в языке JavaScript. Итак, что же это такое?<br><br>
+            <span class="tab">Есть</span> такой способ. К примеру, у нас есть несколько цветов. Чтобы хранить значения этих цветов, как уже делали прежде, мы можем использовать переменные:
+        </p>
+        <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                let color1 = "красный";
+            </p>
+            <p class="code__any code">
+                let color2 = "оранжевый";
+            </p>
+            <p class="code__any code">
+                let color3 = "желтый";
+            </p>
+            <p class="code__any code">
+                let color4 = "зеленый";
+            </p>
+            <p class="code__any code">
+                let color5 = "голубой";
+            </p>
+            <p class="code__any code">
+                let color6 = "синий";
+            </p>
+            <p class="code__any code">
+                let color7 = "фиолетовый";
+            </p>
+        </div>
+        <p class="main__par">
+            <span class="tab">Итак,</span> у нас есть семь цветов радуги – семь переменных. Но проблема в том, что эти переменные никак не связаны друг с другом. То есть, мы никак не отображаем, что все эти семь цветов относятся к цветам радуги. И именно в таком случае, когда нам нужно собрать какие-то данные в единую структуру, как и в случае с цветами радуги, нам и приходят на помощь массивы. Массивы данных создаются следующим образом:
+        </p>
+        <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                let rainbowColors = ["красный", "оранжевый", "желтый", "зеленый", "голубой", "синий", "фиолетовый"];
+            </p>
+        </div>
+        <p class="main__par">
+            <span class="tab">И</span> теперь все цвета собраны воедино и мы можем обращаться к этим значениям по одному имени – по имени <strong>rainbowColors</strong>.<br><br>
+            <span class="tab">Обращаться</span> затем к этому массиву данных можно следующим образом (для примера возьмем консоль): <strong>consol.log(rainbowColors[2, 3]);</strong>. В квадратных скобках указывается индекс элемента в массиве, то есть, его порядковый номер. Индексируются массивы начиная с нуля. Для</span> примера этот вывод в консоль можно скомбинировать еще и со строкой: <strong>'console.log("Небо " + [4] + " цвета");'</strong>.<br><br>
+            <span class="tab">Можно</span> не только считывать данные из элемента массива, но и менять значения этих элементов. То есть, к примеру, если мы хотим изменить цвет <strong>"красный"</strong> на <strong>"оранжевый"</strong>, то мы можем сделать следующее: <strong>'rainbowColors[0] = "оранжевый";'</strong>.<br><br>
+            <span class="tab">Ровно</span> так же можно вывести в консоль (или куда-либо еще) <strong>все</strong> элементы массива при помощи указания его имени: <strong>'console.log(rainbowColors);'</strong>.<br><br>
+            <span class="tab">Так</span> же можно не только изменять какие-то элементы в массиве, но и добавлять в него новые. Но что делать, если мы не знаем, что у нас только семь элементов в массиве, а высчитать из них последний было бы затруднительно? Сделать это можно указать свойство массива <strong>'.length'</strong>. Это свойство равно количеству элементов, а именно: <strong>'rainbowColors[rainbowColors.length] = "темно-синий";'</strong>. Есть и другие способы создания массивов.<br><br>
+            <span class="tab">Второй</span> способ создать массив выглядит следующим образом: <strong>'let emptyArray = [];'</strong>. При такой записи создается пустой массив, в которые затем можно поместить значения.<br><br>
+            <span class="tab">Еще</span> одна, не слишком распространенная форма создания массива – это: <strong>'let emptyArray = new Array();'</strong> – осуществляется, как можно видеть, с помощью обращения к функции <strong>'array'</strong>. Повторюсь, такой способ не распространен.<br><br>
+            <span class="tab">Конечно</span> же, массивы могут хранить не только строки, они могут хранить в себе любые значения. Можно так же создать массив с числами: <strong>'let numbers = [1, 5, 3, 2];'</strong>. Более того, JavaScript позволяет добавлять в массив значения разных типов: <strong>'let anyItems = [32, "Hello!", null]';</strong>.
+        </p>
+        <div id="massive__methods">&nbsp;</div>
+        <h1 class="main__head">Методы массивов</h1>
+        <p class="main__par">
+            <span class="tab">У</span> массивов спаренные методы, такие как <strong>'push/pop'</strong>, <strong>'shift/unshift'</strong>, и есть одиночные <strong>indexOf</strong>, <strong>'slice'</strong>. Это основные методы для работы с массивами. По <button class="button" onclick="window.open('https://www.w3schools.com/jsref/jsref_obj_array.asp')">этой</button> ссылке можно перейти на сайт W3Schools и подробнее прочесть о самых разных методах для работы с массивами данных – их существует очень много. Но в основном используются те методы, речь о которых пойдет далее.<br><br>
+            <span class="tab">Начнем</span> с метода <strong>Push</strong>. Создадим массив: <strong>'let names = ["Вася", "Саша", "Игорь", "Олег"];'</strong>. Далее, если мы хотим изменить массив, а именно, добавить в него какой-то элемент, мы можем воспользоваться либо технологией, описанной выше, либо прибегнуть к методу <strong>Push</strong>. Выглядит это следующим образом (воспроизведем это как полноценный код):
+        </p>
+        <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                let names = "Вася", "Саша", "Игорь", "Олег"];
+            </p>
+            <p class="code__any code">
+                names.push("Вячеслав");
+            </p>
+        </div>
+        <p class="main__par">
+            <span class="tab">После</span> чего, с помощью такого метода записи, в массив (в его конец) будет добавлен новый элемент.<br><br>
+            <span class="tab">Кроме</span> того, метод <strong>'push'</strong> может возвращать значения. Вообще, метод – это, своего рода, функция. И мы можем извлечь из нее значение. Это можно реализовать следующим образом:
+        </p>
+        <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                let names = "Вася", "Саша", "Игорь", "Олег"];
+            </p>
+            <p class="code__any code">
+                let x = names.push("Вячеслав");
+            </p>
+            <p class="code__any code">
+                console.log(names);
+            </p>
+            <p class="code__any code">
+                console.log(x);
+            </p>
+        </div>
+        <p class="main__par">
+            <span class="tab">При</span> этом <strong>console.log();'</strong> в виде переменной <strong>'x'</strong> будет выводить число, означающее длину массива.<br><br>
+            <span class="tab">Противоположностью</span> метода <strong>push</strong> является метод <strong>pop</strong>. Метод <strong>pop</strong> удаляет последний элемент в массиве. Он так же способен возвращать значения, но он возвращает не количество элементов, а значение того элемента, который он удалил, то есть последнего. Код для удаления из массива последнего элемента выглядит так: <strong>'names.pop();'</strong>.<br><br>
+            <span class="tab">Следующая</span> пара методов – <strong>shift</strong> и <strong>unshift</strong>. По той же самой логике, что и предыдущие два массива, они используются для работы с элементами в начале массива. Метод <strong>unshift</strong> добавляет элемент, метод <strong>shift</strong> удаляет. 
+            <span class="tab">Следующий</span> метод – <strong>indexOF</strong>. Он нужен для определения индекса элемента массива. Записывается следующим образом: <strong>'names.indexOf("Игорь");'</strong>. Как можно заметить, в качестве параметра этот метод принимает в себя конкретный элемент массива, а после чего возвращает его индекс. Если мы укажем какой-то элемент, которого нет в массиве, то будет возвращено значение <strong>-1</strong>. То есть, если нужно определить, существует ли введенный элемент в массиве, то это можно легко сделать при помощи этого метода. Есть еще один момент. Если в массиве присутствует два одинаковых элемента, то будет возвращено значение <strong>0</strong>. Мы можем использовать метод <strong>indexOf</strong>, к примеру, в следующий логике:
+        </p>
+        <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                let toyota = ["Camry", 2018, "sedan", "black", true];
+            </p>
+            <p class="code__any code">
+                let isSedan = toyota.indexOf("sedan") === -1 ? console.log("Тип кузова - не седан") : console.log("Тип кузова - седан");
+            </p>
+        </div>
+        <p class="main__par">
+            <span class="tab">В</span> этом случае метод <strong>indexOf</strong> проверяет в массиве, есть ли там характеристика автомобиля – седан. Если же такого элемента массива нет, то возвращается значение <strong>-1</strong>, что исходя из работы тернарного оператора, интерпретируется как <strong>false</strong> и срабатывает описанный вывод в консоль, что машина не является седаном.<br><br>
+            <span class="tab">Последний</span> метод, который мы рассмотрим – это метод <strong>slice</strong>. Метод <strong>slice</strong> позволяет скопировать часть какого-то массива и присвоить её другой переменной, то есть создать другой массив из уже существующего. Например, <strong>let cars = ["Honda", "Toyota", "Peugeot", "Opel", "Mersedes", "BMW"];</strong>. И к примеру, мы хотим выбрать из этого массива только немецкие марки автомобилей, то есть, Opel, Mersedes и BMW. Для этого мы можем создать новый массив: <strong>'let germanCars = cars.slice(3, 5)';</strong>. В параметре метода в круглых скобках указываются индексы элементов, с которого мы начинаем "резать" массив, чтобы забрать его кусок и второй индекс, которым мы заканчиваем.
+        </p>
+        <div id="objects">&nbsp;</div>
+        <h1 class="main__head">Объекты</h1>
+        <p class="main__par">
+            <span class="tab"></span>
+        </p>
+
+
 
 
 

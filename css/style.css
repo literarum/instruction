@@ -6,14 +6,8 @@ html * {
 
 body {
   font-family: "IBM Plex Sans", sans-serif;
-  background: linear-gradient(
-    90deg,
-    rgba(59, 9, 121, 1) -15%,
-    rgba(147, 0, 255, 1) 48%,
-    rgba(207, 0, 255, 0.5) 100%
-  );
-  background-repeat: no-repeat;
-  color: rgba(232, 230, 230, 1);
+  background: white;
+  color: #000;
 }
 
 .header {
@@ -137,13 +131,7 @@ body {
   margin-bottom: 5%;
   max-width: 1100px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.65), inset 0 0 20px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(
-    90deg,
-    rgba(224, 0, 255, 0.5) -15%,
-    rgba(179, 90, 195, 0.5) 48%,
-    rgba(20, 138, 227, 0.5) 100%
-  );
-  background-repeat: no-repeat;
+  background: whitesmoke;
 }
 
 #div_table_of_contents {
