@@ -114,6 +114,7 @@
                 <li><a href="#massives">Массивы</a></li>
                 <li><a href="#massive__methods">Методы массивов</a></li>
                 <li><a href="#objects">Объекты</a></li>
+                <li><a href="#objects__massives">Массивы или объекты</a></li>
             </ul>
         </div>
         <h1 class="tom__name">Том III. JavaScript</h1>
@@ -946,6 +947,82 @@
         </p>
         <div id="objects">&nbsp;</div>
         <h1 class="main__head">Объекты</h1>
+        <p class="main__par">
+            <span class="tab">В</span> JavaScript есть еще одна структура для хранения данных – это <strong>объекты</strong>. Пример массивов из предыдущей главы может хранить как данные одинакового типа (строки), так и данные разных типов (строки, числа, boolean, undefined, null). Этот способ хранения данных, по большому счету, валиден (корректен), однако не слишком удобен: чтобы получить доступ к какому-либо элементу из массива, нам нужно точно знать, на какой позиции расположено то или иное свойство. Поэтому для множества типов данных, которые принадлежат к какому-то объекту, в JavaScript и существует тип хранения данных <strong>объекты</strong>. В коде объекты записываются следующим образом <strong>'let carToyota = {}';</strong>. В фигурных скобках перечисляются свойства объекта. Но они будут сохраняться не по их индексу, а по так называемому <strong>ключу</strong> (строке). Соответственно, в объекте есть ключ и его значение, по которому считывается информация. Более развернуто посмотрим на код:
+        </p>
+        <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                let carToyota = {
+            </p>
+            <p class="code__any sub__code">
+                model: "Camry",
+            </p>
+            <p class="code__any sub__code">
+                year: "2010",
+            </p>
+            <p class="code__any sub__code">
+                carBody: "sedan",
+            </p>
+            <p class="code__any sub__code">
+                color: "black",
+            </p>
+            <p class="code__any sub__code">
+                hasAirbag: true
+            </p>
+            <p class="code__any code">
+                }
+            </p>
+        </div>
+        <p class="main__par">
+            <span class="tab">Далее</span> мы можем обращаться к элементу объекта при помощи похожей записи, что мы рассматривали выше, только в этот раз используется не индекс, а название свойства обекта. На примере консоли: <strong>'console.log(carToyota["year"]);'</strong>. Но для обращения к свойству объекта не обязательно используется метод обращения, как к массиву – для этого есть специальная запись: <strong>'carToyota.year';</strong>. Это обращение к объекту по его ключу. То есть теперь нам не важно знать, на каком месте расположено то или иное свойство. Мы даже можем менять их местами – на результат это никак не повлияет. Есть небольшое отличие между двумя типами записей. В первом случае, когда элемент указывается в квадратных скобках, мы можем использовать переменную. Например, если мы создадим переменную с каким-либо свойством из массива, а затем обратимся к ней, то всё сработает корректно:
+        </p>
+        <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                let x = "Camry";
+            </p>
+            <p class="code__any code">
+                console.log(carToyota[x]);
+            </p>
+        </div>
+        <p class="main__par">
+            <span class="tab">Но</span> если мы обратимся к <strong>'x'</strong> в формате записи <strong>'console.log(carToyota.x)'</strong>, то в результате мы получим значение <strong>'undefined'</strong>. В этом случае будет разыскиваться свойство с названием <strong>'x'</strong>, а не назначенная переменная.<br><br>
+            <span class="tab">В</span> объектах точно так же можно менять одни свойства на другие. Например, цвет: <strong>'carToyota.color = "red";</strong>.<br><br>
+            <span class="tab">Как</span> и массив, объект точно так же можно вызвать. Например, в консоль: <strong>'console.log(carToyota);'</strong>.<br><br>
+            <span class="tab">Для</span>объектов так же существует не один способ их создания. В первом способе, который мы рассмотрели выше, мы сразу прописываем все поля. Но есть второй способ:
+        </p>
+        <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                let carMazda = {};
+            </p>
+            <p class="code__any code">
+                carMazda.year = 2018;
+            </p>
+            <p class="code__any code">
+                carMazda.model = "CX7";
+            </p>
+            <p class="code__any code">
+                carMazda.carBody = "crossover";
+            </p>
+        </div>
+        <p class="main__par">
+            <span class="tab">И</span> еще один способ, как и при создании массивов – при помощи функции. Код выглядит следующим образом:
+        </p>
+        <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                let carOpel = new Object();
+            </p>
+            <p class="code__any code">
+                carOpel.body = "Hatchback";
+            </p>
+            <p class="code__any code">
+                carOpel.year = 2018;
+            </p>
+            <p class="code__any code">
+                carOpel.color = "blue";
+            </p>
+        </div>
+        <div id="objects__massives">&nbsp;</div>
+        <h1 class="main__head">Массивы или объекты</h1>
         <p class="main__par">
             <span class="tab"></span>
         </p>
