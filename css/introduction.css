@@ -17,8 +17,8 @@ html * {
   top: 50px;
   height: 4px;
   width: 0%;
-  background: rgba(255, 255, 255, .7);
-  box-shadow: 0 0 3px rgba(255, 255, 255, .8);
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 3px rgba(255, 255, 255, 0.8);
   border-radius: 0 5px 5px 0;
 }
 
@@ -53,13 +53,13 @@ body {
   height: 50px;
   background-color: #d1c3fca5;
   z-index: 10000;
-  border-bottom: .5px solid black;
-  transition: all .4s;
+  border-bottom: 0.5px solid black;
+  transition: all 0.4s;
 }
 
 .active {
   background-color: #d1c3fc;
-  transition: all .4s;
+  transition: all 0.4s;
 }
 
 .header__list {
@@ -73,7 +73,7 @@ body {
 }
 
 .header__link {
-  transition: .2s;
+  transition: 0.2s;
   transition-timing-function: ease-out;
 }
 
@@ -93,7 +93,7 @@ body {
   font-size: 1.4rem;
   border: none;
   cursor: pointer;
-  transition: .2s;
+  transition: 0.2s;
   transition-timing-function: ease-out;
 }
 
@@ -110,7 +110,7 @@ body {
 }
 
 .dropdown__jQuery__div::before {
-  content: '';
+  content: "";
   width: 8px;
   height: 8px;
   margin-right: -17px;
@@ -125,7 +125,7 @@ body {
 .dropdown-links {
   position: relative;
   display: inline-block;
-  transition: .2s;
+  transition: 0.2s;
   transition-timing-function: ease-out;
 }
 
@@ -134,15 +134,15 @@ body {
 .dropdown-content-links {
   visibility: hidden;
   opacity: 0;
-  transition: visibility .5s, opacity .5s ease-out;
+  transition: visibility 0.5s, opacity 0.5s ease-out;
   padding: 30px 20px;
   position: absolute;
   right: -85px;
   top: 55px;
-  background-color: rgba(210,195,252, .9);
+  background-color: rgba(210, 195, 252, 0.9);
   min-width: 250px;
   z-index: 1;
-  box-shadow: 0 0 5px rgba(0, 0, 0, .8);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
   border-radius: 5px;
 }
 
@@ -157,7 +157,7 @@ body {
   padding: 10px 25px;
   text-decoration: none;
   display: block;
-  transition: .2s;
+  transition: 0.2s;
   transition-timing-function: ease-out;
 }
 
@@ -180,7 +180,7 @@ body {
 }
 
 .logo {
-  opacity: .5;
+  opacity: 0.5;
   display: flex;
   flex-grow: 1;
   justify-content: center;
@@ -201,7 +201,7 @@ body {
 
 .up__down::before,
 .up__down::after {
-  content: '';
+  content: "";
   height: 47px;
   width: 1px;
   background-color: rgb(255, 255, 255);
@@ -209,10 +209,10 @@ body {
 }
 
 .up__down a {
-  padding: .4rem .8rem;
+  padding: 0.4rem 0.8rem;
   font-size: 23px;
   text-decoration: none;
-  transition: .5s;
+  transition: 0.5s;
   transition-timing-function: ease-out;
 }
 
@@ -236,8 +236,8 @@ body {
  * Переключаемая боковая панель навигации
  * выдвигающаяся по клику слева
  */
- 
- .nav {
+
+.nav {
   /*  ширина произвольная, не стесняйтесь экспериментировать */
   width: 320px;
   min-width: 320px;
@@ -252,9 +252,9 @@ body {
   /* внутренние отступы */
   padding: 15px 20px;
   /* плавный переход смещения панели */
-  -webkit-transition: left .3s;
-  -moz-transition: left .3s;
-  transition: left .3s;
+  -webkit-transition: left 0.3s;
+  -moz-transition: left 0.3s;
+  transition: left 0.3s;
   /* определяем цвет фона панели */
   background: #b298ff;
   /* поверх других элементов */
@@ -262,7 +262,7 @@ body {
 }
 
 .nav > ul > li > a::before {
-  height: .1px;
+  height: 0.1px;
   width: 0%;
   background: #fff;
 }
@@ -288,9 +288,9 @@ body {
   /* всегда поверх других элементов страницы */
   z-index: 2001;
   /* анимируем цвет текста при наведении */
-  -webkit-transition: color .25s ease-in-out;
-  -moz-transition: color .25s ease-in-out;
-  transition: color .25s ease-in-out;
+  -webkit-transition: color 0.25s ease-in-out;
+  -moz-transition: color 0.25s ease-in-out;
+  transition: color 0.25s ease-in-out;
 }
 
 /* определяем текст кнопки 
@@ -298,7 +298,7 @@ body {
 */
 
 .nav-toggle:after {
-  content: '\2630';
+  content: "\2630";
   text-decoration: none;
 }
 
@@ -308,7 +308,7 @@ body {
 * имя селектора атрибут флажка
 */
 
-[id='nav-toggle'] {
+[id="nav-toggle"] {
   position: absolute;
   display: none;
 }
@@ -319,7 +319,7 @@ body {
 * когда навигация раскрыта, распологаем внутри панели
 */
 
-[id='nav-toggle']:checked ~ .nav > .nav-toggle {
+[id="nav-toggle"]:checked ~ .nav > .nav-toggle {
   left: auto;
   right: 2px;
   top: 1em;
@@ -330,11 +330,11 @@ body {
 * используем псевдокласс:checked
 */
 
-[id='nav-toggle']:checked ~ .nav {
+[id="nav-toggle"]:checked ~ .nav {
   left: 0;
-  box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
-  -moz-box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
-  -webkit-box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
+  box-shadow: 4px 0px 20px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 4px 0px 20px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 4px 0px 20px 0px rgba(0, 0, 0, 0.5);
   overflow-y: auto;
 }
 
@@ -354,7 +354,7 @@ body {
   }
   .nav {
     width: 100%;
-    box-shadow: none
+    box-shadow: none;
   }
 }
 
@@ -378,13 +378,13 @@ body {
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
-  -webkit-transition: opacity .5s .1s, -webkit-transform .5s .1s;
-  -moz-transition: opacity .5s .1s, -moz-transform .5s .1s;
-  -ms-transition: opacity .5s .1s, -ms-transform .5s .1s;
-  transition: opacity .5s .1s, transform .5s .1s;
+  -webkit-transition: opacity 0.5s 0.1s, -webkit-transform 0.5s 0.1s;
+  -moz-transition: opacity 0.5s 0.1s, -moz-transform 0.5s 0.1s;
+  -ms-transition: opacity 0.5s 0.1s, -ms-transform 0.5s 0.1s;
+  transition: opacity 0.5s 0.1s, transform 0.5s 0.1s;
 }
 
-[id='nav-toggle']:checked ~ .nav > ul > li {
+[id="nav-toggle"]:checked ~ .nav > ul > li {
   opacity: 1;
   -webkit-transform: translateX(0);
   -moz-transform: translateX(0);
@@ -395,10 +395,9 @@ body {
 /* определяем интервалы появления пунктов меню */
 
 .nav > ul > li {
-  -webkit-transition: opacity .5s .2s, -webkit-transform .5s .2s;
-  transition: opacity .5s .2s, transform .5s .2s;
+  -webkit-transition: opacity 0.5s 0.2s, -webkit-transform 0.5s 0.2s;
+  transition: opacity 0.5s 0.2s, transform 0.5s 0.2s;
 }
-
 
 /**
 * оформление ссылок пунктов меню
@@ -415,9 +414,9 @@ body {
   width: 100%;
   text-decoration: none;
   /* плавный переход */
-  -webkit-transition: color .5s ease, padding .5s ease;
-  -moz-transition: color .5s ease, padding .5s ease;
-  transition: color .5s ease, padding .5s ease;
+  -webkit-transition: color 0.5s ease, padding 0.5s ease;
+  -moz-transition: color 0.5s ease, padding 0.5s ease;
+  transition: color 0.5s ease, padding 0.5s ease;
 }
 
 /**
@@ -425,7 +424,7 @@ body {
 */
 
 .nav > ul > li > a:before {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   right: 0;
@@ -437,16 +436,16 @@ body {
 }
 
 .nav > ul > li > a:after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   left: 0;
   bottom: 0;
-  height: .1px;
+  height: 0.1px;
   width: 100%;
   background: #fff;
-  -webkit-transition: width .5s ease;
-  transition: width .5s ease;
+  -webkit-transition: width 0.5s ease;
+  transition: width 0.5s ease;
 }
 
 /* фон затемнения на основной контент 
@@ -454,7 +453,6 @@ body {
 * спорная такая фича, если оно вам надо
 * просто раскомментируйте
 */
-
 
 .mask-content {
   display: block;
@@ -469,11 +467,11 @@ body {
   opacity: 0;
 }
 
-[id='nav-toggle']:checked ~ .mask-content {
+[id="nav-toggle"]:checked ~ .mask-content {
   visibility: visible;
   opacity: 1;
-  -webkit-transition: opacity .5s, visibility .5s;
-  transition: opacity .5s, visibility .5s;
+  -webkit-transition: opacity 0.5s, visibility 0.5s;
+  transition: opacity 0.5s, visibility 0.5s;
 }
 
 .contents__header {
@@ -489,13 +487,14 @@ body {
   padding-bottom: 3rem;
 }
 
-.table__of__contents ul, a {
+.table__of__contents ul,
+a {
   text-decoration: none;
   color: inherit;
   list-style-type: none;
   line-height: 1.5;
   font-size: 1.5rem;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .table__of__contents li {
@@ -503,7 +502,7 @@ body {
 }
 
 .table__of__contents li::before {
-  content: '‣';
+  content: "‣";
   margin-right: 10px;
 }
 
@@ -549,10 +548,10 @@ body {
 .attention {
   border: 1px solid red;
   border-radius: 5px;
-  box-shadow: 0 0 10px rgba(255, 0, 0, .5);
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
   padding: 1em;
   padding-top: 2.5em;
-  background-color: rgba(0, 0, 0, .6);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .attention h1 {
@@ -605,20 +604,21 @@ body {
 }
 
 .main__head {
-    text-align: center;
-    margin-top: 3rem;
-    margin-bottom: 2rem;
-    font-size: 40px;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  font-size: 40px;
 }
 
 .main__par {
-  margin: .5rem;
+  margin: 0.5rem;
   margin-top: 2rem;
   line-height: 1.5;
   font-size: 20px;
 }
 
 .code__block__any {
+  word-wrap: break-word;
   border-radius: 5px;
   margin: 30px;
   padding: 40px;
@@ -693,13 +693,13 @@ body {
   height: 2em;
   width: max-content;
   border: none;
-  background-color: rgba(255, 255, 255, .4);
+  background-color: rgba(255, 255, 255, 0.4);
   border-radius: 5px;
   text-align: center;
   color: #fff;
   cursor: pointer;
-  margin: .2rem;
-  transition: .5s ease-out;
+  margin: 0.2rem;
+  transition: 0.5s ease-out;
 }
 
 .tom__name {
@@ -731,7 +731,8 @@ body {
   align-items: center;
 }
 
-.faq__first p, ul {
+.faq__first p,
+ul {
   grid-column: 2;
 }
 
@@ -765,7 +766,8 @@ body {
   align-self: center;
 }
 
-.faq__second p, ul {
+.faq__second p,
+ul {
   grid-column: 2;
 }
 
@@ -789,7 +791,7 @@ body {
 }
 
 .list li::before {
-  content: '➤';
+  content: "➤";
   width: 10px;
   height: 10px;
   margin-right: 10px;
@@ -1217,9 +1219,14 @@ select option {
   grid-row: 6;
 }
 
-
-
-
+.div__cats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1%;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
 
 @media screen and (max-width: 1310px) {
   .up__down::before,
@@ -1264,7 +1271,7 @@ select option {
   #tooltip {
     opacity: 0;
   }
-  
+
   .tom__name {
     font-size: 4rem;
   }
@@ -1278,14 +1285,14 @@ select option {
   header .slogan {
     display: none;
   }
-  
+
   .contents__header {
     font-size: 2rem;
   }
 
   .list__tableOf a,
   .list__tableOf li {
-    font-size: .9rem;
+    font-size: 0.9rem;
     margin-bottom: 1%;
   }
 
@@ -1309,7 +1316,7 @@ select option {
   .attention p {
     font-size: 1.6rem;
   }
-  
+
   #content {
     max-width: 100%;
     width: 250px;
@@ -1336,9 +1343,9 @@ select option {
 }
 
 @media screen and (max-width: 445px) {
-.instruction h1 {
-  font-size: 2rem;
-}
+  .instruction h1 {
+    font-size: 2rem;
+  }
 
   .faq__first {
     padding: 30% 2% 30% 2%;
@@ -1351,7 +1358,7 @@ select option {
     padding: 45% 2% 45% 2%;
     row-gap: 5%;
   }
-  
+
   .instruction h1 {
     font-size: 1.4rem;
   }
@@ -1363,81 +1370,80 @@ select option {
 
 @media (hover: hover) {
   /* Меняет цвет ссылок в выпадающем списке при наведении */
-.dropdown-content a:hover,
-.dropdown-content-links a:hover,
-.header__item a:hover,
-.dropbtn__jQuery:hover,
-.dropdown__jQuery__div:hover,
-.dropbtn:hover,
-.dropbtn-links:hover
- {
-  color: rgba(0, 0, 0, 1);
-  text-shadow: 0 0 10px #fff, 1px 1px 2px #fff;
-  transition: .2s;
-  transition-timing-function: ease-out;
-}
+  .dropdown-content a:hover,
+  .dropdown-content-links a:hover,
+  .header__item a:hover,
+  .dropbtn__jQuery:hover,
+  .dropdown__jQuery__div:hover,
+  .dropbtn:hover,
+  .dropbtn-links:hover {
+    color: rgba(0, 0, 0, 1);
+    text-shadow: 0 0 10px #fff, 1px 1px 2px #fff;
+    transition: 0.2s;
+    transition-timing-function: ease-out;
+  }
 
-.dropdown__jQuery__div:hover::before {
-  background-color: #fff;
-  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 1));
-  transition: .5s;
-  transition-timing-function: ease-out;
-  box-shadow: 0 0 3px rgba(255, 255, 255, 1);
-  background-color: rgba(0, 0, 0, 1);
-}
+  .dropdown__jQuery__div:hover::before {
+    background-color: #fff;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 1));
+    transition: 0.5s;
+    transition-timing-function: ease-out;
+    box-shadow: 0 0 3px rgba(255, 255, 255, 1);
+    background-color: rgba(0, 0, 0, 1);
+  }
 
-.up__down a:hover {
-  color: rgba(0, 0, 0, .8);
-  text-shadow: 0 0 10px #fff, 1px 1px 2px #fff;
-  transition: .5s;
-  transition-timing-function: ease-out;
-}
+  .up__down a:hover {
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: 0 0 10px #fff, 1px 1px 2px #fff;
+    transition: 0.5s;
+    transition-timing-function: ease-out;
+  }
 
-/* цвет текста при наведении */
-.nav-toggle:hover {
-  color: #f4f4f4;
-}
+  /* цвет текста при наведении */
+  .nav-toggle:hover {
+    color: #f4f4f4;
+  }
 
-/**
+  /**
 * состояние ссылок меню при наведении
 */
-.nav > ul > li > a:hover,
-.nav > ul > li > a:focus {
-  font-weight: 300;
-  padding-left: 15px;
-  text-shadow: 0 0 10px #fff, 1px 1px 2px #fff;
-  color: rgba(0, 0, 0, .8);
-  transition: .5s;
-}
+  .nav > ul > li > a:hover,
+  .nav > ul > li > a:focus {
+    font-weight: 300;
+    padding-left: 15px;
+    text-shadow: 0 0 10px #fff, 1px 1px 2px #fff;
+    color: rgba(0, 0, 0, 0.8);
+    transition: 0.5s;
+  }
 
-/**
+  /**
 * анимируем линию подчеркивания 
 * ссылок при наведении
 */
-.nav > ul > li > a:hover:before {
-  height: .1px;
-  width: 0%;
-  background: #fff;
-  -webkit-transition: width .5s ease;
-  transition: width .5s ease;
+  .nav > ul > li > a:hover:before {
+    height: 0.1px;
+    width: 0%;
+    background: #fff;
+    -webkit-transition: width 0.5s ease;
+    transition: width 0.5s ease;
   }
 
-.nav > ul > li > a:hover:after {
-  width: 0%;
-  background: transparent;
-  -webkit-transition: width 0s ease;
-  transition: width 0s ease;
+  .nav > ul > li > a:hover:after {
+    width: 0%;
+    background: transparent;
+    -webkit-transition: width 0s ease;
+    transition: width 0s ease;
   }
 
-.table__of__contents a:hover {
-  margin-left: 1em;
-  color: rgba(0, 0, 0, .8);
-  text-shadow: 0 0 10px #fff, 1px 1px 2px #fff;
-  transition: .5s;
+  .table__of__contents a:hover {
+    margin-left: 1em;
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: 0 0 10px #fff, 1px 1px 2px #fff;
+    transition: 0.5s;
   }
 
-.button:hover {
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, .4), -2px -2px 8px rgba(0, 0, 0, .4);
-  transition: .2s ease-out;
+  .button:hover {
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4), -2px -2px 8px rgba(0, 0, 0, 0.4);
+    transition: 0.2s ease-out;
   }
 }

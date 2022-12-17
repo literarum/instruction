@@ -17,6 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="templates/js/lightGallery.js"></script>
     <script>
         $(function(){
             $('a[href^="#"]').click(function(){
@@ -115,6 +116,12 @@
                 <li><a href="#massive__methods">Методы массивов</a></li>
                 <li><a href="#objects">Объекты</a></li>
                 <li><a href="#objects__massives">Массивы или объекты</a></li>
+                <li><a href="#objects__methods">Методы объектов</a></li>
+                <li><a href="#this">'this' в методе объекта</a></li>
+                <li><a href="#dom"></a>DOM</li>
+                <li><a href="#dom__selectors">DOM. Селекторы</a></li>
+                <li><a href="#dom__changing__content">DOM. Изменение контента</a></li>
+                <li><a href="#dom__changing__attributes">DOM. Изменение контента</a></li>
             </ul>
         </div>
         <h1 class="tom__name">Том III. JavaScript</h1>
@@ -1024,8 +1031,524 @@
         <div id="objects__massives">&nbsp;</div>
         <h1 class="main__head">Массивы или объекты</h1>
         <p class="main__par">
-            <span class="tab"></span>
+            <span class="tab">Так</span> что же выбрать? Какие данные лучше отображать в массивах, а какие в объектах?<br><br>
+            <span class="tab">В</span> массивах лучше хранить данные одного вида (типа), то есть однообразные данные. Конечно, не воспрещается хранить в массивах и разнообразные данные, однако способ массивов для этих целей не представляется удобным. К примеру, массив с различными названиями цветов, где, конечно же, будут только цвета и ничего больше: <strong>let colors = ["red", "orange", "yellow", "white", "blue"];</strong>. Если же мы хотим сохранять данные разных типов (как в выше описанном примере с автомобилем), то лучше использовать способ объектов. Как например, информация о человеке: 
         </p>
+        <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                let personIvan = {
+            </p>
+            <p class="code__any sub__code">
+                firstName: "Иван",
+            </p>
+            <p class="code__any sub__code">
+                lastName: "Иванов",
+            </p>
+            <p class="code__any sub__code">
+                age: 24,
+            </p>
+            <p class="code__any sub__code">
+                isMarried: false,
+            </p>
+            <p class="code__any code">
+                }
+            </p>
+        </div>
+        <p class="main__par">
+            <span class="tab">Но</span> кроме того, и массивы и объекты могут хранить в себе другие массивы и/или объекты. Например, массив <strong>'numbers'</strong> (числа), может хранить в себе какие-то массивы с какими-то числами: <strong>'let numbers = [[1,2,3], [4,5,6], [7,8,9,10]];'</strong>. А далее, чтобы обратиться к этому массиву, к примеру, через консоль, нужно сначала указать индекс массива в массиве, а затем индекс самого элемента в выбранном массиве: <strong>'condole.log(numbers[1][2]);'</strong>.<br><br>
+            <span class="tab">Объекты</span> с массивами можно конфигурировать по-разному. К примеру, объекты могут содержать в себе массивы. Вернемся к нашему примеру с <strong>'personIvan'</strong>:
+        </p>
+        <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                let personIvan = {
+            </p>
+            <p class="code__any sub__code">
+                firstName: "Иван",
+            </p>
+            <p class="code__any sub__code">
+                lastName: "Иванов",
+            </p>
+            <p class="code__any sub__code">
+                age: 24,
+            </p>
+            <p class="code__any sub__code">
+                isMarried: false,
+            </p>
+            <p class="code__any sub__code">
+                pets: ["cat", "dog", "humster"]
+            </p>
+            <p class="code__any code">
+                }
+            </p>
+        </div>
+        <p class="main__par">
+            <span class="tab">А</span> чтобы обратиться к одному из элементов массива, нужно: <strong>'console.log(personIvan.pets[1]);'</strong>.<br><br>
+            <span class="tab">Объекты</span> могут хранить массивы, а массивы могут хранить объекты. К примеру, мы хотим сделать базу данных о продавцах автомобилей:
+        </p>
+        <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                let sellers = [
+            </p>
+            <p class="code__any sub__code">
+                {
+            </p>
+            <p class="code__any sub__sub__code">
+                firstName: "Иван",
+            </p>
+            <p class="code__any sub__sub__code">
+                firstName: "Иванов",
+            </p>
+            <p class="code__any sub__sub__code">
+                regDate: "09.08.2019",
+            </p>
+            <p class="code__any sub__sub__code">
+                hasDiscount: false,
+            </p>
+            <p class="code__any sub__sub__code">
+                age: 25
+            </p>
+            <p class="code__any sub__code">
+                },
+            </p>
+            <p class="code__any sub__code">
+                {
+            </p>
+            <p class="code__any sub__sub__code">
+                firstName: "Gleb",
+            </p>
+            <p class="code__any sub__sub__code">
+                lastName: "Glebov",
+            </p>
+            <p class="code__any sub__sub__code">
+                regDate: "01.01.2010",
+            </p>
+            <p class="code__any sub__sub__code">
+                hasDiscount: true,
+            </p>
+            <p class="code__any sub__sub__code">
+                age: 34
+            </p>
+            <p class="code__any sub__code">
+                }
+            </p>
+            <p class="code__any code">
+                ]
+            </p>
+        </div>
+        <p class="main__par">
+            <span class="tab">То</span> есть, как можно заметить, у нас есть массив и внутри этого массива есть два объекта (можно создавать сколько угодно объектов). Как же нам обратиться к полям этих объектов? Есть два способа. Мы можем обратиться ко всему объекту, к примеру, в консоли: <strong>'console.log(sellers[1]);'</strong>. Или мы можем обратиться только к какой-то конкретной строке: <strong>'console.log(sellers[1].hasDiscount);'</strong>.<br><br>
+            <span class="tab">В</span> реальной жизни мы можем создавать базы данных, а затем обращаться к конкретным элементам в них. Например, создать базу данных об автомобилях в автосалоне, а затем вывести только те автомобили, которые были проданы. Для этого, собственно, создадим базу данных. А затем создадим цикл, где будет высчитываться длина выводимой информации. Выглядеть это будет следующим образом:
+        </p>
+        <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                let cars = [
+            </p>
+            <p class="code__any sub__code">
+                {
+            </p>
+            <p class="code__any sub__sub__code">
+                carProd: "Mersedes",
+            </p>
+            <p class="code__any sub__sub__code">
+                carModel: "SL900",
+            </p>
+            <p class="code__any sub__sub__code">
+                color: "black",
+            </p>
+            <p class="code__any sub__sub__code">
+                carYear: 2020,
+            </p>
+            <p class="code__any sub__sub__code">
+                isSelled: true
+            </p>
+            <p class="code__any sub__code">
+                },
+            </p>
+            <p class="code__any sub__code">
+                {
+            </p>
+            <p class="code__any sub__sub__code">
+                carProd: "Toyota",
+            </p>
+            <p class="code__any sub__sub__code">
+                carModel: "Camry",
+            </p>
+            <p class="code__any sub__sub__code">
+                color: "blue",
+            </p>
+            <p class="code__any sub__sub__code">
+                carYear: 2019,
+            </p>
+            <p class="code__any sub__sub__code">
+                isSelled: true
+            </p>
+            <p class="code__any sub__code">
+                },
+            </p>
+            <p class="code__any sub__code">
+                {
+            </p>
+            <p class="code__any sub__sub__code">
+                carProd: "BMW",
+            </p>
+            <p class="code__any sub__sub__code">
+                carModel: "X7",
+            </p>
+            <p class="code__any sub__sub__code">
+                color: "white",
+            </p>
+            <p class="code__any sub__sub__code">
+                carYear: 2021,
+            </p>
+            <p class="code__any sub__sub__code">
+                isSelled: false
+            </p>
+            <p class="code__any sub__code">
+                },
+            </p>
+            <p class="code__any sub__code">
+                {
+            </p>
+            <p class="code__any sub__sub__code">
+                carProd: "Audi",
+            </p>
+            <p class="code__any sub__sub__code">
+                carModel: "A8L",
+            </p>
+            <p class="code__any sub__sub__code">
+                color: "black",
+            </p>
+            <p class="code__any sub__sub__code">
+                carYear: 2022,
+            </p>
+            <p class="code__any sub__sub__code">
+                isSelled: false
+            </p>
+            <p class="code__any sub__code">
+                }
+            </p>
+            <p class="code__any code">
+                ];
+            </p>
+            <p class="code__any sub__code">
+                for(let i = 0; i < cars.length; i++) {
+            </p>
+            <p class="code__any sub__code">
+                if(cars[i].isSelled === false) {
+            </p>
+            <p class="code__any sub__sub__code">
+                console.log(cars[i]);
+            </p>
+            <p class="code__any sub__code">
+                }
+            </p>
+            <p class="code__any code">
+                }
+            </p>
+        </div>
+        <p class="main__par">
+            <span class="tab">Для</span> работы с массивами можно использовать не только цикл <strong>for</strong>. Так же можно использовать цикл <strong>forEach</strong> (от англ. для каждого), код выглядит следующим образом:
+        </p>
+        <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                cars.forEach(function(car) {
+            </p>
+            <p class="code__any sub__code">
+                if(car.isSelled === false) {
+            </p>
+            <p class="code__any sub__sub__code">
+                console.log(car);
+            </p>
+            <p class="code__any sub__code">
+                }
+            </p>
+            <p class="code__any code">
+                }
+            </p>
+        </div>
+        <div id="objects__methods">&nbsp;</div>
+        <h1 class="main__head">Методы объектов</h1>
+        <p class="main__par">
+            <span class="tab">Внутри</span> объектов можно прописывать функции, выполняющие те или иные действия. Например, вычисление скидки в зависимости от длительности регистрации пользователя. Рассмотрим это используя вышеприведенный пример с продавцами автомобилей. Если пользователь зарегистрирован на сайте меньше двух лет, то он не имеет никакой скидки. Если от двух до пяти лет, то у него есть скидка 20%, а если больше пяти, то 30%. И далее вызвать метод этого объекта в консоль. Код будет выглядеть следующим образом:
+        </p>
+        <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                let carSeller1 = {
+            </p>
+            <p class="code__any sub__code">
+                firstName: "Игорь",
+            </p>
+            <p class="code__any sub__code">
+                lastName: "Курушин",
+            </p>
+            <p class="code__any sub__code">
+                regYear: 2017,
+            </p>
+            <p class="code__any sub__code">
+                hasDiscount: true,
+            </p>
+            <p class="code__any sub__code">
+                discountCalculation: function(year) {
+            </p>
+            <p class="code__any sub__sub__code">
+                let numberOfYears = 2022 - year;
+            </p>
+            <p class="code__any sub__sub__code">
+                if(numberOfYears <= 2) {
+            </p>
+            <p class="code__any sub__sub__sub__code">
+                discount = 0;
+            </p>
+            <p class="code__any sub__sub__code">
+                } else if(numberOfYears > 2 && numberOfYears <= 5) {
+            </p>
+            <p class="code__any sub__sub__sub__code">
+                discount = 20;
+            </p>
+            <p class="code__any sub__sub__code">
+                } else if(numberOfYears > 5) {
+            </p>
+            <p class="code__any sub__sub__sub__code">
+                discount = 30;
+            </p>
+            <p class="code__any sub__sub__code">
+                }
+            </p>
+            <p class="code__any sub__code">
+                return discount;
+            </p>
+            <p class="code__any sub__code">
+                }
+            </p>
+            <p class="code__any code">
+                }
+            </p>
+            <p class="code__any code break">
+                console.log(carSeller1.discountCalculation(2019));
+            </p>
+        </div>
+        <div id="this">&nbsp;</div>
+        <h1 class="main__head">'this' в методе объекта</h1>
+        <p class="main__par">
+            <span class="tab">Как</span> можно заметить, в выше рассмотренном методе функции мы используем значение, которое можно получить из самого объекта. В данном примере внутриобъектной функции, мы используем параметр <strong>'year'</strong>, то есть год регистрации пользователя. Но так как в самом объекте уже есть свойство с годом регистрации, то нам необязательно использовать для функции параметр <strong>'year'</strong>. Мы можем обратиться непосредственно к свойству <strong>'regYear'</strong> внутри объекта через функцию. К этому свойству объекта внутри функции мы можем обратиться используя ключевое слово <strong>'this'</strong>. Выглядеть в этом случае и объект, и функция будут почти полностью идентично, поэтому не будем переписывать код рассмотренный выше. Отметим только, что теперь параметр функции указываться не будет – скобки после слова <strong>'function'</strong> будут оставаться пустыми, а объявленная нами переменная <strong>'numberOfYears'</strong> будет теперь выглядеть так: <span class="break">'let numberOfYears = this.regYear';</span></strong>. Теперь, чтобы получить результат выполнения функции, не нужно искусственно прописывать в коде вызова консоли параметр функции – функция будет брать данные для своей работы непосредственно из свойства объекта, то есть, из года регистрации пользователя.<br><br>
+            <span class="tab">Но</span> мы можем пойти и еще дальше. Например, если выше описанный объект имеет свойство <strong>discount</strong>, в котором эта скидка указывается, например, по умолчанию скидка будет равна 0. А далее в коде мы можем объявить переменную <strong>'discount'</strong> и присвоить ей значение выше описанной функции с методом <strong>'this'</strong> и далее мы можем переменной <strong>'carSeller1.discount'</strong> присвоить значение переменной <strong>'discount'</strong>. То есть, мы присваиваем полю <strong>discount</strong> в объекте, значение, которое мы вычисляем с помощью выше описанной функции:
+        </p>
+        <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                <span class="break">let discount = carSeller1.discountCalculation();</span>
+            </p>
+            <p class="code__any code">
+                carSeller1.discount = discount;
+            </p>
+        </div>
+        <p class="main__par">
+            <span class="tab">Но</span> можно записать еще короче и сделать так, чтобы код обращался к объекту (carSeller1), затем к его свойству (discount) и отождествлял его с объектом (carSeller1), затем функцией (discountCalculation();). А затем вывести в консоль весь объект. В этом случае, будет выведен весь объект, а в нём автоматически прописываться вычисленный функцией процент скидки, в зависимости от года регистрации на сайте:
+        </p>
+        <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                <span class="break">carSeller1.discount = carSeller1.discountCalculation();</span>
+            </p>
+        </div>
+        <p class="main__par">
+            <span class="tab">Но</span> можно пойти еще дальше по пути оптимизации. Для этого мы можем больше не использовать <strong>'return'</strong> в функции, а обратиться к полю объекта <strong>discount</strong>. Сделать это можно с помощью <strong>'this.discount = discount;'</strong>. То есть, мы присваиваем свойству значения <strong>discount</strong> присваиваем значение внутренней переменной <strong>'discount'</strong>. Теперь мы можем не присваивать полю ничего дополнительного – весь функционал будет осуществляться внутри объекта. Присвоение свойству <strong>discount</strong> нового значения при помощи свойства <strong>regYear</strong>. Итак, весь код для справки будет выглядеть так, для лучшего понимания, снова запишем:
+        </p>
+        <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                let carSeller1 = {
+            </p>
+            <p class="code__any sub__code">
+                firstName: "Игорь",
+            </p>
+            <p class="code__any sub__code">
+                lastName: "Курушин",
+            </p>
+            <p class="code__any sub__code">
+                regYear: 2010,
+            </p>
+            <p class="code__any sub__code">
+                discount: 0,
+            </p>
+            <p class="code__any sub__code">
+                calculateDiscount: function() {
+            </p>
+            <p class="code__any sub__sub__code">
+                let discount;
+            </p>
+            <p class="code__any sub__sub__code">
+                let numberOfYears = 2022 - this.regYear;
+            </p>
+            <p class="code__any sub__sub__code">
+                if(numberOfYears <= 2) {
+            </p>
+            <p class="code__any sub__sub__sub__code">
+                discount = 0;
+            </p>
+            <p class="code__any sub__sub__code">
+                } else if(numberOfYears > 2 && numberOfYears <= 5) {
+            </p>
+            <p class="code__any sub__sub__sub__code">
+                discount = 20;
+            </p>
+            <p class="code__any sub__sub__code">
+                } else if(numberOfYears > 5) {
+            </p>
+            <p class="code__any sub__sub__sub__code">
+                discount = 30;
+            </p>
+            <p class="code__any sub__sub__code">
+                }
+            </p>
+            <p class="code__any sub__code">
+                this.discount = discount;
+            </p>
+            <p class="code__any sub__code">
+                }
+            </p>
+            <p class="code__any code">
+                }
+            </p>
+            <p class="code__any code break">
+                <span class="break">carSeller1.calculateDiscount();</span>
+            </p>
+            <p class="code__any code break">
+                <span class="break">console.log(carSeller1);</span>
+            </p>
+        </div>
+        <div id="dom">&nbsp;</div>
+        <h1 class="main__head">DOM</h1>
+        <p class="main__par">
+            <span class="tab">Как</span> можно понять, JavaScript нужен, конечно, совсем не для того, чтобы выполнять какие-то игрушечные абстрактные задачи вроде выведения в консоль вычисления площади прямоугольника или содержимого массивов. JavaScript нужен для взаимодействия, а главное – управления HTML и CSS содержимым на веб-странице. Делается это с помощью понятия <strong>DOM</strong>, что означает <strong>Document Object Model</strong> (от англ. Объектная Модель Документа).
+        </p>
+        <div id="dom__selectors">&nbsp;</div>
+        <h1 class="main__head">DOM. Селекторы</h1>
+        <p class="main__par">
+            <span class="tab">Для</span> доступа к различным HTML-элементам с помощью стандарта <strong>DOM</strong> точно так же, как и в случае с <strong>CSS</strong> используются <strong>селекторы</strong>. Существует несколько видов селекторов:
+        </p>
+        <ul class="list">
+            <li>document.getElementById();</li>
+            <li>document.getElementsByClassName();</li>
+            <li>document.getElementsByTagName();</li>
+            <li>document.querySelector();</li>
+             <li>document.querySelectorAll();</li>
+        </ul>
+        <p class="main__par">
+            <span class="tab">Начнем</span> с первого селектора – <strong>'document.getElementById();'</strong>. С помощью этого селектора, к примеру, можно заполнить любой тег на странице, которых до этого был пустым, допустим, параграф, где написано - "Привет, Мир!". Поскольку, как можно заметить, если попытаться развернуть и перевести название селектора (это будет "Получить элемент по ID"), то этому параграфу нужно своевременно (до выполнения кода), присвоить ID, по которому этот код будет выполняться. Выглядеть код будет так:<br>
+            <span class="break tab"><strong>'document.getElementById("paragraph").innerHTML = "Привет, Мир!";'</strong></span>.<br><br><br><br>
+            <span class="tab">Следующий</span> селектор <strong>'document.getElementByClassName();'</strong> – находит все элементы по имени указанного класса. То есть, мы можем присвоить HTML-элементам какие-то классы, а затем этот селектор способен возвращать их для дальнейшей с ними работы, например, изменения/добавления контента. Проще говоря, этот селектор занимается примерно тем же, что и классы в HTML – собирает в себя другие элементы, объединяя в группу. Принцип его работы состоит только в том, чтобы собрать по HTML-коду все элементы с прописанным (указанным) в селекторе классом, а затем возвратить (передать) эту информацию для дальнейшей работы кому-нибудь другому. Схема применения может выглядеть следующим образом:
+        </p>
+        <div class="code__block__any code__block__HTML">
+            <p class="code__any code">
+                &lt;!DOCTYPE html&gt;
+            </p>
+            <p class="code__any code">
+                &lt;html lang="ru"&gt;
+            </p>
+            <p class="code__any code">
+                &lt;head&gt;
+            </p>
+            <p class="code__any sub__code">
+                &lt;meta charset="UTF-8"&gt;
+            </p>
+            <p class="code__any sub__code">
+                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            </p>
+            <p class="code__any sub__code">
+                &lt;title&gt;DOM&lt;/title&gt;
+            </p>
+            <p class="code__any code">
+                &lt;/head&gt;
+            </p>
+            <p class="code__any code">
+                &lt;body&gt;
+            </p>
+            <p class="code__any sub__code">
+                &lt;h2&gt;Поиск HTML элементов по имени класса&lt;/h2&gt;
+            </p>
+            <p class="code__any sub__code">
+                &lt;p&gt;Привет, Мир!&lt;/p&gt;
+            </p>
+            <p class="code__any sub__code">
+                &lt;p class="intro">DOM очень полезен.&lt;/p&gt;
+            </p>
+            <p class="code__any sub__code">
+                &lt;p class="intro">Этот пример демонстрирует метод getElementByClassName.&lt;/p&gt;
+            </p>
+            <p class="code__any sub__code">
+                &lt;p id="demo">&lt;/p&gt;
+            </p>
+            <p class="code__any sub__code">
+                &lt;script&gt;
+            </p>
+            <p class="code__any sub__sub__code">
+                let x = document.getElementByClassName("intro");
+            </p>
+            <p class="code__any sub__sub__code">
+                document.getElementById("demo").innerHTML = 'Первый параграф (индекс 0) с классом="intro": ' + x[0].innerHTML;
+            </p>
+            <p class="code__any sub__code">
+                &lt;/script&gt;
+            </p>
+            <p class="code__any code">
+                &lt;/body&gt;
+            </p>
+            <p class="code__any code break">
+                &lt;/html&gt;
+            </p>
+        </div>
+        <div class="faq__any faq__flex">
+               <img src="/instruction/img/faq.png">
+               <p>*для справки: метод <strong>'.innerHTML'</strong> отвечает за отображение выбранного HTML-элемента. С помощью него, к примеру, можно обратиться, то есть прочесть и/или вывести контент любого тега и/или заменить его.
+               </p>
+        </div>
+        <p class="main__par">
+            <span class="tab">Принцип</span> работы этого кода довольно прост. В HTML мы создаем два параграфа заполненные текстом с классом <strong>'intro'</strong> и один пустой параграф с id <strong>'demo'</strong>. Далее мы объявляем переменную <strong>'x'</strong> и присваиваем ей значение в виде <span class="break"><strong>'document.getElementByClassName("intro");'</strong></span>, то есть переменная <strong>'x'</strong> теперь представляет тот контент, который входит в класс <strong>'intro'</strong>. Как и все прочие перечисления индексов элементов в JS, селекторы при работе с DOM не стали исключением и тоже отсчитываются от ноля. Далее мы вставляем в пустой параграф с id <strong>'demo'</strong> текст <strong>'Первый параграф (индекс 0) с классом="intro": '</strong> с помощью <strong>'document.getElementById("demo")'</strong> и приплюсовываем ко всему этому переменную <strong>'x[0]'</strong> с индексом 0, так как у нас два параграфа с классом <strong>'intro'</strong>, а исчисляются индексы, как говорилось выше, начиная от ноля, а затем вставляем всё это в тот же пустой параграф.<br><br>
+            <span class="tab">Выглядит</span> запутано, но глядя на код выше и вчитываясь в это запутанную инструкцию (пусть даже придется прочесть не один раз), всё непременно будет ясно.<br><br><br><br>
+            <span class="tab">Следующий</span> селектор в нашем списке – это <strong>document.getElementByTagName();</strong>. Этот селектор по принципу своего действия очень похож на предыдущий, но с одним, как можно догадаться по названию, отличием: он находит в документе HTML-теги. Можно сказать, что у этого и предыдущего селектора буквально один и тот же принцип действия, только в этот раз мы бы подставляли не класс, а название тега: параграф, заголовок и/или другие.<br><br><br><br>
+            <span class="tab">Следующий</span> селектор выбора элементов – <strong>'document.querySelector();'</strong>. Этот селектор работает уже <strong>не с HTML-тегами</strong>, а <strong>с селекторами CSS</strong>. Как говорилось выше, JS позволяет работать (манипулировать/взаимодействовать) не только с HTML, но и CSS. К примеру, если у нас есть заголовок в HTML с id 'header', то с помощью этого селектора мы можем обратиться к нему точно так же, как в CSS, то есть: <strong>'document.querySelector("#header");'</strong>. Это актуально и в случае обращения к классу. Важно отметить, что при выборе селектором <strong>'querySelector'</strong> класса будут выбираться не все элементы с соответствующими классами, а только <strong>первое</strong> совпадение.<br><br>
+            <span class="tab">Чтобы</span> выбрать все элементы с одинаковыми нужными нам классами или тегами, существует вариация селектора <strong>'querySelector'</strong> – <strong>'querySelectorAll'</strong>.
+        </p>
+        <div id="dom__changing__content"></div>
+        <h1 class="main__head">DOM. Изменение контента</h1>
+        <p class="main__par">
+            <span class="tab">Рассмотрим</span>, как можно манипулировать полученными с помощью селекторов объектами.<br><br>
+            <span class="tab">Как</span> уже говорилось выше, есть способ обратиться к содержимому HTML-элемента. Это делается с помощью свойства <strong>'.innerHTML'</strong>. Но есть и второй способ – это свойство <strong>'.textContent'</strong>. В чем же разница? Разница в том, что свойство <strong>'.innerHTML'</strong> занимается не только отображением "сухого" текста, то есть, буквально содержимого тега, а вообще всего, что касается этого тега. То есть, если рассмотреть принцип его работы на примере, допустим, тега <strong>'ul'</strong> – неупорядоченного списка – то как результат работы свойства <strong>'.innerHTML'</strong> (его возвращения), мы получим всю структуру тега <strong>'ul'</strong> с его дочерними элементами, текстом и всем прочим (к примеру, тегом strong). Свойство <strong>'.textContent'</strong> же занимается буквальным отображением текстового содержимого, где не будет ничего, кроме текста, который содержит тег, к которому совершено обращение. По этой причине, при изменении текста с помощью свойства <strong>'.innerHTML'</strong> нужно указывать не только текст, но и сам тег, текст внутри которого требуется изменить.
+        </p>
+        <div id="dom__changing__styles">&nbsp;</div>
+        <h1 class="main__head">DOM. Изменение стилей</h1>
+        <p class="main__par">
+            <span class="tab">Изменение</span> стилей с помощью DOM и JS провернуть довольно просто. Допустим, в HTML документе у нас есть заголовок, у этого заголовка есть id="header". Чтобы изменить его стиль с помощью JS, код будет выглядеть следующим образом (для удобства запишем функцию с методом (селектором) как переменную):
+        </p>
+        <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                let h1 = document.getElementById("header");
+            </p>
+            <p class="code__any code">
+                h1.style.color = "red";
+            </p>
+        </div>
+        <p class="main__par">
+            <span class="tab">Этим</span> кодом мы через JS обратились по id к заголовку и стилизовали его, сделав его цвет красным.<br><br>
+            <span class="tab">Кроме</span> того, исходя из концепции DOM, JS позволяет добавлять не существовавшие ранее классы. Для этого существует метод <span class="break"><strong>'.classList.add("название_нового_класса");'</strong></span>. У добавления/создания чего-либо, конечно, есть и обратное действие, для этого есть метод<span class="break"><strong>'.classList.remove("название_удаляемого_класса");'</strong></span>. 
+            <span class="tab">Еще</span> один метод, который часто используют для добавления/удаления классов – это <span class="break"><strong>'.classList.toggle("название_класса");'</strong></span>. Этот метод работает как некий переключатель – при первом срабатывании он "включает" новый класс, создавая его, при втором, соответственно, "выключает", удаляя.
+        </p>
+        <div class="faq__any faq__flex">
+               <img src="/instruction/img/faq.png">
+               <p>*для справки: разумеется, используя все перечисленные методы для добавления и/или удаления классов, нужно использовать селекторы обращения к элементам. То есть, используя один из представленных выше методов, полная конструкция будет выглядеть так: <span class="break"><strong>'document.getElementById("некий_id").classList.toggle("некий_класс");'</strong></span>.
+               </p>
+        </div>
+        <div id="dom__changing__attributes"></div>
+        <h1 class="main__head">DOM. Изменение атрибутов</h1>
+        <p class="main__par">
+            <span class="tab">Концепцию</span> манипуляции с атрибутами было бы удобно рассмотреть с точки зрения такого явления в веб-разработке, как "Image Gallery" – галереи изображений. То есть, некой структуры (блока) на сайте, который включает в себя серию (набор) неких изображений, относящихся к тематике сайта. Эти изображения по нажатию, например, на некую кнопку перелистывания, требуется каким-то образом менять. Для этого и применяется методика, описываемая далее.<br><br>
+            <span class="tab">Итак</span>, для начала, как можно вспомнить из начала этой "инструкции" тома по HTML, нам нужно добавить на страницу некую фотографию, а лучше – набор фотографий. Пусть это будет пять фотографий котов.
+        </p>
+        <div class="div__cats">
+            <div class="cat"><img id="cats" src="/instruction/img/cat1.jpeg"></div>
+            <div class="cat"><img id="cats" src="/instruction/img/cat2.jpeg"></div>
+            <div class="cat"><img id="cats" src="/instruction/img/cat3.jpeg"></div>
+            <div class="cat"><img id="cats" src="/instruction/img/cat4.jpeg"></div>
+            <div class="cat"><img id="cats" src="/instruction/img/cat5.jpeg"></div>
+        </div>
 
 
 
