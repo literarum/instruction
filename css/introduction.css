@@ -260,6 +260,8 @@ body {
   background: #b298ff;
   /* поверх других элементов */
   z-index: 2000;
+  overscroll-behavior-y: contain;
+  overflow-y: auto;
 }
 
 .nav > ul > li > a::before {
