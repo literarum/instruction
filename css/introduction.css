@@ -1231,6 +1231,17 @@ select option {
   margin: 0 auto;
 }
 
+#cats {
+  width: 200px;
+}
+
+.cat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2% auto;
+}
+
 
 
 
