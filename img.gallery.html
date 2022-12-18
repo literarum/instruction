@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/instruction/img/image__gallery.png" type="image/png"/>
+    <link rel="stylesheet" href="/instruction/css/normalize.min.css" />
+    <link rel="stylesheet" href="../css/normalize.min.css" />
+    <link rel="stylesheet" href="/instruction/css/gallery.css" />
+    <link rel="stylesheet" href="css/gallery.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <title>Галерея изображений</title>
+  </head>
+  <body>
+    <main>
+      <div class="title">
+        <h2>Тестовая галерея</h2>
+        <h3>Коты</h3>
+      </div>
+      <div class="container">
+        <ul id="gallery">
+          <li>
+            <div class="item">
+              <div class="img">
+                <img
+                  src="/instruction/img/cat1.jpeg"
+                />
+                <h2>Чёрно-рыжий кот</h2>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item">
+              <div class="img">
+                <img
+                src="/instruction/img/cat2.jpeg"
+                />
+                <h2>Рыже-белый кот</h2>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item">
+              <div class="img">
+                <img
+                src="/instruction/img/cat3.jpeg"
+                />
+                <h2>Сонно-недовольный кот</h2>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item">
+              <div class="img">
+                <img
+                src="/instruction/img/cat4.jpeg"
+                />
+                <h2>Удивленный кот</h2>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item">
+              <div class="img">
+                <img
+                src="/instruction/img/cat5.jpeg"
+                />
+                <h2>Кот с большими глазами</h2>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    <script>
+      var gallery = $("#gallery");
+
+      function sliderTilt() {
+        var itemPrev = gallery.find(".slick-current").prev("li").find(".item");
+        var itemNext = gallery.find(".slick-current").next("li").find(".item");
+
+        $(".item").tilt({
+          perspective: 300,
+          speed: 2000,
+          glare: false,
+          maxGlare: 0.2,
+        });
+        itemPrev.tilt.destroy.call(itemPrev);
+        itemNext.tilt.destroy.call(itemNext);
+      }
+
+      gallery.on("init", function (event, slick) {
+        $(sliderTilt);
+      });
+
+      gallery.on("afterChange", function (event, slick, currentSlide) {
+        $(sliderTilt);
+      });
+
+      gallery.slick({
+        dots: false,
+        arrows: true,
+        infinite: false,
+        centerMode: true,
+        focusOnSelect: false,
+        speed: 1000,
+        centerPadding: "24vw",
+        slidesToScroll: 1,
+        initialSlide: 4,
+        draggable: false,
+      });
+
+      $(".img").each(function () {
+        $(this).append(
+          '<img class="shad" src="' + $(this).find("img").attr("src") + '" />'
+        );
+      });
+
+      $(function () {
+        $(".img").click(function () {
+          if (!$("#gallery").hasClass("detail")) {
+            $("#gallery").addClass("detail");
+            $(".slick-arrow").addClass("none");
+          } else if ($("#gallery").hasClass("detail")) {
+            $("#gallery").removeClass("detail");
+            $(".slick-arrow").removeClass("none");
+            console.log("overview");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1229,6 +1229,10 @@ select option {
   margin: 0 auto;
 }
 
+
+
+
+
 @media screen and (max-width: 1310px) {
   .up__down::before,
   .up__down::after {
