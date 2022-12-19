@@ -1540,7 +1540,8 @@
         <h1 class="main__head">DOM. Изменение атрибутов</h1>
         <p class="main__par">
             <span class="tab">Концепцию</span> манипуляции с атрибутами было бы удобно рассмотреть с точки зрения такого явления в веб-разработке, как "Image Gallery" – галереи изображений. То есть, некой структуры (блока) на сайте, который включает в себя серию (набор) неких изображений, относящихся к тематике сайта. Эти изображения по нажатию, например, на некую кнопку перелистывания, требуется каким-то образом менять. Для этого и применяется методы изменения атрибутов.<br><br>
-            <span class="tab">По</span> <button class="button" onclick="window.open('img.gallery.html')">этой</button> кнопке можно перейти на страницу, где можно увидеть готовую галерею изображений, а если открыть код страницы, то можно увидеть посредствам какого функционала она реализована.
+            <span class="tab">По</span> <button class="button" onclick="window.open('img.gallery.html')">этой</button> кнопке можно перейти на страницу, где можно увидеть готовую галерею изображений, а если открыть код страницы, то можно увидеть посредствам какого функционала она реализована.<br><br>
+            <span class="tab">Итак</span>, для начала нам нужно добавить в HTML разметку наши изображения:
         </p>
         <div class="div__cats">
             <div class="cat"><img id="cats" src="/instruction/img/cat1.jpeg"></div>
@@ -1550,7 +1551,7 @@
             <div class="cat"><img id="cats" src="/instruction/img/cat5.jpeg"></div>
         </div>
         <p class="main__par">
-            <span class="tab">И</span> теперь, с помощью JS, мы можем воздействовать на эти изображения. Для начала нам нужно с помощью одного из уже известных селекторов обратиться к этим изображениям:
+            <span class="tab">И</span> теперь, с помощью JS, мы можем воздействовать на них. Для начала нам нужно с помощью одного из уже известных селекторов обратиться к этим изображениям:
         </p>
         <div class="code__block__any code__block__js">
             <p class="code__any code">
@@ -1583,6 +1584,85 @@
         <p class="main__par">
             <span class="tab">Что</span> такое "events"? Events в переводе с английского – события. То есть, мы можем изменять объекты DOM структуры с помощью JS по каким-то событиям. Схема организации реакции на какие-либо события выглядит следующим образом. Для начала нам, конечно, нужно выбрать какой-то элемент, с которым мы и будем работать. Затем, нужно добавить так называемого  <strong>Event Listener</strong> – прослушивателя события. Он через точку записывается после обращения к элементу, а после него в круглых скобках и кавычках пишется, непосредственно событие. Самое распространенное, к примеру <strong>'click'</strong>. Вторым элементом указывается функция, в которой мы пишем код, который будет запускаться, когда будет кликнут выбранный нами элемент. Ну а дальше всё как обычно из принципа работы функции. К примеру, изменим цвет заголовка на красный. Рассмотрим это на практике. Допустим, у нас есть элемент заголовка – <strong>h1</strong> с id "test". Код JS будет выглядеть следующим образом:
         </p>
+        <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                let h1 = document.getElementById("test");
+            </p>
+            <p class="code__any code">
+                h1.addEventListener("click", function() {
+            </p>
+            <p class="code__any sub__code">
+                this.style.color = (this.style.color == 'red') ? 'rgb(232, 230, 230)' : 'red';
+            </p>
+            <p class="code__any code">
+                });
+            </p>
+        </div>
+        <h1 class="main__head" id="head__toggle">Тестовый заголовок, меняющий цвет по нажатию!</h1>
+        <script type="text/javascript">				 
+            let colorToggle = document.getElementById("head__toggle");
+            colorToggle.addEventListener("click", function() {
+                this.style.color = (this.style.color == 'red') ? 'rgb(232, 230, 230)' : 'red';
+            });
+         </script>
+         <p class="main__par">
+            <span class="tab">Для</span> одного элемента мы можем устанавливать несколько <strong>Event Listener</strong>.<br><br>
+            <span class="tab">Точно</span> такой же функционал, как и со сменой цвета заголовка из примера выше, мы можем цеплять и, к примеру, к кнопкам. Для наглядности и простоты, кнопка тоже будет менять цвет элемента. По нажатию она будет менять цвет фона всей страницы! А код будет выглядеть следующим образом (HTML-код мы поместим в синюю рамку, а JS-код в красную:
+         </p>
+         <div class="code__block__any code__block__HTML">
+            <p class="code__any code">
+                &lt;button class="button" id="button_test"&gt;Сменить цвет!&lt;/button&gt;
+            </p>
+        </div>
+        <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                let button = document.getElementById("button_test");
+            </p>
+            <p class="code__any code">
+                let isButtonApplied = false;
+            </p>
+            <p class="code__any code">
+                button.addEventListener("click", function() {
+            </p>
+            <p class="code__any sub__code">
+                if(isButtonApplied === false) {
+            </p>
+            <p class="code__any sub__sub__code">
+                ducument.querySelector("body").style.background = "black";
+            </p>
+            <p class="code__any sub__sub__code">
+                isButtonApplied = true;
+            </p>
+            <p class="code__any sub__code">
+                } else if (isButtonApplied === true) {
+            </p>
+            <p class="code__any sub__sub__code">
+                document.querySelector("body").style.background = "#F0F0F2";
+            </p>
+            <p class="code__any sub__sub__code">
+                isButtonApplied = false;
+            </p>
+            <p class="code__any sub__code">
+                }
+            </p>
+            <p class="code__any code">
+                });
+            </p>
+        </div>
+        <button class="button" id="button_test">Сменить цвет!</button>
+        <script type="text/javascript">
+            let button = document.getElementById("button_test");
+            let isButtonApplied = false;
+            button.addEventListener("click", function() {
+                if(isButtonApplied === false) {
+                    document.getElementByClassName("container").style.background = "black";
+                    isButtonApplied = true;
+                } else if(isButtonApplied === true) {
+                    document.getElementsByClassName("container").style.background = "linear-gradient(90deg, rgba(224, 0, 255, 0.5) -15%, rgba(179, 90, 195, 0.5) 48%, rgba(20, 138, 227, 0.5) 100%)";
+                    isButtonApplied = false;	
+                }
+            });
+        </script>
 
 
 
