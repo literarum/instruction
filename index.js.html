@@ -92,7 +92,7 @@
     </div>
 </header>
     <div id="top">&nbsp;</div>
-    <div class="container">
+    <div id="container" class="container">
         <div class="table__of__contents">
             <h1 class="contents__header">Оглавление</h1>
             <ul class="list__tableOf">
@@ -1649,16 +1649,20 @@
                 });
             </p>
         </div>
-        <button class="button" id="button_test">Сменить цвет!</button>
+        <div style="display: flex; justify-content: center; align-items: center; margin-block: 5rem;">
+            <button class="button" id="button_test" style=" width: 10em; height: 4em; min-width: 200px; font-size: 2rem; box-shadow: 0 0 10px rgba(0, 0, 0, 1);">Сменить цвет!</button>
+        </div>
         <script type="text/javascript">
             let button = document.getElementById("button_test");
             let isButtonApplied = false;
             button.addEventListener("click", function() {
                 if(isButtonApplied === false) {
-                    document.getElementByClassName("container").style.background = "black";
+                    document.getElementById("container").style.background = "black";
+                    button.style.boxShadow = "0 0 10px rgba(255, 255, 255, 1)"
                     isButtonApplied = true;
                 } else if(isButtonApplied === true) {
-                    document.getElementsByClassName("container").style.background = "linear-gradient(90deg, rgba(224, 0, 255, 0.5) -15%, rgba(179, 90, 195, 0.5) 48%, rgba(20, 138, 227, 0.5) 100%)";
+                    document.getElementById("container").style.background = "linear-gradient(90deg, rgba(224, 0, 255, 0.5) -15%, rgba(179, 90, 195, 0.5) 48%, rgba(20, 138, 227, 0.5) 100%)";
+                    button.style.boxShadow = "0 0 15px rgba(0, 0, 0, 1)"
                     isButtonApplied = false;	
                 }
             });
