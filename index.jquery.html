@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/instruction/img/ico.png" type="image/png">
+    <link rel="shortcut icon" href="/img/ico.png" type="image/png">
+    <link rel="stylesheet" href="/instruction/css/normalize.min.css">
+    <link rel="stylesheet" href="../css/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/introduction.css">
+    <link rel="stylesheet" type="text/css" href="/instruction/css/introduction.css">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/instruction/js/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="templates/js/lightGallery.js"></script>
+    <script>
+        $(function(){
+            $('a[href^="#"]').click(function(){
+         		var target = $(this).attr('href');
+         	    $('html, body').animate({scrollTop: $(target).offset().top}, 500);
+         		return false;
+            });
+        });
+    </script>
+    <style>
+        .dropdown__jQuery__div a,
+        .clicked {
+            color: rgba(0, 0, 0, 1);
+            text-shadow: 0 0 10px #fff, 1px 1px 1px #fff;
+        }
+        .dropdown__jQuery__div::before {
+            filter: drop-shadow(0 0 5px rgba(255, 255, 255, 1));
+            background-color: rgba(0, 0, 0, 1);
+        }
+    </style>
+    <title>jQuery</title>
+</head>
+
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+    <input type="checkbox" id="nav-toggle" hidden>
+    <nav class="nav">
+        <ul>
+            <li style="margin-left: 1rem; font-size: 24px; color:rgba(0, 0, 0, .8)">Навигация по сайту</li>
+            <li><a href="/instruction/index.html">Главная</a></li>
+            <li><a href="/instruction/old.index.html">Оригинал</a></li>
+            <li><a href="/instruction/index.html5.html">HTML5</a></li>
+            <li><a href="/instruction/index.css.html">CSS</a></li>
+            <li><a href="/instruction/index.js.html">JavaScript</a></li>
+            <li><a href="/instruction/index.jquery.html"></a></li>
+            <li style="margin-left: 1rem; font-size: 24px; color:rgba(0, 0, 0, .8)">Полезные ссылки</li>
+            <li><a href="https://www.w3schools.com/">W3Schools</a></li>
+            <li><a href="https://developer.mozilla.org/ru/">MDN</a></li>
+            <li><a href="https://html5book.ru/">HTML5Book</a></li>
+        </ul>
+    </nav>
+    <div class="mask-content"></div>
+    <header class="header">
+        <label for="nav-toggle" class="nav-toggle" onclick></label>
+        <ul class="header__list">
+            <li class="header__item"><a class="hover" data-title="Перейти во введение" href="/instruction/index.html" class="header__link">Главная</a></li>
+            <li class="header__item"><a class="hover" data-title="Старая версия инструкции" href="/instruction/old.index.html" class="header__link">Оригинал</a></li>
+            <div class="dropdown-links">
+                <button class="dropbtn-links">Cсылки</button>
+                <div class="dropdown-content-links">
+                    <a href="https://www.w3schools.com/" target="_blank">W3Schools</a>
+                    <a href="https://developer.mozilla.org/ru/" target="_blank">MDN</a>
+                    <a href="https://html5book.ru/" target="_blank">HTML5Book</a>
+                </div>
+            </div>
+            <li class="header__item">
+                <div class="dropdown">
+                <button class="dropbtn clicked">Разделы</button>
+                <div class="dropdown-content">
+                    <a href="/instruction/index.html5.html">HTML5</a>
+                    <a href="/instruction/index.css.html">CSS</a>
+                    <button onclick="window.location.href='/instruction/index.js.html'" class="dropbtn dropbtn__jQuery">JavaScript</button>
+                    <div class="dropdown__jQuery__div">
+                        <a class="jquery__a" href="/instruction/index.jquery.html">jQuery</a>
+                    </div>
+                    <a href="#">Bootstrap</a>
+                </div>
+            </div></li>
+        </ul>
+        <div class="up__down">
+            <a class="hover" data-title="Переместиться в самый верх страницы" href="#top">Наверх</a>
+            <a class="hover" data-title="Переместиться в самый низ страницы" href="#bottom">Вниз</a>
+            <div id="tooltip"></div>
+        </div>
+    <p class="slogan">Make Web-Sites not War</p>
+    <div class="logo">
+        <img src="/instruction/img/logo.png">
+    </div>
+</header>
+    <div id="top">&nbsp;</div>
+    <div id="container" class="container">
+        <div class="table__of__contents">
+            <h1 class="contents__header">Оглавление</h1>
+            <ul class="list__tableOf">
+                <li><a href="#general">Общие положения</a></li>
+                <li><a href="#selector">Селектор</a></li>
+                <li><a href="#css__method">Метод css()</a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </div>
+        <h1 class="tom__name">Том IV. jQuery</h1>
+        <div id="general">&nbsp;</div>
+        <h1 class="main__head">Общие положения</h1>
+        <p class="main__par">
+            <span class="tab">jQuery</span> – это библиотека, построенная на основе языка JavaScript. То есть, весь код, написанной на этой библиотеке, соответственно, написан на языке JavaScript.<br><br>
+            <span class="tab">В</span> целом, библиотеки в языках программирования – это сборники подпрограмм или объектов, используемых для разработки программного обеспечения. То есть, дополнительные средства, добавляющие функционал и/или упрощающие манипуляции с кодом программы. Говоря еще проще: библиотека – это набор из каких-то кусков кода, которые были написаны другими программистами для общего пользования. И подключая эти куски кода к коду нашей программы, мы можем значительно повысить функционал и/или упростить его реализацию.<br><br>
+            <span class="tab">Для</span> того, чтобы использовать библиотеку jQuery, её необходимо сначала подключить к веб-странице. Один из популярных вариантов сделать это – с помощью сайта <strong>'googleapis'</strong>. Для этого мы просто вставляем в тег <strong>'head'</strong> ссылку на внешний источник: <span class="break"><strong>&lt;script&gt;src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"&lt;/script&gt;</strong></span> – это и есть внешняя ссылка для подключения библиотеки. Еще один способ подключить jQuery – это скачать файл с библиотекой, затем создать новый файл JS и скопировать туда весь код из скаченного файла jQuery, а затем подключить его к HTML. В этом случае, вы не будете зависеть от внешних ресурсов, но и обновляться функционал в этом случае не будет.<br><br>
+            <span class="tab">Код</span> с помощью jQuery записывается следующим образом: в начале всегда пишется знак доллара – <strong>$</strong>, то есть это обращение (выбор) того, что мы указываем далее в скобках, к примеру весь HTML-документ или что-то другое. Далее пишется <strong>'.ready'</strong>, то есть код будет выполняться тогда, когда документ будет готов – загружен. Далее пишется ключевое слово <strong>'function()'</strong>, после чего открываются фигурные скобки. Внутри фигурных скобок, соответственно, мы можем писать код, который будет выполняться после загрузки документа. Пример в коде ниже выполняет функцию выбора всех заголовков <strong>'h3'</strong>, при нажатии на которые у них будет меняться цвет фона. После обращений к заголовкам (после доллара) для того, чтобы действие выполнялось по клику, пишется <strong>.click</strong>, а затем снова <strong>'function()'</strong>:
+        </p>
+        <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                $(document).ready(function() {
+            </p>
+            <p class="code__any sub__code">
+                $("h3").click(function() {
+            </p>
+            <p class="code__any sub__sub__code">
+                $(this).css("background-color", "red");
+            </p>
+            <p class="code__any sub__code">
+                });
+            </p>
+            <p class="code__any code">
+                });
+            </p>
+        </div>
+        <div id="selector">&nbsp;</div>
+        <h1 class="main__head">Селектор</h1>
+        <p class="main__par">
+            <span class="tab">Как</span> можно помнить из главы на странице посвященной JS, существует несколько методов обращения к какому-либо элементу, эти методы называются селекторы. В JS их несколько, а в jQuery всё выбирается при помощи одного селектора. Этот селектор уже был представлен в главе выше – это знак <strong>'$'</strong>. Таким образом можно обращаться к любому объекту (элементу) в HTML. Будь до заголовки, списки или все элементы в списке (<strong>'$('h3');'</strong>). Но что делать, если нам нужно обратиться к какому-то конкретному элементу, например, в том же списке? Это делается с помощью такого же селектора, но в круглых скобках последовательно указывается интересующий нас элемент. К примеру, у нас есть два списка, один неупорядоченный, другой упорядоченный. Но нам нужно взаимодействовать только с элементами из упорядоченного списка. Выглядеть код будет так: <strong>'$('ol li')'</strong>. Точно так же мы можем обратиться к элементам и по ID. Делается это так: <strong>$('#ваш_ID')</strong>. Та же схема актуальна и для классов. 
+        </p>
+        <div id="css__method">&nbsp;</div>
+        <h1 class="main__head">Метод css()</h1>
+        <p class="main__par">
+            <span class="tab">Как</span> вы могли заметить, в главе об общих положениях использовался метод <strong>.css</strong>. Этот метод, как можно догадаться, позволяет взаимодействовать с элементами на уровне стилей. То есть, если мы создаем какой-то элемент в HTML с ID:
+        </p>
+        <div class="code__block__any code__block__HTML">
+            <p class="code__any code">
+                &lt;h3 id="header"&gt;Заголовок&lt;/h3&gt;
+            </p>
+        </div>
+        <p class="main__par">
+            <span class="tab">Затем</span> мы можем задать этому элементу какой-то стиль с помощью jQuery при помощи метода <strong>.css</strong>:
+        </p>
+        <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                $(#header).css('backgroundColor', 'red');
+            </p>
+        </div>
+        <p class="main__par">
+            <span class="tab">Как</span> можно заметить, такой метод записи обращений к стилям гораздо короче, чем при помощи селекторов в классическом JS. Но это не единственное и не самое главное преимущество. Дело в том, что мы в одном методе вызова CSS можем поменять сразу несколько свойств. Делается это при помощи объекта из JS:
+        </p>
+        <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                let testStyle = {
+            </p>
+            <p class="code__any sub__code">
+                color: "green",
+            </p>
+            <p class="code__any sub__code">
+                background: "yellow",
+            </p>
+            <p class="code__any sub__code">
+                border: "1px solid red"
+            </p>
+            <p class="code__any code">
+                };
+            </p>
+        </div>
+        <p class="main__par">
+            <span class="tab">Теперь</span> этот созданный объект с набором стилей можно применить. Запись при этом будет чрезвычайно простой:
+        </p>
+        <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                $('h3').css(testStyle);
+            </p>
+        </div>
+        <p class="main__par">
+            <span class="tab">Для</span> сравнения и лучшего понимания, можно рассмотреть, как бы выглядел бы код для изменения цвета элементов списка, но уже без применения jQuery, а на обычном JS:
+        </p>
+        <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                let colors = document.querySelectorAll('ul');
+            </p>
+            <p class="code__any code">
+                for(let i = 0; i < colors.length; i++) {
+            </p>
+            <p class="code__any sub__code">
+                colors[i],style.color = 'blue';
+            </p>
+            <p class="code__any code">
+                };
+            </p>
+        </div>
+        <p class="main__par">
+            <span class="tab">А</span> вот так с помощью jQuery:
+        </p>
+        <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                $('ul li').css('blue');
+            </p>
+        </div>
+        <p class="main__par">
+            <span class="tab">Куда</span> приятнее и эффективнее, правда? Правда. Согласен.
+        </p>
+        <div id="text__method">&nbsp;</div>
+        <h1 class="main__head">Метод text()</h1>
+        <p class="main__par">
+            <span class="tab">При</span> помощи метода <strong>.text()</strong> можно получать и/или устанавливать любой текст. Этот метод вполне можно рассматривать как версию метода <strong>'.textContent'</strong> из классического JS. У метода <strong>.text()</strong> есть особенность: он выбирает не только текст в выбранном элементе, но и текст во всех потомках выбранного элемента. Работа этого метода так же проста, как и работа предыдущего метода. К примеру, если нам нужно получить текстовый контент какого-либо элемента, то код будет выглядеть так:
+        </p>
+
+
+
+
+
+
+
+    </div>
+
+
+
+    <div id="bottom"></div>
+
+
+
+    <script src="/js/script.js"></script>
+    <script src="/instruction/js/script.js"></script>
+</body>
+</html>
