@@ -122,6 +122,7 @@
                 <li><a href="#dom__changing__content">DOM. Изменение контента</a></li>
                 <li><a href="#dom__changing__attributes">DOM. Изменение контента</a></li>
                 <li><a href="#dom__events">DOM. Events</a></li>
+                <li><a href="#js__game">Финал JS. Игра на реакцию</a></li>
             </ul>
         </div>
         <h1 class="tom__name">Том III. JavaScript</h1>
@@ -1667,6 +1668,240 @@
                 }
             });
         </script>
+        <div id="js__game">&nbsp;</div>
+        <h1 class="main__head">Финал JS. Игра на реакцию</h1>
+        <p class="main__par">
+            <span class="tab">Внимательно</span> смотрите за кодом, как и обычно HTML-код мы разместим внутри синей рамки, JS-код в красной, а CSS будет в зеленой:
+        </p>
+        <div class="code__block__any code__block__HTML">
+            <p class="code__any code">
+                &lt;div id="shape"&gt;&lt;/div&gt;
+            </p>
+            <p class="code__any code">
+                &lt;h3&gt;Время реакции &lt;span id="reactionTime"&gt;&lt;/span&gt;&lt;/h3&gt;
+            </p>
+        </div>
+        <div class="code__block__any code__block__CSS">
+            <p class="code__any code">
+                #shape {
+            </p>
+            <p class="code__any sub__code">
+                width: 150px;
+            </p>
+            <p class="code__any sub__code">
+                height: 150px;
+            </p>
+            <p class="code__any sub__code">
+                background-color: green;
+            </p>
+            <p class="code__any sub__code">
+                display: none;
+            </p>
+            <p class="code__any sub__code">
+                position: relative;
+            </p>
+            <p class="code__any sub__code">
+                }
+            </p>
+        </div>
+        <div class="code__block__any code__block__js">
+            <p class="code__any code">
+                let startTime = new Date().getTime();
+            </p>
+            <p class="code__any code">
+                function getRandomColor() {
+            </p>
+            <p class="code__any sub__code">
+                let letters = "0123456789ABCDEF".split('');
+            </p>
+            <p class="code__any sub__code">
+                let color = "#";
+            </p>
+            <p class="code__any sub__code">
+                for(let i = 0; i < 6; i++) {
+            </p>
+            <p class="code__any sub__sub__code">
+                color += letters[Math.floor(Math.random() * 16)];
+            </p>
+            <p class="code__any sub__code">
+                }
+            </p>
+            <p class="code__any sub__code">
+                return color;
+            </p>
+            <p class="code__any code">
+                let makeShapeVisible = function() {
+            </p>
+            <p class="code__any sub__code">
+                let shape = document.getElementById("shape");
+            </p>
+            <p class="code__any sub__code">
+                let top = Math.random() * 400;
+            </p>
+            <p class="code__any sub__code">
+                let left = Math.random() * 700;
+            </p>
+            <p class="code__any sub__code">
+                let width = Math.random() * 200 + 50;
+            </p>
+            <p class="code__any sub__code">
+                shape.style.top = top + "px";
+            </p>
+            <p class="code__any sub__code">
+                shape.style.left = left + "px";
+            </p>
+            <p class="code__any sub__code">
+                shape.style.width = width + "px";
+            </p>
+            <p class="code__any sub__code">
+                if(Math.random() > 0.3) {
+            </p>
+            <p class="code__any sub__sub__code">
+                shape.style.borderRadius = "50%";
+            </p>
+            <p class="code__any sub__sub__code">
+                shape.style.borderBottom = "0";
+            </p>
+            <p class="code__any sub__sub__code">
+                shape.style.backgroundColor = getRandomColor();
+            </p>
+            <p class="code__any sub__code">
+                } else if(Math.random() >= 0.3 && Math.random() <= 0.7) {
+            </p>
+            <p class="code__any sub__sub__code">
+                shape.style.borderRadius = "0";
+            </p>
+            <p class="code__any sub__sub__code">
+                shape.style.backgroundColor = getRandomColor();
+            </p>
+            <p class="code__any sub__sub__code">
+                shape.style.borderRadius = "0";
+            </p>
+            <p class="code__any sub__code">
+                } else if(Math.random() > 0.7) {
+            </p>
+            <p class="code__any sub__sub__code">
+                shape.style.left = "0";
+            </p>
+            <p class="code__any sub__sub__code">
+                shape.style.right = "0";
+            </p>
+            <p class="code__any sub__sub__code">
+                shape.style.borderLeft = "50px solid transparrent";
+            </p>
+            <p class="code__any sub__sub__code">
+                shape.style.borderReft = "50px solid transparrent";
+            </p>
+            <p class="code__any sub__sub__code">
+                shape.style.borderBottom = "100px solid " + getRandomColor();
+            </p>
+            <p class="code__any sub__sub__code">
+                shape.style.backgroundColor = "transparrent";
+            </p>
+            <p class="code__any sub__code">
+                }
+            </p>
+            <p class="code__any sub__code">
+                shape.style.display = "block";
+            </p>
+            <p class="code__any sub__code">
+                startTime = new Date().getTime();
+            </p>
+            <p class="code__any code">
+                }
+            </p>
+            <p class="code__any code">
+                setTimeout(makeShapeVisible, Math.random() * 1000);
+            </p>
+            <p class="code__any code">
+                document.getElementById("shape").onclick = function() {
+            </p>
+            <p class="code__any sub__code">
+                let shape = document.getElementById("shape");
+            </p>
+            <p class="code__any sub__code">
+                shape.style.display = "none";
+            </p>
+            <p class="code__any sub__code">
+                let finishTime = new Date().getTime();
+            </p>
+            <p class="code__any sub__code">
+                let reactionTime = (finishTime - startTime) / 1000;
+            </p>
+            <p class="code__any sub__code">
+                document.getElementById("reactionTime").innerHTML = reactionTime + " секунд";
+            </p>
+            <p class="code__any sub__code">
+                setTimeout(makeShapeVisible, Math.random() * 1000);
+            </p>
+            <p class="code__any code">
+                }
+            </p>
+        </div>
+        <div id="game">
+            <div id="shape"></div>
+            <h3>Время реакции <span id="reactionTime"></span></h3>
+            <script type="text/javascript">
+               let startTime = new Date().getTime();
+               
+               function getRandomColor() {
+               
+                   let letters = "0123456789ABCDEF".split('');
+                   let color = "#";
+               
+                   for(let i = 0; i < 6; i++) {
+                       color += letters[Math.floor(Math.random() * 16)];
+                   }
+                   return color;
+               }
+               
+               let makeShapeVisible = function() {
+               
+                   let shape = document.getElementById("shape");
+                   let top = Math.random() * 500;
+                   let left = Math.random() * 150;
+                   let width = Math.random() * 200 + 50;
+                   shape.style.top = top + "px";
+                   shape.style.left = left + "px";
+                   shape.style.width = width + "px";
+               
+                   if(Math.random() > 0.3) {
+                       shape.style.borderRadius = "50%";
+                       shape.style.borderBottom = "0";
+                       shape.style.backgroundColor = getRandomColor();
+                   } else if(Math.random() >= 0.3 && Math.random() <= 0.7) {
+                       shape.style.borderRadius = "0";
+                       shape.style.backgroundColor = getRandomColor();
+                       shape.style.borderRadius = "0";
+                   } else if(Math.random() > 0.7) {
+                       shape.style.left = "0";
+                       shape.style.left = "0";
+                       shape.style.borderLeft = "50px solid transparent";
+                       shape.style.borderReft = "50px solid transparent";
+                       shape.style.borderBottom = "100px solid " + getRandomColor();
+                       shape.style.backgroundColor = "transparent";
+                   }
+               
+                   shape.style.dysplay = "block";
+                   startTime = new Date().getTime();
+               }
+               
+               setTimeout(makeShapeVisible, Math.random() * 1000);
+               
+               document.getElementById("shape").onclick = function() {
+               
+               let shape = document.getElementById("shape");
+               shape.style.display = "block";
+               
+               let finishTime = new Date().getTime();
+               let reactionTime = (finishTime - startTime) / 1000;
+               document.getElementById("reactionTime").innerHTML = reactionTime + " секунд";
+               setTimeout(makeShapeVisible, Math.random() * 1000);
+               }
+            </script>
+            <br><br><br><br><br><br><br><br><br><br>
+        </div>
+
 
 
 
