@@ -75,7 +75,7 @@
                     <a href="/instruction/index.css.html">CSS</a>
                     <button onclick="window.location.href='/instruction/index.js.html'" class="dropbtn dropbtn__jQuery clicked">JavaScript</button>
                     <div class="dropdown__jQuery__div">
-                        <a class="jquery__a" href="#">jQuery</a>
+                        <a class="jquery__a" href="index.jquery.html">jQuery</a>
                     </div>
                     <a href="#">Bootstrap</a>
                 </div>
@@ -1838,9 +1838,9 @@
                 }
             </p>
         </div>
-        <div id="game">
+        <h3 class="main__head">Время реакции <span id="reactionTime"></span></h3>
+        <div>
             <div id="shape"></div>
-            <h3>Время реакции <span id="reactionTime"></span></h3>
             <script type="text/javascript">
                let startTime = new Date().getTime();
                
@@ -1858,7 +1858,7 @@
                let makeShapeVisible = function() {
                
                    let shape = document.getElementById("shape");
-                   let top = Math.random() * 500;
+                   let top = Math.random() * 400;
                    let left = Math.random() * 150;
                    let width = Math.random() * 200 + 50;
                    shape.style.top = top + "px";
@@ -1882,7 +1882,7 @@
                        shape.style.backgroundColor = "transparent";
                    }
                
-                   shape.style.dysplay = "block";
+                   shape.style.display = "block";
                    startTime = new Date().getTime();
                }
                
@@ -1899,8 +1899,11 @@
                setTimeout(makeShapeVisible, Math.random() * 1000);
                }
             </script>
-            <br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         </div>
+        <p class="main__par">
+            <span class="tab">На</span> этом наше увлекательное путешествие по миру базовых знаний JavaScript подошло к концу. Помните, что всё, что здесь написано, лишь очень незначительная попытка показать, что из себя представляет этот язык, но никак не полное руководство по нему. Далее мы будем смотреть на популярную библиотеку JavaScript, которая называется <button onclick="window.open('/instruction/index.jquery.html')" class="button">jQuery</button>.
+        </p>
 
 
 
