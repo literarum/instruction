@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/instruction/img/ico.png" type="image/png">
+    <link rel="shortcut icon" href="/img/ico.png" type="image/png">
+    <link rel="stylesheet" href="/instruction/css/normalize.min.css">
+    <link rel="stylesheet" href="../css/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/introduction.css">
+    <link rel="stylesheet" type="text/css" href="/instruction/css/introduction.css">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/instruction/js/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="templates/js/lightGallery.js"></script>
+    <script>
+        $(function(){
+            $('a[href^="#"]').click(function(){
+         		var target = $(this).attr('href');
+         	    $('html, body').animate({scrollTop: $(target).offset().top}, 500);
+         		return false;
+            });
+        });
+    </script>
+    <style>
+        .dropdown-content .clicked,
+        .clicked {
+            color: rgba(0, 0, 0, 1);
+            text-shadow: 0 0 10px #fff, 1px 1px 1px #fff;
+        }
+    </style>
+    <title>jQuery</title>
+</head>
+
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+    <input type="checkbox" id="nav-toggle" hidden>
+    <nav class="nav">
+        <ul>
+            <li style="margin-left: 1rem; font-size: 24px; color:rgba(0, 0, 0, .8)">Навигация по сайту</li>
+            <li><a href="/instruction/index.html">Главная</a></li>
+            <li><a href="/instruction/old.index.html">Оригинал</a></li>
+            <li><a href="/instruction/index.html5.html">HTML5</a></li>
+            <li><a href="/instruction/index.css.html">CSS</a></li>
+            <li><a href="/instruction/index.js.html">JavaScript</a></li>
+            <li><a href="/instruction/index.jquery.html">jQuery</a></li>
+            <li><a href="/instruction/index.bootstrap.html">Bootstrap</a></li>
+            <li style="margin-left: 1rem; font-size: 24px; color:rgba(0, 0, 0, .8)">Полезные ссылки</li>
+            <li><a href="https://www.w3schools.com/">W3Schools</a></li>
+            <li><a href="https://developer.mozilla.org/ru/">MDN</a></li>
+            <li><a href="https://html5book.ru/">HTML5Book</a></li>
+        </ul>
+    </nav>
+    <div class="mask-content"></div>
+    <header class="header">
+        <label for="nav-toggle" class="nav-toggle" onclick></label>
+        <ul class="header__list">
+            <li class="header__item"><a class="hover" data-title="Перейти во введение" href="/instruction/index.html" class="header__link">Главная</a></li>
+            <li class="header__item"><a class="hover" data-title="Старая версия инструкции" href="/instruction/old.index.html" class="header__link">Оригинал</a></li>
+            <div class="dropdown-links">
+                <button class="dropbtn-links">Cсылки</button>
+                <div class="dropdown-content-links">
+                    <a href="https://www.w3schools.com/" target="_blank">W3Schools</a>
+                    <a href="https://developer.mozilla.org/ru/" target="_blank">MDN</a>
+                    <a href="https://html5book.ru/" target="_blank">HTML5Book</a>
+                </div>
+            </div>
+            <li class="header__item">
+                <div class="dropdown">
+                <button class="dropbtn clicked">Разделы</button>
+                <div class="dropdown-content">
+                    <a href="/instruction/index.html5.html">HTML5</a>
+                    <a href="/instruction/index.css.html">CSS</a>
+                    <button onclick="window.location.href='/instruction/index.js.html'" class="dropbtn dropbtn__jQuery">JavaScript</button>
+                    <div class="dropdown__jQuery__div">
+                        <a class="jquery__a" href="/instruction/index.jquery.html">jQuery</a>
+                    </div>
+                    <a class="clicked" href="/instruction/index.bootstrap.html">Bootstrap</a>
+                </div>
+            </div></li>
+        </ul>
+        <div class="up__down">
+            <a class="hover" data-title="Переместиться в самый верх страницы" href="#top">Наверх</a>
+            <a class="hover" data-title="Переместиться в самый низ страницы" href="#bottom">Вниз</a>
+            <div id="tooltip"></div>
+        </div>
+    <p class="slogan">Make Web-Sites not War</p>
+    <div class="logo">
+        <img src="/instruction/img/logo.png">
+    </div>
+</header>
+    <div id="top">&nbsp;</div>
+    <div id="container" class="container">
+        <div class="table__of__contents">
+            <h1 class="contents__header">Оглавление</h1>
+            <ul class="list__tableOf">
+                <li><a href="#general">Общие положения</a></li>
+                <li><a href="#responsive__design">Адаптивный дизайн в Bootstrap</a></li>
+                <li><a href="#grid">Grid</a></li>
+                <li><a href="#topography">Topography</a></li>
+                <li><a href="#nav__bar">Nav Bar</a></li>
+                <li><a href="#forms__tables">Формы и таблицы</a></li>
+            </ul>
+        </div>
+        <h1 class="tom__name">Том V. Bootstrap</h1>
+        <div id="general">&nbsp;</div>
+        <h1 class="main__head">Общие положения</h1>
+        <p class="main__par">
+            <span class="tab">Bootstrap</span> – это популярный фрэймворк (библиотека), которая удобно, быстро и эффективно позволяет создавать адаптивные веб-страницы как для десктопного отображения, так и для мобильного. Это даже несколько больше, чем просто библиотека, как например, jQuery. Bootstrap – это целая платформа, если так можно выразиться. Он включается в себя как обширные технологии CSS, так и технологии JS. Интересной и полезной особенностью концепции Bootstrap является то, что все манипуляции со стилями с помощью него осуществляются только в HTML разметке документа с помощью классов.<br><br>
+            <span class="tab">При</span> подключении Bootstrap к странице, он вносит ряд изменений в стили, которые не соотносятся с настоящими стилями этой страницы. По этой причине я вижу рациональным для демонстрации работы Bootstrap сделать отдельную, внешнюю веб-страницу, перейти на которую вы можете <button onclick="window.open('/instruction/bootstrap_demo.html')" class="button">здесь</button>.<br><br>
+            <span class="tab">Так</span> же мне бы хотелось дополнительно с акцентировать внимание на том, что лично я в применении технологий Bootstrap не вижу фундаментального смысла. Если вы достаточно хорошо знакомы с технологиями CSS, а именно с адаптивными технологиями, сеткой CSS Grid и CSS Flexbox, технологиями медиазапросов, то это позволит вам создавать столь же адаптивные веб-страницы, но с еще и более глубокой и гибкой их настройкой. В этом томе описания этой технологии будут описаны элементы, которые лично для меня кажутся уж слишком ограничивающими, превращающие разработчика в условного ребенка, который в погоне за скоростью не способен самостоятельно указать даже цвет текста. В виду всего этого, описание этого фреймворка будет весьма сжатым и в [описании] будет множество ссылок на внешние статьи учебников, так как мне не хотелось бы тратить на это слишком много времени. Если же вас заинтересует данная технология, то о ней всегда можно прочесть гораздо более исчерпывающее руководство, опять же, на том W3Schools. Снова отмечу, что да, технология действительно мощная, крайне полезна и универсальна для построения веб-сайтов, но лично я предпочитаю строить всё своими собственными руками.
+        </p>
+        <div id="responsive__design">&nbsp;</div>
+        <h1 class="main__head">Адаптивный дизайн в Bootstrap</h1>
+        <p class="main__par">
+            <span class="tab">Итак</span>, как мы уже условились, ключ к красивому, а главное функциональному сайту кроется в его адаптивности, а именно, в его адаптивной (responsive) разметке элементов. То есть, разметка, реагирующая на различные размеры экранов устройств, на которых осуществляется загрузка веб-страницы и подстраивающаяся под них.<br><br>
+            <span class="tab">Прежде</span> всего, основная задача для реализации подобного функционального поведения лежит на контейнерах. В Bootstrap контейнерами называются элементы &lt;div&gt; с классом <strong>'container'</strong>, которые содержат внутри себя какой-то элемент. Контейнеры являются основными и самыми необходимыми элементами в Bootstrap, если используется grid-система (установленная по умолчанию).
+        </p>
+        <div class="faq__any faq__flex">
+               <img src="/instruction/img/faq.png">
+               <p>*для справки: grid-система в Bootstrap – это некая сетка размещения элементов на веб-странице. То есть, весь экран веб-сайта разбивается на колонки, а элементы внутри них способны автоматически подстраиваться друг под друга. В целом, CSS Grid-View, как мы говорили на странице посвященной CSS, во многом помогает в дизайне веб-страниц тем, что серьезно упрощает размещение элементов.
+               </p>
+        </div>
+        <p class="main__par">
+            <span class="tab">C</span> помощью техники Grid-CSS и технологий Bootstrap мы можем разместить у себя на странице три адаптивных колонки текста одинаковой ширины, которые будут менять своё расположение в зависимости от размера экрана. Делаться это будет с помощью такого кода:
+        </p>
+        <div class="code__block__any code__block__HTML">
+            <p class="code__any code">
+                &lt;div class="container"&gt;
+            </p>
+            <p class="code__any sub__code">
+                &lt;div class="row"&gt;
+            </p>
+            <p class="code__any sub__sub__code">
+                &lt;div class="col-sm"&gt;
+            </p>
+            <p class="code__any sub__sub__sub__code">
+                Одна из трех колонок
+            </p>
+            <p class="code__any sub__sub__code">
+                &lt;/div&gt;
+            </p>
+            <p class="code__any sub__sub__code">
+                &lt;div class="col-sm"&gt;
+            </p>
+            <p class="code__any sub__sub__sub__code">
+                Одна из трех колонок
+            </p>
+            <p class="code__any sub__sub__code">
+                &lt;/div&gt;
+            </p>
+            <p class="code__any sub__code">
+                &lt;/div&gt;
+            </p>
+            <p class="code__any code">
+                &lt;/div&gt;
+            </p>
+        </div>
+        <div id="grid">&nbsp;</div>
+        <h1 class="main__head">Grid</h1>
+        <p class="main__par">
+            <span class="tab">Grid-cистема</span> в Bootstrap построена с помощью flexbox свойств и позволяет создавать до 12ти колонок по ширине страницы. Если использовать все 12 колонок нет необходимости, их можно группировать вместе, создавая более широкое пространство для контента. Как говорилось выше, grid-система адаптивна, то есть, чувствительна к ширине – колонки переустанавливаются (перераспределяются) автоматически, в зависимости от ширины экрана устройства.
+            <span class="tab">В</span> Bootstrap есть набор классов, которые позволяют использовать и настраивать grid-систему, их всего пять и это:
+        </p>
+        <ul class="list">
+            <li><strong>.col-</strong> – используется для очень маленьких девайсов, ширина экрана которых меньше 576px;</li>
+            <li><strong>.col-sm-</strong> – используется для маленьких устройств, ширина экрана которых равна или больше 576px;</li>
+            <li><strong>.col-md-</strong> – ширина экрана равна или больше 768px;</li>
+            <li><strong>.col-lg</strong> – большие устройства, ширина которых равна или больше 992px;</li>
+            <li><strong>.col-xl-</strong> – очень большие девайсы, ширины которых равна или больше 1200px;</li>
+        </ul>
+        <p class="main__par">
+            <span class="tab">Классы</span>, описанные выше, как и любые классы в HTML, могут комбинироваться, сочетая в себе различные эффекты Bootstrap. Подводя итог, структура Bootstrap Grid выглядит следующим образом: сначала размещаются элементы <strong>&lt;div&gt;</strong> класса <strong>'.raw'</strong>, то есть, строки, а в этих элементах &lt;div&gt; уже, соответственно, располагаются колонки разных классов, описанных в списке выше. Прописывать полное название классов не обязательно, Bootstrap может делать это автоматически, выставляя нужную ширину колонок. То есть, если установлено два элемента в контейнере с классом <strong>'.raw'</strong>, то ширина колонок будет выставлена в 50%, если три то 33.33% и так далее.<br><br>
+            <span class="tab">Если</span> нужно работать <strong>НЕ</strong> автоматически, то запись класса, внутри контейнера с классом <strong>'.raw'</strong> будет выглядеть так: <strong>'&lt;div&gt; class="col-*-*"'</strong>, где первая звездочка означает значение адаптивности, то есть, тот элемент, который мы указывали в списке выше (к примеру, -sm). Вторая звездочка отображает число колонок, которое может изменяться, от одной до двенадцати для каждой строки.<br><br>
+            <span class="tab">Поподробнее</span> остановившись на основных контейнерах для Bootstrap скажу, что есть два их типа: уже описанный <strong>'.container'</strong> – предоставляет собой фиксированную ширину контейнера и второй – <strong>'.container-fluid'</strong> – предоставляет ширину контейнера, который заполняет всю ширину экрана.
+        </p>
+        <div id="topography">&nbsp;</div>
+        <h1 class="main__head">Topography</h1>
+        <p class="main__par">
+            <span class="tab">Topography</span> – это оформление контента, в Bootstrap для этого есть установки по умолчанию:
+        </p>
+        <ul class="list">
+            <li>Для текста по умолчанию используется размер 16px, высота строки 1.5 и семейство шрифтов – Helvetica New, Helvetica, Arial, sans-serif;</li>
+            <li>У всех элементов &lt;p&gt; свойство <strong>margin-top</strong> установлено на '0', а свойство <strong>margin-bottom</strong> на 1rem (то есть, 16px);</li>
+            <li>У элементов заголовков:
+                <ul class="sub__list">
+                    <li>Заголовок h1 имеет значение в 2.5rem (40px);</li>
+                    <li>Заголовок h2 имеет значение в 2rem (32px);</li>
+                    <li>Заголовок h3 имеет значение в 1.75rem (28px);</li>
+                    <li>Заголовок h4 имеет значение в 1.5rem (24px);</li>
+                    <li>Заголовок h5 имеет значение в 1.25rem (20px);</li>
+                    <li>Заголовок h6 имеет значение в 1rem (16px);</li>
+                </ul>
+            </li>
+        </ul>
+        <p class="main__par">
+            <span class="tab">Так</span> же для заголовков можно использовать класс <strong>.display-</strong> (со значением от одного до шести) и с помощью него задавать размер и толщину текста для заголовка. Кроме того, при работе с заголовками можно использовать HTML элемент <strong>&lt;small&gt;</strong>, который позволяет создавать текст второстепенного значения прямо внутри заголовка – текст будет немного меньше и тоньше.<br><br>
+            <span class="tab">Элемент</span> <strong>&lt;mark&gt;</strong> добавляет желтоватый фон для текста, так, будто его выделяет некий маркер светлого оттенка. Элемент <strong>&lt;abbr&gt;</strong> добавляет тексту нижнее подчеркивание точками.<br><br>
+            <span class="tab"><button onclick="window.open('https://www.w3schools.com/bootstrap/bootstrap_typography.asp')" class="button">Здесь</button></span> вы можете подробнее прочесть про различные классы Bootstrap Topography на сайте W3Schools.<br><br>
+            <span class="tab">Так</span> же Bootstrap позволяет использовать набор классов для добавления цветов текста. Если вы хоть немного знаете CSS, то смысла в настолько глубоком применении Bootstrap на своей веб-странице я не вижу, как я говорил выше, об этой технологии я рассказываю поверхностно. Поэтому <button onclick="window.open('https://www.w3schools.com/bootstrap/bootstrap_typography.asp')" class="button">здесь</button> так же на сайте W3Schools вы можете прочесть про все классы, позволяющие работать с цветами в Bootstrap. Там же можно прочесть и про классы, позволяющие задать цвет фона. Подробнее про то, как может выглядеть текст с применением подобных классов, а так же про применение других классов, задающих оформление, смотрите по ссылке Bootstrap из главы "Общие положения".<br><br>
+        </p>
+        <div id="nav__bar">&nbsp;</div>
+        <h1 class="main__head">Nav Bar</h1>
+        <p class="main__par">
+            <span class="tab">Nav</span> Bar'ом в пользовательском интерфейсе называют панель навигации. Эту панель вы запросто можете встретить практически на любом сайте. Более того, как вы могли обратить внимание, даже на странице инструкции, которую вы сейчас читаете, в верхней её части есть такая панель (только сделанная не на Bootstrap). Bootstrap позволяет быстро установить панель навигации на свой сайт, к тому же, она будет адаптивной. Её код можно увидеть в HTML-файле страницы Bootstrap по ссылке выше и скопировать оттуда, но так же увидеть здесь, на картинке:
+        </p>
+        <div class="bootstap__img">
+            <img src="/instruction/img/nav_code.png" alt="">
+        </div>
+        <p class="main__par">
+            <span class="tab"></span>Ну а сейчас я вкратце расскажу, как же тут всё работает.<br><br>
+            <span class="tab">Всё</span> начинается с семантического элемента <strong>&lt;nav&gt;</strong>, который по своей сути является тем же самым, что и контейнер &lt;div&gt;. Поэтому и семантический – для логического "понимательного" выделения элементов. Далее в этом элементе, как и в наших предыдущих примерах, встречаются классы. После тега &lt;nav&gt;, соответственно, идет класс, определяющий сам компонент навигационной строки, который так и называется – <strong>navbar</strong>. Следующий класс – <strong>navbar-expand-lg</strong> – класс, позволяющий создавать адаптивную разметку. Если вы перейдете на страницу Bootstrap, то можете попробовать всячески сворачивать окно браузера и увидеть, что навигационная панель сворачивается в так называемое "бургер-меню". Следующие два класса – <strong>navbar-light</strong> и <strong>bg-light</strong> – используются для настройки цветовой гаммы. Этими цветами можно управлять по той же схеме, что и в предыдущей главе, о чем подробнее можно прочесть на сайте Bootstrap. Кроме того, цвета можно задавать и вручную, для этого можно просто прописать <strong>style="background-color: 'цвет'</strong>.<br><br>
+            <span class="tab">Следующий</span> класс – <strong>navbar-brand</strong> – используется для размещения лого веб-сайта, но в данном примере там размещено просто слово "Navbar".<br><br>
+            <span class="tab">Здесь</span> описаны базовые классы для работы с панелью навигации. Для более подробного ознакомления со всеми остальными классами, можно посетить сайт Bootstrap. Но на самом деле, классы названы довольно наглядно, поэтому я бы рекомендовал попытаться самостоятельно исследовать их, скопировав код к себе в редактор.
+        </p>
+        <div id="forms__tables">&nbsp;</div>
+        <h1 class="main__head">Формы и таблицы</h1>
+        <p class="main__par">
+            <span class="tab">Если</span> вы к моменту прочтения этого текста уже пытались стилизовать формы или таблицы с помощью CSS, то вы понимаете, что делается это совсем не в две строки кода. У Bootstrap есть функционал, который позволяет делать это очень быстро и легко. Начнем с кода простой формы, где есть только строка электронной почты и пароля. Такие формы часто используются не для регистрации, а для входа пользователя на сайт:
+        </p>
+        <div class="bootstap__img">
+            <img src="/instruction/img/form_code.png" alt="">
+        </div>
+        <p class="main__par">
+            <span class="tab">В</span> Bootstrap, конечно же, есть и более сложные формы, которые используются для регистрации. Более подробно о них можно прочесть на сайте Bootstrap, найдя статью "Forms".
+        </p>
+        <h1 class="main__head">Страница по Bootstrap не дописана, но когда-нибудь обязательно будет</h1>
+
+
+
+
+
+
+
+    </div>
+
+
+
+    <div id="bottom"></div>
+
+
+    <footer>2023 &copy; Literarum</footer>
+    <script src="/js/script.js"></script>
+    <script src="/instruction/js/script.js"></script>
+</body>
+</html>

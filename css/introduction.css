@@ -1251,6 +1251,23 @@ select option {
   z-index: 0;
 }
 
+.bootstap__img {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-block: 3rem;
+  width: 800px;
+  max-width: 90%;
+}
+
+.bootstap__img > img {
+  width: 800px;
+  overflow: hidden;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
 
 
 
