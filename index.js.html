@@ -1664,22 +1664,30 @@
             button.addEventListener("click", function() {
                 if(isButtonApplied === false) {
                     container.style.background = "black";
-                    container.style.transition = 'background 1.5s ease-in-out';
+                    container.style.transition = 'background 2.5s ease-in-out';
 
                     button.style.boxShadow = "0 0 10px rgba(255, 255, 255, 1)";
 
+                    body.style.transition = "color 3.5s ease-in-out";
                     body.style.color = "red";
-                    body.style.transition = "color 2.5s ease-in-out";
+
+                    setTimeout(() => {body.style.background = 'rgba(0, 0, 0, .9)', body.style.transition = 'background 1s ease-in-out';}, 2500);
+                    
 
                     isButtonApplied = true;
+
+                    setTimeout(() => {console.log('World!');}, 5000); 
+
                 } else if(isButtonApplied === true) {
                     container.style.background = "linear-gradient(90deg, rgba(224, 0, 255, 0.5) -15%, rgba(179, 90, 195, 0.5) 48%, rgba(20, 138, 227, 0.5) 100%)";
-                    container.style.transition = 'background 1.5s ease-in-out';
+                    container.style.transition = 'background 2.5s ease-in-out';
 
                     button.style.boxShadow = "0 0 15px rgba(0, 0, 0, 1)";
 
                     body.style.color = "rgba(232, 230, 230, 1)";
-                    body.style.transition = "color 2.5s ease-in-out";
+                    body.style.transition = "color 3.5s ease-in-out";
+
+                    setTimeout(() => {body.style.transition = 'background 1s ease-in-out', body.style.background = 'linear-gradient(90deg, rgba(59, 9, 121, 1) -40%, rgba(147, 0, 255, 1) 48%, rgba(207, 0, 255, 0.5) 100%)';}, 2500);
                     
                     isButtonApplied = false;
                 }
@@ -1804,16 +1812,16 @@
                 shape.style.right = "0";
             </p>
             <p class="code__any sub__sub__code">
-                shape.style.borderLeft = "50px solid transparrent";
+                shape.style.borderLeft = "50px solid transparent";
             </p>
             <p class="code__any sub__sub__code">
-                shape.style.borderReft = "50px solid transparrent";
+                shape.style.borderReft = "50px solid transparent";
             </p>
             <p class="code__any sub__sub__code">
                 shape.style.borderBottom = "100px solid " + getRandomColor();
             </p>
             <p class="code__any sub__sub__code">
-                shape.style.backgroundColor = "transparrent";
+                shape.style.backgroundColor = "transparent";
             </p>
             <p class="code__any sub__code">
                 }
