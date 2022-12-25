@@ -60,7 +60,7 @@
         <label for="nav-toggle" class="nav-toggle" onclick></label>
         <ul class="header__list">
             <li class="header__item"><a class="hover" data-title="Перейти во введение" href="/instruction/index.html" class="header__link">Главная</a></li>
-            <li class="header__item"><a class="hover" data-title="Старая версия инструкции" href="/instruction/old.index.html" class="header__link">Оригинал</a></li>
+            <li class="header__item"><button id="light" class="dropbtn-links hover" data-title="Активировать ночной режим">Свет</button></li>
             <div class="dropdown-links">
                 <button class="dropbtn-links">Cсылки</button>
                 <div class="dropdown-content-links">
@@ -71,8 +71,8 @@
             </div>
             <li class="header__item">
                 <div class="dropdown">
-                <button class="dropbtn clicked">Разделы</button>
-                <div class="dropdown-content">
+                <button id="clicked" class="dropbtn clicked">Разделы</button>
+                <div id="dropdown-content" class="dropdown-content">
                     <a href="/instruction/index.html5.html">HTML5</a>
                     <a href="/instruction/index.css.html">CSS</a>
                     <button onclick="window.location.href='/instruction/index.js.html'" class="dropbtn dropbtn__jQuery clicked">JavaScript</button>
@@ -1700,6 +1700,7 @@
             let button = document.getElementById("button_test");
             let container = document.getElementById("container");
             let body = document.getElementById('body');
+            let header = document.querySelector('header');
             let isButtonApplied = false;
             button.addEventListener("click", function() {
                 if(isButtonApplied === false) {
@@ -1710,6 +1711,10 @@
 
                     body.style.transition = "color 3.5s ease-in-out";
                     body.style.color = "red";
+
+                    header.style.background = 'rgba(0, 0, 0, .6';
+                    header.style.transition = '2.5s ease-in-out';
+                    
 
                     setTimeout(() => {body.style.background = 'rgba(0, 0, 0, .9)', body.style.transition = 'background 1s ease-in-out';}, 2500);
                     
@@ -1723,6 +1728,9 @@
 
                     body.style.color = "rgba(232, 230, 230, 1)";
                     body.style.transition = "color 3.5s ease-in-out";
+
+                    header.style.background = '#d1c3fca5';
+                    header.style.transition = '2.5s ease-in-out';
 
                     setTimeout(() => {body.style.transition = 'background 1s ease-in-out', body.style.background = 'linear-gradient(90deg, rgba(59, 9, 121, 1) -40%, rgba(147, 0, 255, 1) 48%, rgba(207, 0, 255, 0.5) 100%)';}, 2500);
                     
