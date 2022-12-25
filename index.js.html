@@ -36,7 +36,7 @@
     <title>JavaScript</title>
 </head>
 
-<body>
+<body id="body">
     <div class="progress-bar" id="progressBar"></div>
     <input type="checkbox" id="nav-toggle" hidden>
     <nav class="nav">
@@ -131,6 +131,7 @@
         <div id="general">&nbsp;</div>
         <h1 class="main__head">Общие положения</h1>
         <p class="main__par">
+            <span class="tab">Итак</span>, JavaScript – это язык программирования, позволяющий достичь наивысшей производительности HTML-станиц, наполняя их анимацией, интерактивными элементами и динамическими визуальными эффектами. Язык JS способен сделать веб-страницы более полезными, обеспечивая немедленную обратную связь, то есть, для изменений не требует перезагрузки страницы. 
             <span class="tab">Если</span> вы помните, в HTML документе мы можем создавать кнопки. Делается это с помощью зеркального тега <strong>&lt;button&gt;</strong>. Этот тег сам по себе является простым шаблоном и не обладает никакой функциональностью без нужной настройки. Соответственно, чтобы при нажатии добавленной нами кнопки выполнялся какой-то код, тегу <strong>&lt;button&gt;</strong>, к примеру, можно присвоить атрибут <strong>'onclick'</strong>. Внутри этого атрибута можно указать код JavaScript inline-способом, то есть, без создания дополнительного документа с кодом. Самое элементарное, что мы сейчас можем сделать, просто для понимания – это по нажатию кнопки вывести какое-то сообщение. Выглядеть это будет следующим образом: <strong>&lt;button onclick="alert('Hello world!')"&gt;Поприветствуй мир!&lt;/button&gt;</strong>. Еще один абстрактный пример: точно таким же inline-способом (и всеми остальными, разумеется, тоже), с помощью JavaScript можно отправлять, к примеру, и сообщения в консоль браузера. Делается это с помощью кода <strong class="break">&lt;button onclick="console.log('Hello Console!')"&gt;Поприветствуй консоль!&lt;button&gt;</strong>. По нажатию на <button class="button" id="button" onclick="alert('Не тыкай!'), console.log('Hello Console!')">эту</button> кнопку вы получите alert-сообщение в окне браузера и вывод сообщения в консоль.
         </p>
         <div class="faq__any faq__flex">
@@ -1657,16 +1658,30 @@
         </div>
         <script type="text/javascript">
             let button = document.getElementById("button_test");
+            let container = document.getElementById("container");
+            let body = document.getElementById('body');
             let isButtonApplied = false;
             button.addEventListener("click", function() {
                 if(isButtonApplied === false) {
-                    document.getElementById("container").style.background = "black";
-                    button.style.boxShadow = "0 0 10px rgba(255, 255, 255, 1)"
+                    container.style.background = "black";
+                    container.style.transition = 'background 1.5s ease-in-out';
+
+                    button.style.boxShadow = "0 0 10px rgba(255, 255, 255, 1)";
+
+                    body.style.color = "red";
+                    body.style.transition = "color 2.5s ease-in-out";
+
                     isButtonApplied = true;
                 } else if(isButtonApplied === true) {
-                    document.getElementById("container").style.background = "linear-gradient(90deg, rgba(224, 0, 255, 0.5) -15%, rgba(179, 90, 195, 0.5) 48%, rgba(20, 138, 227, 0.5) 100%)";
-                    button.style.boxShadow = "0 0 15px rgba(0, 0, 0, 1)"
-                    isButtonApplied = false;	
+                    container.style.background = "linear-gradient(90deg, rgba(224, 0, 255, 0.5) -15%, rgba(179, 90, 195, 0.5) 48%, rgba(20, 138, 227, 0.5) 100%)";
+                    container.style.transition = 'background 1.5s ease-in-out';
+
+                    button.style.boxShadow = "0 0 15px rgba(0, 0, 0, 1)";
+
+                    body.style.color = "rgba(232, 230, 230, 1)";
+                    body.style.transition = "color 2.5s ease-in-out";
+                    
+                    isButtonApplied = false;
                 }
             });
         </script>
