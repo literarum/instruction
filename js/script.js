@@ -92,6 +92,13 @@ function turnLightOff() {
     	isButtonApplied = true;
 
     } else if (isButtonApplied === true) {
+
+		setTimeout(() => {
+			clicked.style.textShadow = "0 0 10px #fff, 1px 1px 1px #fff";
+			clicked.style.color = 'rgba(0, 0, 0, 1)';
+			clicked.style.transition = '1s ease-in-out';
+		}, 2500);
+
     	container.style.background = "linear-gradient(90deg, rgba(224, 0, 255, 0.5) -15%, rgba(179, 90, 195, 0.5) 48%, rgba(20, 138, 227, 0.5) 100%)";
     	container.style.transition = "background 2.5s ease-in-out";
 
