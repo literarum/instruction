@@ -1607,6 +1607,7 @@
             let colorToggle = document.getElementById("head__toggle");
             colorToggle.addEventListener("click", function() {
                 this.style.color = (this.style.color == 'red') ? 'rgb(232, 230, 230)' : 'red';
+                this.style.transition = '.5s ease-in-out';
             });
          </script>
          <p class="main__par">
@@ -1623,6 +1624,12 @@
                 let button = document.getElementById("button_test");
             </p>
             <p class="code__any code">
+                let container = document.getElementById("container");
+            </p>
+            <p class="code__any code">
+                let body = document.getElementById('body');
+            </p>
+            <p class="code__any code">
                 let isButtonApplied = false;
             </p>
             <p class="code__any code">
@@ -1632,7 +1639,22 @@
                 if(isButtonApplied === false) {
             </p>
             <p class="code__any sub__sub__code">
-                ducument.querySelector("body").style.background = "black";
+                container.style.background = "black";
+            </p>
+            <p class="code__any sub__sub__code">
+                container.style.transition = 'background 2.5s ease-in-out';
+            </p>
+            <p class="code__any sub__sub__code">
+                button.style.boxShadow = "0 0 10px rgba(255, 255, 255, 1)";
+            </p>
+            <p class="code__any sub__sub__code">
+                body.style.transition = "color 3.5s ease-in-out";
+            </p>
+            <p class="code__any sub__sub__code">
+                body.style.color = "red";
+            </p>
+            <p class="code__any sub__sub__code">
+                setTimeout(() => {body.style.background = 'rgba(0, 0, 0, .9)', body.style.transition = 'background 1s ease-in-out';}, 2500);
             </p>
             <p class="code__any sub__sub__code">
                 isButtonApplied = true;
@@ -1641,7 +1663,22 @@
                 } else if (isButtonApplied === true) {
             </p>
             <p class="code__any sub__sub__code">
-                document.querySelector("body").style.background = "#F0F0F2";
+                container.style.background = "linear-gradient(90deg, rgba(224, 0, 255, 0.5) -15%, rgba(179, 90, 195, 0.5) 48%, rgba(20, 138, 227, 0.5) 100%)";
+            </p>
+            <p class="code__any sub__sub__code">
+                container.style.transition = 'background 2.5s ease-in-out';
+            </p>
+            <p class="code__any sub__sub__code">
+                button.style.boxShadow = "0 0 15px rgba(0, 0, 0, 1)";
+            </p>
+            <p class="code__any sub__sub__code">
+                body.style.color = "rgba(232, 230, 230, 1)";
+            </p>
+            <p class="code__any sub__sub__code">
+                body.style.transition = "color 3.5s ease-in-out";
+            </p>
+            <p class="code__any sub__sub__code">
+                setTimeout(() => {body.style.transition = 'background 1s ease-in-out', body.style.background = 'linear-gradient(90deg, rgba(59, 9, 121, 1) -40%, rgba(147, 0, 255, 1) 48%, rgba(207, 0, 255, 0.5) 100%)';}, 2500);
             </p>
             <p class="code__any sub__sub__code">
                 isButtonApplied = false;
@@ -1673,10 +1710,7 @@
 
                     setTimeout(() => {body.style.background = 'rgba(0, 0, 0, .9)', body.style.transition = 'background 1s ease-in-out';}, 2500);
                     
-
                     isButtonApplied = true;
-
-                    setTimeout(() => {console.log('World!');}, 5000); 
 
                 } else if(isButtonApplied === true) {
                     container.style.background = "linear-gradient(90deg, rgba(224, 0, 255, 0.5) -15%, rgba(179, 90, 195, 0.5) 48%, rgba(20, 138, 227, 0.5) 100%)";

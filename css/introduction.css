@@ -621,6 +621,7 @@ a {
 }
 
 .code__block__any {
+  line-height: 1.5;
   word-wrap: break-word;
   border-radius: 5px;
   margin: 30px;
